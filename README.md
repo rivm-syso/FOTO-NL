@@ -114,12 +114,6 @@ Corresponding Authors:
 
 If you use this repository or the FOTO-NL database, please cite: Hofman et al. (2025). Long-term chemical pollution monitoring data of surface waters in the Netherlands.
 
-```{vbnet}
-
-This version is plain text and can be copied directly into an R script or Markdown file without formatting issues. Let me know if you need further adjustments!
-
-```
-
 
 
 
