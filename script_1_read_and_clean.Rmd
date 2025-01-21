@@ -1,0 +1,1592 @@
+---
+title: "1. combine and clean"
+author: "Thomas Hofman"
+date: "2025-01-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Reading, combining and cleaning of the data
+
+This script reads the separate files of different waterboards and converts them to uniform attributes. This script continues to clean these attributes.
+
+#### install packages
+
+install all required packages and functions
+
+```{r read packages}
+
+# read required packages:
+list.of.packages <- c("openxlsx", "dplyr", "svDialogs", "devtools", "git2r")
+#add all required packages
+for(i in 1:length(list.of.packages)){if(!(list.of.packages[i] %in% rownames(installed.packages()))){install.packages(list.of.packages[i])}}
+#only download uninstalled packages
+lapply(list.of.packages, require, character.only = T) #load packages
+
+#load homemade functions required for this script
+source("R/functions/excelDate2Date.R") #used in CheckMapConc function
+source("R/functions/CheckMapConc.R")
+source("R/functions/ValidCAS.R")
+
+#Set folder with excel data files
+prjdata <- "R/data" #refer to folder with original xlsx input files here
+
+```
+
+## --------------------------------------------------------------
+
+# Read in and harmonize names datafiles
+
+## --------------------------------------------------------------
+
+Read in excel data files and harmonize names with function CheckMapConc
+
+This function also renames the dutch names of variables "OS" and "Corg" into TSS resp. DOC
+
+### Read in and harmonize data water board "Aa en Maas"
+
+```{r}
+TryReadpreMil <- read.xlsx(paste(prjdata, "data bestand_Aa en Maas.xlsx", sep = "/"), sheet = "1980-1999")
+TryReadThisMil <- read.xlsx(paste(prjdata, "data bestand_Aa en Maas.xlsx", sep = "/"), sheet = "2000-2019")
+
+AaenMaas <- rbind(
+  CheckMapConc(TryReadpreMil,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Aa en Maas"),
+  CheckMapConc(TryReadThisMil,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Aa en Maas")
+)
+
+#check if all observations are included
+length(AaenMaas[,1]) == length(TryReadpreMil[,1]) + length(TryReadThisMil[,1])
+#some describing statistics
+length(unique(AaenMaas$Parametercode))
+length(unique(AaenMaas$Meetpuntcode))
+summary(AaenMaas$SampleDate)
+```
+
+### Read in and harmonize data water board "Amstel, Gooi en Vecht"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Amstel Gooi Vecht.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Amstel Gooi Vecht.xlsx", sep = "/"), sheet = "deel 2")
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Amstel Gooi Vecht.xlsx", sep = "/"), sheet = "deel 3")
+TryReaddeel4 <- read.xlsx(paste(prjdata, "data bestand_Amstel Gooi Vecht.xlsx", sep = "/"), sheet = "deel 4")
+AmstelGooiVecht <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Amstel Gooi Vecht"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Amstel Gooi Vecht"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Amstel Gooi Vecht"),
+  CheckMapConc(TryReaddeel4,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Amstel Gooi Vecht")
+)
+
+#check if all observations are included
+length(AmstelGooiVecht[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1]) + length(TryReaddeel4[,1])
+#some describing statistics
+length(unique(AmstelGooiVecht$Parametercode))
+length(unique(AmstelGooiVecht$Meetpuntcode))
+summary(AmstelGooiVecht$SampleDate)
+```
+
+### Read in and harmonize data water board "Brabantse Delta"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Brabantse Delta.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Brabantse Delta.xlsx", sep = "/"), sheet = "deel 2")
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Brabantse Delta.xlsx", sep = "/"), sheet = "deel 3")
+
+BrabantseDelta <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Brabantse Delta"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Brabantse Delta"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Brabantse Delta")
+)
+
+#check if all observations are included
+length(BrabantseDelta[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1])
+#some describing statistics
+length(unique(BrabantseDelta$Parametercode))
+length(unique(BrabantseDelta$Meetpuntcode))
+summary(BrabantseDelta$SampleDate)
+
+#Coordinate X in germany (X = 890902). Assumed typo: excluded from data
+BrabantseDelta <- BrabantseDelta[BrabantseDelta$X < 400000, ]
+```
+
+### Read in and harmonize data water board "De Dommel"
+
+```{r}
+TryReadpreMil <- read.xlsx(paste(prjdata, "data bestand_DeDommel.xlsx", sep = "/"), sheet = "1952-2009")
+TryReadThisMil <- read.xlsx(paste(prjdata, "data bestand_DeDommel.xlsx", sep = "/"), sheet = "2010-2019")
+DeDommel <- rbind(
+  CheckMapConc(TryReadpreMil,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "De Dommel"),
+  CheckMapConc(TryReadThisMil,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "De Dommel")
+)
+
+#check if all observations are included
+length(DeDommel[,1]) == length(TryReadpreMil[,1]) + length(TryReadThisMil[,1])
+#some describing statistics
+length(unique(DeDommel$Parametercode))
+length(unique(DeDommel$Meetpuntcode))
+summary(DeDommel$SampleDate)
+
+#These are not used from here on, so removed:
+rm(TryReadpreMil,   TryReadThisMil)
+```
+
+### Read in and harmonize data water board "Delfland"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Delfland.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Delfland.xlsx", sep = "/"), sheet = "deel 2")
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Delfland.xlsx", sep = "/"), sheet = "deel 3")
+Delfland <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Delfland"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Delfland"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Delfland")
+)
+
+#check if all observations are included
+length(Delfland[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1])
+#some describing statistics
+length(unique(Delfland$Parametercode))
+length(unique(Delfland$Meetpuntcode))
+summary(Delfland$SampleDate)
+```
+
+###Read in and harmonize data water board "Drents Overijsselse Delta"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Drents Overijsselse Delta.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Drents Overijsselse Delta.xlsx", sep = "/"), sheet = "deel 2")
+DrentsOverijsselseDelta <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Drents Overijsselse Delta"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Drents Overijsselse Delta")
+)
+
+#check if all observations are included
+length(DrentsOverijsselseDelta[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1])
+#some describing statistics
+length(unique(DrentsOverijsselseDelta$Parametercode))
+length(unique(DrentsOverijsselseDelta$Meetpuntcode))
+summary(DrentsOverijsselseDelta$SampleDate)
+
+#Some location coordinates for data water board "Drents Overijsselse Delta" were received in separate files
+#matched to measurement data with script below
+LocDrent <- read.xlsx(paste(prjdata, "AanvlocDrent.xlsx", sep = "/"))
+LocDrent <- LocDrent[!is.na(LocDrent$GeometriePunt.X_RD),]
+matchLoc <- match(DrentsOverijsselseDelta$Meetpuntcode, LocDrent$Identificatie)
+table(is.na(matchLoc))
+DrentsOverijsselseDelta$X <- LocDrent$GeometriePunt.X_RD[matchLoc]
+DrentsOverijsselseDelta$Y <- LocDrent$GeometriePunt.Y_RD[matchLoc]
+LocDrent <- read.xlsx(paste(prjdata, "lokatie info_Drents Overijsselse Delta.xlsx", sep = "/"))
+LocDrent <- LocDrent[!is.na(LocDrent$GeometriePunt.X_RD),]
+matchLoc <- match(DrentsOverijsselseDelta$Meetpuntcode, LocDrent$Identificatie)
+DrentsOverijsselseDelta$X <- LocDrent$GeometriePunt.X_RD[matchLoc]
+DrentsOverijsselseDelta$Y <- LocDrent$GeometriePunt.Y_RD[matchLoc]
+```
+
+### Read in and harmonize data water board "Hoogheemraadschap van Rijnland"
+
+function Num2Date (defined below) required to properly harmonize dates Date format in original datafiles water board "HH van Rijnland" were inconsistent
+
+```{r}
+Num2Date <- function (x) {
+  NumString <- as.character(x)
+  DateStr <- paste(substr(NumString,1,4), substr(NumString,5,6), substr(NumString,7,8), sep = "-")
+}
+
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_HH van Rijnland.xlsx", sep = "/"), sheet = 1)
+TryReaddeel1$Datum <- Num2Date(TryReaddeel1$Datum)
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_HH van Rijnland.xlsx", sep = "/"), sheet = 2)
+TryReaddeel2$Datum <- Num2Date(TryReaddeel2$Datum)
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_HH van Rijnland.xlsx", sep = "/"), sheet = 3)
+TryReaddeel3$Datum <- Num2Date(TryReaddeel3$Datum)
+TryReaddeel4 <- read.xlsx(paste(prjdata, "data bestand_HH van Rijnland.xlsx", sep = "/"), sheet = 4)
+TryReaddeel4$Datum <- Num2Date(TryReaddeel4$Datum)
+TryReaddeel5 <- read.xlsx(paste(prjdata, "data bestand_HH van Rijnland.xlsx", sep = "/"), sheet = 5)
+TryReaddeel5$Datum <- Num2Date(TryReaddeel5$Datum)
+
+HHvanRijnland <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = "%Y-%m-%d", #
+               fac2ugL = 1, DataSource = "HH van Rijnland"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = "%Y-%m-%d",
+               fac2ugL = 1, DataSource = "HH van Rijnland"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = "%Y-%m-%d",
+               fac2ugL = 1, DataSource = "HH van Rijnland"),
+  CheckMapConc(TryReaddeel4,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = "%Y-%m-%d",
+               fac2ugL = 1, DataSource = "HH van Rijnland"),
+  CheckMapConc(TryReaddeel5,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = "%Y-%m-%d",
+               fac2ugL = 1, DataSource = "HH van Rijnland")
+)
+
+#check if all observations are included
+length(HHvanRijnland[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1]) + length(TryReaddeel4[,1]) + length(TryReaddeel5[,1])
+#some describing statistics
+length(unique(HHvanRijnland$Parametercode))
+length(unique(HHvanRijnland$Meetpuntcode))
+summary(HHvanRijnland$SampleDate)
+```
+
+### Read in and harmonize data water board "Hollands Noorderkwartier"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Hollands Noorderkwartier.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Hollands Noorderkwartier.xlsx", sep = "/"), sheet = "deel 2")
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Hollands Noorderkwartier.xlsx", sep = "/"), sheet = "deel 3")
+TryReaddeel4 <- read.xlsx(paste(prjdata, "data bestand_Hollands Noorderkwartier.xlsx", sep = "/"), sheet = "deel 4")
+HollandsNoorderkwartier <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hollands Noorderkwartier"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hollands Noorderkwartier"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hollands Noorderkwartier"),
+  CheckMapConc(TryReaddeel4,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hollands Noorderkwartier")
+)
+
+#check if all observations are included
+length(HollandsNoorderkwartier[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1]) + length(TryReaddeel4[,1])
+#some describing statistics
+length(unique(HollandsNoorderkwartier$Parametercode))
+length(unique(HollandsNoorderkwartier$Meetpuntcode))
+summary(HollandsNoorderkwartier$SampleDate)
+```
+
+### Read in and harmonize data water board "Hollandse Delta"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Hollandse Delta.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Hollandse Delta.xlsx", sep = "/"), sheet = "deel 2")
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Hollandse Delta.xlsx", sep = "/"), sheet = "deel 3")
+TryReaddeel4 <- read.xlsx(paste(prjdata, "data bestand_Hollandse Delta.xlsx", sep = "/"), sheet = "deel 4")
+HollandseDelta <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hollandse Delta"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hollandse Delta"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hollandse Delta"),
+  CheckMapConc(TryReaddeel4,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hollandse Delta")
+)
+
+#check if all observations are included
+length(HollandseDelta[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1]) + length(TryReaddeel4[,1])
+#some describing statistics
+length(unique(HollandseDelta$Parametercode))
+length(unique(HollandseDelta$Meetpuntcode))
+summary(HollandseDelta$SampleDate)
+```
+
+### Read in and harmonize data water board "Hunze en Aas"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Hunze en Aas.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Hunze en Aas.xlsx", sep = "/"), sheet = "deel 2")
+HunzeenAas <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hunze en Aas"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Hunze en Aas")
+)
+
+#check if all observations are included
+length(HunzeenAas[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1])
+#some describing statistics
+length(unique(HunzeenAas$Parametercode))
+length(unique(HunzeenAas$Meetpuntcode))
+summary(HunzeenAas$SampleDate)
+```
+
+### Read in and harmonize data water board "Limburg"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Limburg.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Limburg.xlsx", sep = "/"), sheet = "deel 2")
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Limburg.xlsx", sep = "/"), sheet = "deel 3")
+Limburg <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Limburg"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Limburg"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Limburg")
+)
+
+#check if all observations are included
+length(Limburg[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1])
+#some describing statistics
+length(unique(Limburg$Parametercode))
+length(unique(Limburg$Meetpuntcode))
+summary(Limburg$SampleDate)
+```
+
+### Read in and harmonize data water board "Rijn en IJssel"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Rijn en IJssel.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Rijn en IJssel.xlsx", sep = "/"), sheet = "deel 2")
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Rijn en IJssel.xlsx", sep = "/"), sheet = "deel 3")
+RijnenIJssel <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Rijn en IJssel"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Rijn en IJssel"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Rijn en IJssel")
+)
+
+#check if all observations are included
+length(RijnenIJssel[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1])
+#some describing statistics
+length(unique(RijnenIJssel$Parametercode))
+length(unique(RijnenIJssel$Meetpuntcode))
+summary(RijnenIJssel$SampleDate)
+```
+
+### Read in and harmonize data water board "Rivierenland"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Rivierenland.xlsx", sep = "/"), sheet = 1)
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Rivierenland.xlsx", sep = "/"), sheet = 2)
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Rivierenland.xlsx", sep = "/"), sheet = 3)
+Rivierenland <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Rivierenland"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Rivierenland"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Rivierenland")
+)
+
+#check if all observations are included
+length(Rivierenland[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1])
+#some describing statistics
+length(unique(Rivierenland$Parametercode))
+length(unique(Rivierenland$Meetpuntcode))
+summary(Rivierenland$SampleDate)
+```
+
+### Read in and harmonize data water board "Scheldestromen"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Scheldestromen.xlsx", sep = "/"), sheet = 1)
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Scheldestromen.xlsx", sep = "/"), sheet = 2)
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Scheldestromen.xlsx", sep = "/"), sheet = 3)
+Scheldestromen <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Scheldestromen"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Scheldestromen"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Scheldestromen")
+)
+
+#check if all observations are included
+length(Scheldestromen[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1])
+#some describing statistics
+length(unique(Scheldestromen$Parametercode))
+length(unique(Scheldestromen$Meetpuntcode))
+summary(Scheldestromen$SampleDate)
+```
+
+### Read in and harmonize data water board "Schieland Krimpenerwaard"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Schieland Krimpenerwaard.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Schieland Krimpenerwaard.xlsx", sep = "/"), sheet = "deel 2")
+SchielandKrimpenerwaard <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Schieland Krimpenerwaard"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Schieland Krimpenerwaard")
+)
+
+#check if all observations are included
+length(SchielandKrimpenerwaard[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1])
+#some describing statistics
+length(unique(SchielandKrimpenerwaard$Parametercode))
+length(unique(SchielandKrimpenerwaard$Meetpuntcode))
+summary(SchielandKrimpenerwaard$SampleDate)
+```
+
+### Read in and harmonize data water board "Stichtse Rijnlanden"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Stichtse Rijnlanden.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Stichtse Rijnlanden.xlsx", sep = "/"), sheet = "deel 2")
+StichtseRijnlanden <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Stichtse Rijnlanden"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Stichtse Rijnlanden")
+)
+
+#check if all observations are included
+length(StichtseRijnlanden[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1])
+#some describing statistics
+length(unique(StichtseRijnlanden$Parametercode))
+length(unique(StichtseRijnlanden$Meetpuntcode))
+summary(StichtseRijnlanden$SampleDate)
+```
+
+### Read in and harmonize data water board "Vallei en Veluwe"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Vallei Veluwe.xlsx", sep = "/"), sheet = 1)
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Vallei Veluwe.xlsx", sep = "/"), sheet = 2)
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Vallei Veluwe.xlsx", sep = "/"), sheet = 3)
+ValleiVeluwe <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Vallei Veluwe"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Vallei Veluwe"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Vallei Veluwe")
+)
+
+#check if all observations are included
+length(ValleiVeluwe[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1])
+#some describing statistics
+length(unique(ValleiVeluwe$Parametercode))
+length(unique(ValleiVeluwe$Meetpuntcode))
+summary(ValleiVeluwe$SampleDate)
+```
+
+### Read in and harmonize data water board "Vechtstromen"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Vechtstromen_aangepast 19 aug 2020.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Vechtstromen_aangepast 19 aug 2020.xlsx", sep = "/"), sheet = "deel 2")
+Vechtstromen <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Vechtstromen"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Vechtstromen")
+)
+
+#check if all observations are included
+length(Vechtstromen[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1])
+#some describing statistics
+length(unique(Vechtstromen$Parametercode))
+length(unique(Vechtstromen$Meetpuntcode))
+summary(Vechtstromen$SampleDate)
+```
+
+### Read in and harmonize data water board "Wetterskip"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Wetterskip.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Wetterskip.xlsx", sep = "/"), sheet = "deel 2")
+TryReaddeel3 <- read.xlsx(paste(prjdata, "data bestand_Wetterskip.xlsx", sep = "/"), sheet = "deel 3")
+TryReaddeel4 <- read.xlsx(paste(prjdata, "data bestand_Wetterskip.xlsx", sep = "/"), sheet = "deel 4")
+Wetterskip <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Wetterskip"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Wetterskip"),
+  CheckMapConc(TryReaddeel3,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Wetterskip"),
+  CheckMapConc(TryReaddeel4,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Wetterskip")
+)
+
+#check if all observations are included
+length(Wetterskip[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1]) + length(TryReaddeel3[,1]) + length(TryReaddeel4[,1])
+#some describing statistics
+length(unique(Wetterskip$Parametercode))
+length(unique(Wetterskip$Meetpuntcode))
+summary(Wetterskip$SampleDate)
+```
+
+### Read in and harmonize data water board "Noorderzijlvest"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_WS Noorderzijlvest.xlsx", sep = "/"), sheet = 1)
+Noorderzijlvest <-
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = "%Y-%m-%d",
+               X = "x-coordinaat", Y = "y-coordinaat",
+               fac2ugL = 1, DataSource = "Noorderzijlvest")
+
+#check if all observations are included
+length(Noorderzijlvest[,1]) == length(TryReaddeel1[,1])
+#some describing statistics
+length(unique(Noorderzijlvest$Parametercode))
+length(unique(Noorderzijlvest$Meetpuntcode))
+summary(Noorderzijlvest$SampleDate)
+```
+
+### Read in and harmonize data water board "Zuiderzeeland"
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "data bestand_Zuiderzeeland.xlsx", sep = "/"), sheet = "deel 1")
+TryReaddeel2 <- read.xlsx(paste(prjdata, "data bestand_Zuiderzeeland.xlsx", sep = "/"), sheet = "deel 2")
+Zuiderzeeland <- rbind(
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Zuiderzeeland"),
+  CheckMapConc(TryReaddeel2,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "CASnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = F,
+               fac2ugL = 1, DataSource = "Zuiderzeeland")
+)
+
+#check if all observations are included
+length(Zuiderzeeland[,1]) == length(TryReaddeel1[,1]) + length(TryReaddeel2[,1])
+#some describing statistics
+length(unique(Zuiderzeeland$Parametercode))
+length(unique(Zuiderzeeland$Meetpuntcode))
+summary(Zuiderzeeland$SampleDate)
+```
+
+### Read in and harmonise data river Maas from Rijkswaterstaat
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "Rijkswaterstaat data bestand_Maas.xlsx", sep = "/"), sheet = 1)
+Maas <-CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "Casnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = "%d-%m-%Y",
+               fac2ugL = 1, DataSource = "Maas")
+names(Maas)[names(Maas)=="Casnummer"] <- "CASnummer"
+
+#check if all observations are included
+length(Maas[,1]) == length(TryReaddeel1[,1])
+#some describing statistics
+length(unique(Maas$Parametercode))
+length(unique(Maas$Meetpuntcode))
+summary(Maas$SampleDate)
+
+#change unit x en y coordinates from cm to m
+Maas$X <- Maas$X / 100
+Maas$Y <- Maas$Y / 100
+```
+
+### Read in and harmonize data river Rijn from Rijkswaterstaat
+
+```{r}
+TryReaddeel1 <- read.xlsx(paste(prjdata, "Rijkswaterstaat data bestand_Rijn.xlsx", sep = "/"), sheet = 1)
+Rijn <-
+  CheckMapConc(TryReaddeel1,   SampleID = NA,
+               Meetpuntcode = "Meetpunt.code",
+               ChemIDnames = c("Parametercode", "Casnummer"),
+               MeasuredValue = "Meetwaarde",
+               Unit = "Eenheid",
+               LimitIndicator = "Limietsymbool",
+               SampleDate = "Datum",
+               DateAsYearMonthDay = "%d-%m-%Y",
+               fac2ugL = 1, DataSource = "Rijn")
+names(Rijn)[names(Rijn)=="Casnummer"] <- "CASnummer"
+
+#check if all observations are included
+length(Rijn[,1]) == length(TryReaddeel1[,1])
+#some describing statistics
+length(unique(Rijn$Parametercode))
+length(unique(Rijn$Meetpuntcode))
+summary(Rijn$SampleDate)
+
+#change unit x en y coordinates from cm to m
+Rijn$X <- Rijn$X / 100
+Rijn$Y <- Rijn$Y / 100
+
+rm(TryReaddeel1,TryReaddeel2,TryReaddeel3,TryReaddeel4, TryReaddeel5)
+```
+
+### Binding all files into one dataframe
+
+bind all dataframes to one single dataframe and remove seperate frames
+
+```{r}
+AllData8 <- rbind(AaenMaas, AmstelGooiVecht, BrabantseDelta, DeDommel, Delfland,
+                  DrentsOverijsselseDelta, HHvanRijnland, HollandseDelta, HollandsNoorderkwartier,
+                  HunzeenAas, Limburg, Noorderzijlvest, Maas, Rijn, RijnenIJssel, Rivierenland, Scheldestromen,
+                  SchielandKrimpenerwaard, StichtseRijnlanden, ValleiVeluwe, Vechtstromen,
+                  Wetterskip, Zuiderzeeland)
+rm(AaenMaas, AmstelGooiVecht, BrabantseDelta, DeDommel, Delfland,
+   DrentsOverijsselseDelta, HHvanRijnland, HollandseDelta, HollandsNoorderkwartier,
+   HunzeenAas, Limburg, Noorderzijlvest, Maas, Rijn, RijnenIJssel, Rivierenland, Scheldestromen,
+   SchielandKrimpenerwaard, StichtseRijnlanden, ValleiVeluwe, Vechtstromen,
+   Wetterskip, Zuiderzeeland)
+```
+
+## Checkpoint 1: InBAllData.RDS
+
+in between save of complete single dataframe with all waterboards in it
+
+```{r}
+saveRDS(AllData8, file = "InBAllData.RDS")
+```
+
+## --------------------------------------------------------------
+
+# Clean coordinates and and unique location codes
+
+## --------------------------------------------------------------
+
+*if data not active run: AllData8 \<- readRDS(file = "InBAllData.RDS")*
+
+### Assign letter to each waterboard and add this to locationcode ("Meetpuntcode")
+
+Some location codes are identical across water boards: add a unique letter per water board to Meetpuntcode (location code) to make every Meetpuntcode unique
+
+```{r}
+WSen <- data.frame(
+  WS = unique(AllData8$DataSource), stringsAsFactors = F
+)
+WSen$Char <- LETTERS[1:nrow(WSen)]
+#add assigned letter of water board to location code ("Meetpuntcode")
+for (WS in 1:nrow(WSen)){
+  AllData8$Meetpuntcode[AllData8$DataSource == WSen$WS[WS]] <-
+      paste(WSen$Char[WS], AllData8$Meetpuntcode[AllData8$DataSource == WSen$WS[WS]], sep = "")
+}
+```
+
+### Clean up location-XY relation there are XY with multiple locationcode and locationcode with multiple XY
+
+```{r}
+#set X and Y as numeric
+AllData8$X <- as.numeric(AllData8$X)
+AllData8$Y <- as.numeric(AllData8$Y)
+
+#Small X,Y deviations for the same location("Meetpuntcode")
+#correct to only one set of X and Y per location -> use most used X and Y
+uniqLocations <- unique(AllData8[,c("Meetpuntcode","X","Y")])
+tabUniqLoc <- table (uniqLocations$Meetpuntcode) #15 locations ("Meetpuntcode") identified with multiple x and y coordinates
+MultiMeetpunt <- data.frame(
+  MultiMeetpuntName = names(tabUniqLoc[tabUniqLoc>1]),
+  mostX = NA,
+  mostY = NA,
+  stringsAsFactors = F
+)
+for (imeetpunt in 1:nrow(MultiMeetpunt)) {#imeetpunt = 2
+  tabInAll <- table(AllData8[AllData8$Meetpuntcode == MultiMeetpunt$MultiMeetpuntName[imeetpunt], c("X","Y")])
+  XYmax <- which.max(tabInAll) -1
+  Xmax <- 1 + XYmax %% 2
+  Ymax <- 1 + XYmax %/% 2
+  MultiMeetpunt$mostX[imeetpunt] <- rownames(tabInAll)[Xmax]
+  MultiMeetpunt$mostY[imeetpunt] <- colnames(tabInAll)[Ymax]
+  AllData8$X[AllData8$Meetpuntcode == MultiMeetpunt$MultiMeetpuntName[imeetpunt]] <- as.numeric(MultiMeetpunt$mostX[imeetpunt])
+  AllData8$Y[AllData8$Meetpuntcode == MultiMeetpunt$MultiMeetpuntName[imeetpunt]] <- as.numeric(MultiMeetpunt$mostY[imeetpunt])
+}
+
+#test on success of clean-up of location data
+wasNum <- nrow(uniqLocations)
+uniqLocations <- unique(AllData8[,c("Meetpuntcode","X","Y")])
+stopifnot(wasNum - nrow(MultiMeetpunt) == nrow(uniqLocations))
+
+#remove NA (n = 847042)and <= 0 (n = 12091) X-coordinate values
+AllData8 <- AllData8[!is.na(AllData8$X) & AllData8$X > 0,]
+#43177164 rows(measurements) left after removing NA and negative X-coordinates
+#No NA or negative Y-coordinates after cleaning based on X-coordinates
+
+```
+
+### X and Y with multiple assigned location codes (n = 354)
+
+Correct to only one location code per X,Y combination -\> choose most used
+
+```{r}
+AggXY <- aggregate(Meetpuntcode ~ X + Y, data = uniqLocations, FUN = length)
+MultiMeetpunt = AggXY[AggXY$Meetpuntcode > 1, c("X","Y")]
+for (imeetpunt in 1:nrow(MultiMeetpunt)) {#imeetpunt = 2
+  PrepTable <- AllData8[AllData8$X == MultiMeetpunt$X[imeetpunt] & AllData8$Y == MultiMeetpunt$Y[imeetpunt],c("X","Y","Meetpuntcode")]
+  Ltable <- table(PrepTable$Meetpuntcode)
+  mostFreq <- names(Ltable)[which.max(Ltable)]
+  AllData8$Meetpuntcode[AllData8$X == MultiMeetpunt$X[imeetpunt] & AllData8$Y == MultiMeetpunt$Y[imeetpunt]] <- mostFreq
+}
+```
+
+### sometimes X and Y are in km instead of m
+
+correcting units from km to m
+
+```{r}
+AllData8$X[AllData8$X < 1000] <- AllData8$X[AllData8$X < 1000] * 1000
+AllData8$Y[AllData8$Y < 1000] <- AllData8$Y[AllData8$Y < 1000] * 1000
+```
+
+## --------------------------------------------------------------
+
+# Cleaning substance descriptions
+
+## --------------------------------------------------------------
+
+in 5 steps:
+
+-   1\. Remove measurements with no substance descriptors (Parametercode and CAS)
+
+-   2\. Add missing CAS numbers based on substance names (Parametercode)
+
+-   3\. Check for invalid CAS numbers based on their checksum
+
+-   4\. Assign a preferred unit to valid CAS numbers, as well as modifying factors
+
+-   5\. Remove all measurements/substances with invalid CAS numbers, except for modifying factors
+
+### Overview of NA parametercodes
+
+```{r}
+table(is.na(AllData8$Parametercode)) #n = 23385 NA
+```
+
+### remove all data with NA Parametercodes
+
+These do also not have a CAS, no way to identify substance
+
+```{r}
+AllData8 <- AllData8[!is.na(AllData8$Parametercode),]
+```
+
+Substances are identified by either CAS number or Aquocode ("Parametercode")
+
+Add missing CASnumbers from AquoParams dataset based on Aquocode ("Parametercode") (n= 2999 paramatercodes with missing CAS number)
+
+```{r}
+load("R/AquoParams.rda")
+matchAquo <- match(AllData8$Parametercode,AquoParams$Code)
+AllData8$CASnummer[is.na(AllData8$CASnummer)] <- AquoParams$CASnummer[matchAquo[is.na(AllData8$CASnummer)]]
+NoParameter <- AllData8[is.na(matchAquo)&is.na(AllData8$CASnummer),] # none
+#Check amount of unique parameters and amount of unique CAS numbers
+length(unique(AllData8$Parametercode)) #n = 1830
+length(unique(AllData8$CASnummer)) #n = 1681 -> not all measured substances/chemicals/units have a CAS code, such as Temperature or pH
+```
+
+#### *Intermezzo: Name and CAS of conductivity needs to be changed here, otherwise these measurements are removed in these steps ----*
+
+##### remove where Rgeleidbaarheid and Unit == ug/l (n = 239)
+
+```{r}
+AllData8 <- AllData8[!(AllData8$Parametercode == "GELDHD" & AllData8$Unit == "ug/l"),] # n = 239
+Rgeleidbaarheid <- AllData8$Parametercode == "GELDHD"
+#Inidcate unit for conductivity ("Rgeleidbaarheid") is mS/m for water board "Drents Overijsselse Delta"
+AllData8$Unit[Rgeleidbaarheid & AllData8$DataSource == "Drents Overijsselse Delta"] <- "mS/m"
+AllData8$Parametercode[Rgeleidbaarheid] <- "Cl"
+AllData8$CASnummer[Rgeleidbaarheid] <-  "16887-00-6"
+```
+
+#### *Continue substance description cleaning*
+
+#### define table with all unique measured variables and corresponding CAS numbers
+
+```{r}
+
+VarUnit <- unique(AllData8[,c("Parametercode","CASnummer")])
+#Check for invalid CAS numbers using ValidCAS function
+#Checks the validity of a CAS code based on the checksum of CAS numbers
+VarUnit$ValidCAS <- ValidCAS(VarUnit$CASnummer) # n = 147 invalid CAS numbers
+table(VarUnit$ValidCAS)
+
+#Create table with names and units of modifiers from "ModifierDefaults" dataset
+#For later use: to differentiate modifying factors(for bioavailability) from contaminating substances
+load("R/ModifierDefaults.rda")
+MODnameUnit <- sapply(names(ModifierDefaults[-1]), strsplit, split="\\(")
+MODname <- sapply(MODnameUnit, function(x) x[1])
+MODnameUnit <- tolower(sapply(MODnameUnit, function(x) substr(x[2],start = 1,stop = nchar(x[2])-1)))
+names(MODnameUnit) <- MODname
+
+#Correct parametercode T to the more correct Tw (Temperature of water instead of just temperature)
+AllData8$Parametercode[AllData8$Parametercode == "T"] <- "Tw"
+
+#Add logical variable to dataframe indicating wether CAS is valid (TRUE) or not (FALSE)
+UniqCASinData <- unique(AllData8$CASnummer)
+
+ValidCAS <- ValidCAS(UniqCASinData) #using ValidCAS function to check if CAS numbers are valid
+UniqCASinData[!ValidCAS] #invalid CAS: "NVT" (Dutch acronym for not applicable), and "som van stoffen" (Dutch for sum of substances)
+UniqCASinData <- UniqCASinData[ValidCAS]
+
+AllData8$ValidCAS <- AllData8$CASnummer %in% UniqCASinData
+
+#Indicate that measurements with validCAS = TRUE have preferred unit of "ug/l"
+AllData8$ToUnit <- ""
+AllData8$ToUnit[AllData8$ValidCAS] <- "ug/l"
+
+#Retrieve preferred unit for modifying factors from MODname
+for (Modfy in MODname) {
+  AllData8$ToUnit[AllData8$Parametercode == Modfy] <- MODnameUnit[Modfy]
+}
+```
+
+#### Checkpoint 2: AllData.RDS
+
+```{r}
+#save checkpoint data
+saveRDS(AllData8, file = "AllData.RDS")
+
+#write VarUnit for sup info report 
+readr::write_delim(VarUnit, "unique_valid_CAS_codes.csv", delim = ";")
+```
+
+#### Create df OthParam: measurements with an invalid CASnr and are also not modifying factors
+
+filter based on available ToUnit, as parameters with valid CAS or modifying factors have a unit indicated in ToUnit
+
+```{r}
+OthParam <- AllData8[AllData8$ToUnit == "",] # n = 8896696
+
+OthParam$Valid <- !is.na(OthParam$MeasuredValue) & OthParam$LimitIndicator == "-"
+othervalid <- aggregate(MeasuredValue~Parametercode + DataSource, data = OthParam[OthParam$Valid==T,], FUN = length) #Df with amount of measurements per parameter en datasource
+write.csv(othervalid, file = "othervalid.csv")
+length(unique(OthParam$Parametercode)) #143
+```
+
+We don't want to throw away all measurement in OthParam (unique n=144): some are relevant ecological paramaters such as turbidity and sums of substances \#### Load in xlsx file indicating wether to keep a parametercode or not These were checked manually based on their Aquocode. Measurements in OthParam that were unclear were marked to be thrown away
+
+```{r}
+TooGoodToGo <- read.xlsx("R/data/TooGoodToGo.xlsx")
+
+
+#### Adding some missing CAS numbers of substances
+unique(AllData8$CASnummer[AllData8$Parametercode == "DccC6ySn"])
+ValidCAS("7529-52-4")
+AllData8$CASnummer[AllData8$Parametercode == "DccC6ySn"] <- "7529-52-4"
+
+unique(AllData8$CASnummer[AllData8$Parametercode == "DFySn"])
+ValidCAS("1011-95-6")
+AllData8$CASnummer[AllData8$Parametercode == "DFySn"] <- "7529-52-4"
+
+unique(AllData8$CASnummer[AllData8$Parametercode == "FEOa"])
+ValidCAS("603-17-8")
+AllData8$CASnummer[AllData8$Parametercode == "FEOa"] <- "603-17-8"
+
+unique(AllData8$CASnummer[AllData8$Parametercode == "TccC6ySn"])
+ValidCAS("13121-70-5")
+AllData8$CASnummer[AllData8$Parametercode == "TccC6ySn"] <- "13121-70-5"
+
+#Check if there are any Parametercodes in OthParam that are not in TooGoodToGo
+OthParamUniq <- unique(OthParam$Parametercode)
+OthParamUniq[!OthParamUniq %in% TooGoodToGo$Parametercode] #check if all parametercodes in OthParam are listed in TooGoodToGo -> they are
+rm(OthParamUniq)
+TooGoodToGo <- mutate(TooGoodToGo, Keep = as.logical(Keep)) #Making sure the colomn indicating whether to keep a measurement is a logical
+table(TooGoodToGo$Keep) #4 true
+GoodToGo <- filter(TooGoodToGo, Keep == FALSE) #Df with all Parametercodes that can be discarded
+
+#Filter AllData8 based on df GoodToGo
+AllData8$Keep <- !AllData8$Parametercode %in% GoodToGo$Parametercode
+table(AllData8$Keep) #n=8481632 measurements discarded
+#Check if AllData$Keep completely corresponds with GoodToGo
+GoodToGoCheck <- filter(AllData8, Keep == FALSE)
+GoodToGoCheck <- unique(GoodToGoCheck$Parametercode)
+GoodToGoCheck[GoodToGoCheck %in% GoodToGo$Parametercode]
+```
+
+#### Create df ToPAF from AllData8, only measurements that we want to keep.
+
+Data we want to keep are measurements with valid cas codes, measurements of modifiers. Other parameters, such as turbidity, organic N, water depth, sums of substances, and unclear parameters, are discarded as indicated in TooGoodToGo df
+
+```{r}
+ToPAF <- filter(AllData8, Keep ==TRUE)
+save(ToPAF, file = "ToPAF.rda")
+```
+
+Remove df "AllData8" , rest of script works with new df "ToPAF"
+
+```{r}
+rm(AllData8)
+```
+
+## --------------------------------------------------------------
+
+# Unit and value conversion and addition
+
+## --------------------------------------------------------------
+
+#### Add molecular weight to dataframe
+
+molecular weight is later used in unit conversion section
+
+```{r}
+#Add column with molecular weight values to df "ToPAF" based on name match with Gross dataset
+load("R/Gross.rda")
+MatchDef <- match(ToPAF$CASnummer, Gross$CAS)
+MatchDef[is.na(MatchDef)] <- match(ToPAF$Parametercode[is.na(MatchDef)], Gross$AquoCode)
+ToPAF$MolM <- Gross$MW.g.Mol[MatchDef]
+
+#Add molecular weight values for modifying factors based on name match with "Gross" dataset
+matchAquoGross <- match(MODname,Gross$AquoCode)
+for (matchMod in MODname[!is.na(matchAquoGross)]){ #matchMod = "Ca"
+  ToPAF$MolM[ToPAF$Parametercode==matchMod] <- Gross$MW.g.Mol[match(matchMod, Gross$AquoCode)]
+}
+```
+
+#### Curation of "PreTreatment" variable
+
+Describes properties (such as measurered after filtering) of observations
+
+```{r}
+PropertyCodes <- unique(ToPAF$PreTreatment)
+list_PropertyCodes <- list()
+for (Property in PropertyCodes){
+  #Property <- "nf"
+  slice <- filter(ToPAF, PreTreatment == Property)
+  slicetable <- data.frame(table(slice$Parametercode))
+
+  list_PropertyCodes[[length(list_PropertyCodes) + 1]] <- slicetable
+}
+names(list_PropertyCodes) <- PropertyCodes
+```
+
+#### Unit and Value conversions
+
+```{r}
+#unit for pH not always described as "pH". We assumed used unit is pH anyway as no other units are possible/commonly used
+#Set unit of pH to same unit as used in "ModifierDefaults" dataset (which is "units")
+
+ToPAF$Unit[ToPAF$Parametercode=="pH"] <- MODnameUnit["pH"]
+
+#Measurements selected in TooGoodToGo do not have preferred unit indicated yet in ToUnit column
+#Set ToUnit in this section, for later unit conversion
+
+ToPAF$ToUnit[ToPAF$Parametercode == "FEOa"] <- "ug/l"
+ToPAF$ToUnit[ToPAF$Parametercode == "DFySn"] <- "ug/l"
+ToPAF$ToUnit[ToPAF$Parametercode == "TccC6ySn"] <- "ug/l"
+
+table(ToPAF$ToUnit)
+
+#Convert measurement of data to their preferred unit (as listed in column "ToUnit"), where needed
+#For measurements with measurement in mg/L but preferred unit in microg/L:
+mg2ug <- ToPAF$Unit == "mg/l" & ToPAF$ToUnit == "ug/l"
+ToPAF$MeasuredValue[mg2ug] <- ToPAF$MeasuredValue[mg2ug] * 1000
+ToPAF$Unit[mg2ug] <- "ug/l"
+rm(mg2ug)
+
+#For measurements with measurement in microg/L but preferred unit in mg/L:
+#This is the case for (some measurements of) modifying factors DOC and TSS
+ug2mg <- ToPAF$Unit == "ug/l" & ToPAF$ToUnit == "mg/l"
+ToPAF$MeasuredValue[ug2mg] <- ToPAF$MeasuredValue[ug2mg] / 1000
+ToPAF$Unit[ug2mg] <- "mg/l"
+rm(ug2mg)
+
+#For measurements with measurement in ng/L but preferred unit in microg/L:
+ng2ug <- ToPAF$Unit == "ng/l" & ToPAF$ToUnit == "ug/l"
+ToPAF$MeasuredValue[ng2ug] <- ToPAF$MeasuredValue[ng2ug] / 1000
+ToPAF$Unit[ng2ug] <- "ug/l"
+rm(ng2ug)
+
+#For measurements with measurement in pg/L but preferred unit in microg/L:
+pg2ug <- ToPAF$Unit == "pg/l" & ToPAF$ToUnit == "ug/l"
+ToPAF$MeasuredValue[pg2ug] <- ToPAF$MeasuredValue[pg2ug] / 1000000
+ToPAF$Unit[pg2ug] <- "ug/l"
+rm(pg2ug)
+
+#For measurements with measurement in mmol/L but preferred unit in microg/L:
+mmolL2ugL <- ToPAF$Unit == "mmol/l" & ToPAF$ToUnit == "ug/l"
+ToPAF$MeasuredValue[mmolL2ugL] <- ToPAF$MeasuredValue[mmolL2ugL] * ToPAF$MolM[mmolL2ugL] * 1000
+ToPAF$Unit[mmolL2ugL] <- "ug/l"
+rm(mmolL2ugL)
+
+#Cl includes both concentrations and conductivity measurements
+#Converting conductivity to Cl concentration gives strange results (see section below)
+#Give conductivity it's own parametercode and harmonize use of unit to "mS/cm"
+table(ToPAF$Unit[ToPAF$Parametercode == "Cl"])
+ToPAF$Parametercode[ToPAF$Parametercode == "Cl" & ToPAF$Unit != "ug/l"] <- "Conductivity"
+table(ToPAF$Unit[ToPAF$Parametercode == "Conductivity"])
+
+ToPAF$ToUnit[ToPAF$Parametercode == "Conductivity"] <-  "mS/cm"
+ToPAF$ValidCAS[ToPAF$Parametercode == "Conductivity"] <- F
+ToPAF$CASnummer[ToPAF$Parametercode == "Conductivity"] <- "NVT"
+
+mSm2mScm <- ToPAF$Unit == "mS/m" & ToPAF$ToUnit == "mS/cm"
+ToPAF$MeasuredValue[mSm2mScm] <- ToPAF$MeasuredValue[mSm2mScm] / 100
+ToPAF$Unit[mSm2mScm] <- "mS/cm"
+rm(mSm2mScm)
+
+uScm2mScm <- ToPAF$Unit == "uS/cm" & ToPAF$ToUnit == "mS/cm"
+ToPAF$MeasuredValue[uScm2mScm] <- ToPAF$MeasuredValue[uScm2mScm] / 1000
+ToPAF$Unit[uScm2mScm] <- "mS/cm"
+rm(uScm2mScm)
+
+
+#Some NOxHy is given as N or Nnf;  these need converting to actual ug by:
+#Molweight N = 14, H = 1, O = 16
+
+ToPAF$MeasuredValue[ToPAF$Parametercode=="NH4" & ToPAF$PreTreatment %in% c("N","Nnf")] <-
+    ToPAF$MeasuredValue[ToPAF$Parametercode=="NH4" & ToPAF$PreTreatment %in% c("N","Nnf")] * 18 / 14
+ToPAF$MeasuredValue[ToPAF$Parametercode=="NH3" & ToPAF$PreTreatment %in% c("N","Nnf")] <-
+  ToPAF$MeasuredValue[ToPAF$Parametercode=="NH3" & ToPAF$PreTreatment %in% c("N","Nnf")] * 17 / 14
+ToPAF$MeasuredValue[ToPAF$Parametercode=="NO3" & ToPAF$PreTreatment %in% c("N","Nnf")] <-
+  ToPAF$MeasuredValue[ToPAF$Parametercode=="NO3" & ToPAF$PreTreatment %in% c("N","Nnf")] * (14+3*16) / 14
+ToPAF$MeasuredValue[ToPAF$Parametercode=="NO2" & ToPAF$PreTreatment %in% c("N","Nnf")] <-
+  ToPAF$MeasuredValue[ToPAF$Parametercode=="NO2" & ToPAF$PreTreatment %in% c("N","Nnf")] * (14+2*16) / 14
+
+#Check if all units are now identical to their intended unit
+Unitmm <- unique(ToPAF[ToPAF$Unit!=ToPAF$ToUnit,c("Parametercode" ,"Unit", "ToUnit", "MolM")])
+
+save(ToPAF, file = "ToPAF.rda")
+```
+
+#### Some mismatches remain, resolved below:
+
+```{r}
+#Some units for temperature (Tw) are in ug/l instead of oC
+#create seperate object of Tw measurements to take a closer look at errors
+ToPAFTw <- filter(ToPAF, Parametercode == "Tw")
+table(ToPAFTw$Unit) #224 measurements with wrong unit of ug/l
+#create seperate object of Tw with wrong unit to take a closer look
+ToPAFtwmicrogram <- filter(ToPAFTw, Unit == "ug/l")
+summary(ToPAFtwmicrogram$MeasuredValue) #values seem reasonable for oC -> assume unit is supposed to be oC
+#Correct Tw measurements with unit in ug/l to unit oC
+ToPAF$Unit[ToPAF$Parametercode == "Tw" & ToPAF$Unit == "ug/l"] <- "oC"
+rm(ToPAFTw, ToPAFtwmicrogram)
+
+#Tounit for Tw is oc, while Unit is oC
+#Use of oC is actually consistent in Unit -> change ToUnit.
+ToPAF$ToUnit[ToPAF$Parametercode == "Tw"] <- "oC"
+
+# remove values of pH > 14
+ToPAF <- ToPAF[-which(ToPAF$Parametercode == "pH" & ToPAF$MeasuredValue > 14), ]
+
+
+
+#for n = 36 unit of PCDD48 measurements in ug/L (liter spelled with upper case instead of lower case)
+#correct unit to ug/l
+ToPAF$Unit[ToPAF$Parametercode == "PCDD48" & ToPAF$Unit == "ug/L"] <- "ug/l"
+
+# n = 48 out of 557 cyffAd measurements in ul/l instead of ug/l
+table(ToPAF$Unit[ToPAF$Parametercode == "cyffAd"])
+cyffAd <- filter(ToPAF, Parametercode == "cyffAd")
+# Taking a closer look at the measured values of both groups
+# ggplot(cyffAd, aes(x = Unit, y = MeasuredValue)) + geom_boxplot()
+summary(cyffAd$MeasuredValue[cyffAd$Unit == "ug/l"])  # Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 0.00200 0.00200 0.01000 0.01198 0.01000 0.05000
+summary(cyffAd$MeasuredValue[cyffAd$Unit == "ul/l"])  # Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 0.00500 0.01000 0.01000 0.01042 0.01000 0.03000
+rm(cyffAd)
+#Assume manual input error in Unit -> correct name unit from ul/l to ug/l
+ToPAF$Unit[ToPAF$Parametercode == "cyffAd" & ToPAF$Unit == "ul/l"] <- "ug/l"
+
+#219 (out of 894972) chlorofyl A measurements in % instead of ug/l
+table(ToPAF$Unit[ToPAF$Parametercode == "CHLFa"])
+#219 measurements in % are removed from dataset
+#create object defining which measurements need to be removed
+CHLFa <- filter(ToPAF, Parametercode == "CHLFa")
+CHLFaprct <- filter(CHLFa, Unit == "%")
+#filter out measurements of CHLFa with unit %
+ToPAF <- anti_join(ToPAF, CHLFa)
+rm(CHLFa, CHLFaprct)
+
+#6400 out of 394706 FEOa measurements with unit % instead of ug/l
+table(ToPAF$Unit[ToPAF$Parametercode == "FEOa"])
+#6400 measurements in % are removed from dataset
+#create object defining which measurements need to be removed
+FEOa <- filter(ToPAF, Parametercode == "FEOa")
+FEOaprct <- filter(FEOa, Unit == "%")
+#filter out measurements of minrlole with unit %
+ToPAF <- anti_join(ToPAF, FEOaprct)
+rm(FEOa, FEOaprct)
+
+#Approximately half of all O2 measurements are in %, other half in ug/l. : kept as is, unresolved
+table(ToPAF$Unit[ToPAF$Parametercode == "O2"])
+O2temp <- filter(ToPAF, Parametercode == "O2" | Parametercode == "Tw" )
+
+#4 out of 11619 minrole measurements with unit % instead of ug/l
+table(ToPAF$Unit[ToPAF$Parametercode == "minrlole"])
+#4 measurements in % are removed from dataset
+#create object defining which measurements need to be removed
+minrlole <- filter(ToPAF, Parametercode == "minrlole")
+minrloleprct <- filter(minrlole, Unit == "%")
+#filter out measurements of minrlole with unit %
+ToPAF <- anti_join(ToPAF, minrloleprct)
+rm(minrlole, minrloleprct)
+
+save(ToPAF, file = "ToPAF.rda")
+```
+
+#### Check again for any remaining unit mismatches
+
+```{r}
+Unitmm <- unique(ToPAF[ToPAF$Unit!=ToPAF$ToUnit,c("Parametercode" ,"Unit", "ToUnit", "MolM")])
+#Approximately half of all O2 measurements are in %, other half in ug/l.
+#Not an error, kept as is.
+table(ToPAF$Unit[ToPAF$Parametercode == "O2"])
+
+
+rm(Unitmm)
+#Columns MolM, ToUnit, Keep and ValidCAS are no longer needed and thus removed
+ToPAF$MolM <- NULL
+ToPAF$ToUnit <- NULL
+ToPAF$Keep <- NULL
+ToPAF$ValidCAS <- NULL
+
+# Remove measurements with NA "MeasuredValue" -----------------------------
+ToPAF <- ToPAF[!is.na(ToPAF$MeasuredValue),]
+
+# Change of names -----------------------------------------------------
+#Change names of columns in "toPAF" df to the following:
+names(ToPAF) <- c("SampleID", "AquoCode", "CAS", "MeasuredValue", "Unit", "Locationcode",
+                  "AdditionalProperties", "LimitIndicator", "X", "Y", "DataSource", "SampleDate")
+
+#translate CAS NVT to english
+ToPAF$CAS[ToPAF$CAS == "NVT"] <- "Not Applicable"
+
+```
+
+#### Correction of some Measured Values based on expert judgement -----------------
+
+hard change due of some Ca and Mg values due to very probable wrong unit, comm. Jaap P & Leo
+
+```{r}
+#Making a seperate save of the pre-adjusted Ca and Mg values
+Ca_Mg <- filter(ToPAF, AquoCode %in% c("Ca", "Mg"))
+write.csv(Ca_Mg, file = "Preadjusted_Data_Ca_Mg.csv", row.names = FALSE)
+CaMgtest <- read.csv(file = "Preadjusted_Data_Ca_Mg.csv")
+
+#n = 3164 Ca measurements changed from water board "Rijn en IJssel"
+ToPAF$MeasuredValue[ToPAF$AquoCode=="Ca" & ToPAF$DataSource=="Rijn en IJssel" & ToPAF$MeasuredValue < 900] <-
+  ToPAF$MeasuredValue[ToPAF$AquoCode=="Ca" & ToPAF$DataSource=="Rijn en IJssel" & ToPAF$MeasuredValue < 900] * 1000
+#n = 3184 Mg measurements changed from water board "Rijn en IJssel"
+ToPAF$MeasuredValue[ToPAF$AquoCode=="Mg" & ToPAF$DataSource=="Rijn en IJssel" & ToPAF$MeasuredValue < 95] <-
+  ToPAF$MeasuredValue[ToPAF$AquoCode=="Mg" & ToPAF$DataSource=="Rijn en IJssel" & ToPAF$MeasuredValue < 95] * 1000
+#n = 1054 Mg measurements changed from water board "Scheldestromen"
+ToPAF$MeasuredValue[ToPAF$AquoCode=="Mg" & ToPAF$DataSource=="Scheldestromen" &
+                      ToPAF$MeasuredValue < 1500 & ToPAF$SampleDate > "2005-01-01"] <-
+  ToPAF$MeasuredValue[ToPAF$AquoCode=="Mg" & ToPAF$DataSource=="Scheldestromen" &
+                        ToPAF$MeasuredValue < 1500 & ToPAF$SampleDate > "2005-01-01"] * 1000
+
+
+# Harmonize input values "LimitIndicator" ---------------------------------
+ToPAF$LimitIndicator[is.na(ToPAF$LimitIndicator)] <- "-"
+ToPAF$LimitIndicator[ToPAF$LimitIndicator == " "] <- "-"
+
+# Create unique SampleIDs based on unique date ("SampleDate") and location ("Meetpuntcode") combinations --------
+#Facilitates analyzing mixtures at unique location-time combinations
+#setup SampleIDs: unique date-locations
+ToSample <- ToPAF[, c("Locationcode", "SampleDate")]
+Astmp <- paste0(ToSample$Locationcode, ":", format(ToSample$SampleDate, "%Y-%m-%d"))
+ToSample$SampleID <- unlist(Astmp) #now it's not a list
+#Add SampleID to ToPAF dataframe
+ToPAF$SampleID[is.na(ToPAF$SampleID)] <- ToSample$SampleID
+```
+
+### Checkpoint 3: ToPAF.rds
+
+```{r}
+saveRDS(ToPAF, file = "ToPAF.rds")
+```

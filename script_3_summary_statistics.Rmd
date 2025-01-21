@@ -1,0 +1,282 @@
+---
+title: "Environmental Data Analysis"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+## Load Required Packages
+
+```{r}
+#list all packages
+list.of.packages <- c("gridExtra", "readr", "tidyverse", "dplyr", "sf", "ggplot2", "scales", "lubridate")
+for(i in list.of.packages) if(!require(i, character.only = TRUE)) install.packages(i)
+
+# Load all packages
+lapply(list.of.packages, require, character.only = TRUE)
+
+# output location
+out_dir <- "summary_stats"
+if(!dir.exists(out_dir)) dir.create(out_dir)
+
+```
+
+## Load and Prepare Data
+
+```{r load-data}
+AllData <- readRDS("AllDataNL.rds")
+AllData$MeasuredValue<- as.numeric(AllData$MeasuredValue)
+
+# Define a global color palette for consistency
+all_sources <- unique(AllData$DataSource)
+global_colors <- setNames(scales::hue_pal()(length(all_sources)), all_sources)
+global_colors["All"] <- "black"
+
+head(AllData)
+```
+
+## ECDF Plot Function
+
+```{r ecdf-function}
+Substance_df_fn <- function(substance, plottype) {
+  subdata <- AllData %>% filter(Parametercode == substance)
+  x_lab <- unique(subdata$Unit)
+
+  # Filter based on plottype
+  if(plottype == "95_ci" | plottype == "95_ci_log") {
+    subdata <- subdata %>% filter(MeasuredValue < (mean(MeasuredValue) + 2 * sd(MeasuredValue)))
+  } else if (plottype == "kmean") {
+    subdata <- kmean_data(subdata)
+  } else if (plottype == "iqr") {
+    subdata <- subdata %>% filter(!MeasuredValue %in% boxplot.stats(MeasuredValue)$out)
+  }
+
+  # Calculate range of MeasuredValue in scientific notation
+  min_value <- min(subdata$MeasuredValue, na.rm = TRUE)
+  max_value <- max(subdata$MeasuredValue, na.rm = TRUE)
+  range_text <- paste("Range:", formatC(min_value, format = "e", digits = 2), "-", formatC(max_value, format = "e", digits = 2))
+
+  # Prepare ECDF data
+  loc_all_df <- subdata %>% group_by(DataSource) %>% summarize(MeasuredValue = list(MeasuredValue)) %>% unnest(cols = MeasuredValue) %>% mutate(SampleID = DataSource)
+  ecdf_df <- bind_rows(loc_all_df, subdata %>% mutate(SampleID = "All")) %>% arrange(desc(SampleID == "All"))
+
+  # Plot with global color palette
+  ggplot(ecdf_df, aes(x = MeasuredValue, color = SampleID)) +
+    stat_ecdf(aes(size = ifelse(SampleID == "All", 1.2, 0.5), alpha = ifelse(SampleID == "All", 1, 0.5))) +
+    ggtitle(substance) +
+    xlab(ifelse(plottype == "95_ci_log", paste(x_lab, "(log-scale)"), x_lab)) +
+    ylab("fraction") +
+    scale_x_continuous(
+      trans = ifelse(plottype == "95_ci_log", "log10", "identity"),
+      labels = scales::label_scientific()
+    ) +
+    scale_size_identity() +
+    scale_alpha_identity() +
+    scale_color_manual(values = global_colors) +
+    theme_minimal(base_family = "Calibri", base_size = 14) +
+    theme(
+      plot.title = element_text(size = 16, face = "bold"),
+      axis.title = element_text(size = 14),
+      axis.text = element_text(size = 12),
+      legend.title = element_text(size = 14),
+      legend.text = element_text(size = 12),
+      legend.position = "right",
+      legend.direction = "vertical"
+    ) +
+    guides(color = guide_legend(ncol = 1)) +
+    annotate("text", x = max_value, y = 0.1, label = range_text, hjust = 1, size = 4, color = "black")
+}
+```
+
+## Generate Overview Table
+
+```{r overview-table}
+create_overview_table <- function(substance_list) {
+  overview <- lapply(substance_list, function(substance) {
+    subdata <- AllData %>% filter(Parametercode  == substance)
+
+    # Calculate Q1, Q3, and IQR
+    q1 <- quantile(subdata$MeasuredValue, 0.25, na.rm = TRUE)
+    q3 <- quantile(subdata$MeasuredValue, 0.75, na.rm = TRUE)
+    iqr <- q3 - q1
+
+    # Define whiskers
+    lower_whisker <- q1 - 1.5 * iqr
+    upper_whisker <- q3 + 1.5 * iqr
+
+    # Count records beyond whiskers
+    below_whisker <- sum(subdata$MeasuredValue < lower_whisker, na.rm = TRUE)
+    above_whisker <- sum(subdata$MeasuredValue > upper_whisker, na.rm = TRUE)
+
+    # Total records and percentage within whisker range
+    total_records <- nrow(subdata)
+    within_whiskers <- total_records - below_whisker - above_whisker
+    percent_within_whiskers <- (within_whiskers / total_records) * 100
+
+    # Return a data frame row for this substance
+    data.frame(
+      Substance = substance,
+      Lower_Whisker = formatC(lower_whisker, format = "e", digits = 2),
+      Upper_Whisker = formatC(upper_whisker, format = "e", digits = 2),
+      Below_Whisker = below_whisker,
+      Above_Whisker = above_whisker,
+      Total_Records = total_records,
+      Percent_Within_Whiskers = round(percent_within_whiskers, 2)
+    )
+  })
+
+  # Combine into a single data frame
+  overview_table <- do.call(rbind, overview)
+  return(overview_table)
+}
+
+# Helper to extract the legend
+get_legend <- function(plot) {
+  ggplot_gtable(ggplot_build(plot))$grobs[[which(sapply(ggplot_gtable(ggplot_build(plot))$grobs, function(x) x$name) == "guide-box")]]
+}
+
+#helper to generate output image
+plot_printer <- function(out_dir, file ,image_id){
+  png(file.path(out_dir, as.character(image_id)))
+  print(file)
+  if (!is.null(dev.list())) dev.off()
+}
+
+
+```
+
+## Substance plotter function
+
+```{r}
+# substanceplotter function
+substanceplotter <- function(plots, group_color, substances, file_prefix) {
+  # Set Calibri font
+  theme_set(theme_minimal(base_family = "Calibri"))
+
+  # Apply background color to each plot
+  plots <- lapply(plots, function(p) {
+    p + theme(
+      panel.background = element_rect(fill = group_color, color = NA),
+      plot.background = element_rect(fill = group_color, color = NA)
+    )
+  })
+
+  # Divide plots into groups of 4
+  plot_groups <- split(plots, ceiling(seq_along(plots) / 4))
+  substance_groups <- split(substances, ceiling(seq_along(substances) / 4))
+
+  # Iterate through groups of plots
+  for (i in seq_along(plot_groups)) {
+    plot_group <- plot_groups[[i]]
+    substances_in_group <- substance_groups[[i]]
+
+    # Extract legend from the first plot
+    legend <- get_legend(plot_group[[1]])
+
+    # Remove legends from individual plots in the group
+    plot_group <- lapply(plot_group, function(p) p + theme(legend.position = "none"))
+
+    # Arrange plots with a shared legend
+    arranged_plot <- grid.arrange(
+      do.call(arrangeGrob, c(plot_group, ncol = 2, nrow = 2)),
+      legend,
+      ncol = 2,
+      widths = c(4, 1)
+    )
+
+    # Save the arranged plot
+    filename <- paste0(file_prefix, "_", paste(substances_in_group, collapse = "_"), ".png")
+    ggsave(file.path(out_dir, filename), arranged_plot, width = 12, height = 10)
+  }
+}
+```
+
+## General Plotting
+
+```{r general-plots}
+substance_list <- c("pH", "DOC", "Cl", "Ca", "Mg", "SO4", "Ptot", "Ntot")
+plots_iqr <- lapply(substance_list, Substance_df_fn, plottype = "iqr")
+substanceplotter(plots_iqr, group_color = "white", substances = substance_list, file_prefix = "general_plots")
+
+
+# Generate plots and overview table
+overview_table <- create_overview_table(substance_list)
+write_csv(overview_table, "summary_stats/substance_iqr_table.csv")
+
+```
+
+## Additional Analysis
+
+### Metals
+
+```{r metals}
+metal_substance_list <- c("Cu", "Zn", "Cd", "Pb")
+metal_plots_iqr <- lapply(metal_substance_list, Substance_df_fn, plottype = "iqr")
+substanceplotter(metal_plots_iqr, group_color = "white", substances = metal_substance_list, file_prefix = "metal_plots")
+
+# Generate overview table
+overview_table <- create_overview_table(metal_substance_list)
+write_csv(overview_table, "summary_stats/metal_iqr_table.csv")
+```
+
+### Pesticides/Herbicides
+
+```{r pesticides}
+pesticide_list <- c("glyfst", "thiacpd", "Oaml", "prosfcb")
+pest_plots_iqr <- lapply(pesticide_list, Substance_df_fn, plottype = "iqr")
+substanceplotter(pest_plots_iqr, group_color = "white", substances = pesticide_list, file_prefix = "pesticide_plots")
+
+# Generate overview table
+overview_table <- create_overview_table(pesticide_list)
+write_csv(overview_table, "summary_stats/pesticide_iqr_table.csv")
+```
+
+## Summary Data
+
+```{r summary-data}
+# Counts per year
+year_counts <- AllData %>% group_by(year) %>% summarize(counts = n()) %>% arrange(year)
+write_csv(year_counts, file.path(out_dir, "n_measurements_year.csv"))
+
+plot_printer(out_dir = out_dir, file = barplot(year_counts$counts, names.arg = year_counts$year, ylab = "measurements"), image_id = "n_measurements_year.png")
+
+# Counts per waterboard per year
+counts_per_waterboard_year <- AllData %>% group_by(year, DataSource) %>% summarize(counts = n()) %>% ungroup()
+write_csv(counts_per_waterboard_year, file.path(out_dir, "counts_per_waterboard_year.csv"))
+
+# Unique Parametercode per year
+year_substance_counts <- AllData %>% group_by(year) %>% summarize(substance_counts = n_distinct(Parametercode)) %>% arrange(year)
+write_csv(year_substance_counts, file.path(out_dir, "n_substances_year.csv"))
+
+plot_printer(out_dir = out_dir, file = barplot(year_substance_counts$substance_counts, names.arg = year_substance_counts$year, ylab = "chemicals"), image_id = "n_substances_year.png")
+
+
+# Unique sample sites per year
+year_samplesites_counts <- AllData %>% group_by(year) %>% summarize(samplesites_counts = n_distinct(LocationCode )) %>% arrange(year)
+write_csv(year_samplesites_counts, file.path(out_dir, "n_samplesites_year.csv"))
+
+plot_printer(out_dir = out_dir, file = barplot(year_samplesites_counts$samplesites_counts, names.arg = year_samplesites_counts$year, ylab = "sample sites"), image_id = "n_samplesites_year.png")
+
+
+# Sample days per location
+sample_days_per_loc <- AllData %>% group_by(LocationCode ) %>% summarize(days = n_distinct(SampleDate)) %>% left_join(unique(AllData %>% select(LocationCode , DataSource)), by = "LocationCode")
+write_csv(sample_days_per_loc, file.path(out_dir, "n_sample_days_per_loc.csv"))
+
+```
+
+## Heatmap for Counts per Waterboard per Year
+
+```{r Heatmap}
+counts_per_waterboard_year_wide <- counts_per_waterboard_year %>% pivot_wider(names_from = year, values_from = counts, values_fill = 0) %>% as.data.frame()
+
+counts_per_waterboard_year_heathmap <- counts_per_waterboard_year_wide %>% gather(key = "Year", value = "Counts", -DataSource) %>% mutate(DataSource = fct_relevel(DataSource, all_sources)) %>% ggplot(aes(Year, DataSource, fill = Counts)) + geom_tile() + scale_fill_gradient(low = "white", high = "black") + theme_minimal() + theme(legend.position = "none")
+
+plot_printer(out_dir = out_dir, file = counts_per_waterboard_year_heathmap, image_id = "counts_per_waterboard_year_heathmap.png")
+
+
+
+```

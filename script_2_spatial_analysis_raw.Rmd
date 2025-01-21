@@ -1,0 +1,111 @@
+---
+title: "script_2_spatial_analysis_raw"
+author: "Thomas Hofman"
+date: "2025-01-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+## spatial analysis
+
+This script
+
+## Download and install required packages
+
+```{r}
+list.of.packages <- c("remotes","RPostgreSQL", "RPostgres","readr", "tidyverse", "DBI", "sf", "mapview", "httr", "ows4R", "data.table") #add all required packages
+for(i in 1:length(list.of.packages)){if(!(list.of.packages[i] %in% rownames(installed.packages()))){install.packages(list.of.packages[i])}} #only download uninstalled packages
+lapply(list.of.packages, require, character.only = T) #load all packages
+```
+
+#### Read the final datafile from script_1\_read_and_clean
+
+extract the coordinates in this file and give a quick overview
+
+```{r}
+AllData <- readRDS("AllData.RDS")
+
+#add year param
+AllData$year <- lubridate::year(AllData$SampleDate)
+
+#get unique coords to look up water type
+coords <- unique(AllData[,c("SampleID","Meetpuntcode","X", "Y")])
+coords_sf <- st_as_sf(coords, coords = c("X", "Y"), crs = "EPSG:28992", remove = F)
+coords$xy <- paste0(coords$X,coords$Y)
+
+#quick overview
+mapview(coords_sf, zcol = "SampleID", legend = T, cex = 2)
+```
+
+#### qgis export
+
+create an export file for further development of maps in QGIS
+
+```{r}
+coords_year <- unique(AllData[,c("SampleID","Meetpuntcode","X", "Y", "year")])
+write_csv(coords_year, "unique_x_y_mpc.csv")
+```
+
+#### extract datapoints outside of NL
+
+Some points are not in NL and are likely to be errors, these are removed from the dataset. As points just outside NL could be real sampling points, a 2km buffer around NL is created.
+
+```{r}
+#Read NL shape and convert to siple feature
+NL_shape <- read.csv("R/adm_landsgrens.csv")
+NL_shape_sf <- st_as_sfc(NL_shape$st_astext, crs = "EPSG:28992")
+NL_shape_2023 <- NL_shape_sf[1]
+
+#buffer two km around NL
+NL_shape_2023_buffer_2k <- sf::st_buffer(NL_shape_2023,2000)
+
+#het points that are in NL + 2km
+points_in_nl <- sf::st_intersection(coords_sf,NL_shape_2023_buffer_2k)
+
+#get id's of points that are not in NL
+not_nl <- coords_sf[which(!coords_sf$geometry %in% points_in_nl$geometry),]
+not_nl_coords <- do.call(rbind, st_geometry(not_nl)) %>%
+  as_tibble() %>% setNames(c("x","y"))
+
+
+
+in_nl <- coords_sf[which(coords_sf$geometry %in% points_in_nl$geometry),]
+in_nl <- do.call(rbind, st_geometry(in_nl)) %>%
+as_tibble() %>% setNames(c("x","y"))
+
+#check
+mapview(in_nl$x, in_nl$y)
+```
+
+#### Remove coordinates outside the bufferzone and save the output and last clean steps
+
+```{r}
+#filter points that are not in NL
+AllDataNL <- AllData[which(paste0(AllData$X,"_", AllData$Y) %in% paste0(in_nl$x, "_",in_nl$y)),]
+
+
+#get nl coords for QGIS maps
+coordsNL <- unique(AllDataNL[,c("DataSource","Meetpuntcode","X", "Y")])
+write_csv(coordsNL, "coordsNL.csv")
+
+mapview(st_as_sf(coordsNL, coords = c("X", "Y"), crs = "EPSG:28992"))
+
+
+#clean up 
+AllDataNL$year <- lubridate::year(AllDataNL$SampleDate)
+AllDataNL$`NA` <- NULL
+AllDataNL <- AllDataNL %>% rename(LocationCode = Meetpuntcode)
+AllDataNL$MeasuredValue <- formatC(AllDataNL$MeasuredValue, format = "e", digits = 3)
+AllDataNL$X <- round(AllDataNL$X, digits = 0)
+AllDataNL$Y <- round(AllDataNL$Y, digits = 0)
+
+
+
+#save
+saveRDS(AllDataNL, "AllDataNL.rds")
+if(!dir.exists("output")){dir.create("output")}
+fwrite(AllDataNL, "output/FOTO_NL_output_raw.csv", sep = ";")
+```
