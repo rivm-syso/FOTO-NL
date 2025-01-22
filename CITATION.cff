@@ -1,43 +1,44 @@
-**Message:**  
-If you wish to use these scripts or the output, please use the following metadata.
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
 
-### Dataset Details
-
-**Dataset title:** FOTO-NL Long-term chemical pollution monitoring data of surface waters in the Netherlands  
-**Author: Name:** Thomas Hofman  
-**Author: Affiliation:** RIVM  
-**Author: Identifier:** 0009-0002-9101-0353  
-**Author: Type of identifier:** ORCID  
-**Contact point: Department:** Duurzaamheid, drinkwater & Bodem (DDB)  
-**Contact point: Email:** thomas.hofman@rivm.nl  
-
-**Description:**  
-Data on chemical pollutants in surface waters were collated from the 21 current Dutch regional Waterboards and the national Rijkswaterstaat authority, covering the whole country and the period between July 7, 1952, and August 1, 2020. Data were curated and harmonized to provide a resource, the FOTO-NL chemical pollution database, for scientific research and practical purposes in characterization, prevention, and mitigation of chemical pollution of surface waters. The collated dataset contains a total of 42.5 million place-time specified measured water quality parameters, representing the most dense water quality set of Europe, readily available for the evaluation of the water quality policy goals of the Water Framework Directive in 2027 and beyond.
-
-**Theme:** Environment (ENVI)  
-**Keywords:** Chemical; Pollution; Monitoring; Spatial; Temporal; Data  
-**Geographical coverage:** Netherlands  
-**Covered time period:** 1952-2020  
-**Series:** -  
-**Other identifier:** -  
-**Landing page:** -  
-**Related source:** Add link to publication once accepted  
-**Funding information:** STOWA and RIVM funded the project, in particular via the RIVM SPR-BIOTICHS project  
-
-**Access rights:** Public  
-**License:** CC-BY  
-**Terms of use:** -  
-**Applicable legislation:** -  
-**HVD category:** -  
-**Access URL:** Add link Zenodo  
-**Distribution title:** -  
-**File size:**   
-**File format:** csv  
-**Version:** -  
-**Version date:** 20250115  
-**Status:** Completed  
-**Availability:** Available  
-
----
-
-
+cff-version: 1.2.0
+title: >-
+  FOTO-NL Long-term chemical pollution monitoring data of
+  surface waters in the Netherlands  
+message: >-
+  If you wish to use these scripts or the output, please use
+  the following metadata.
+type: software
+authors:
+  - given-names: Thomas
+    family-names: Hofman
+    affiliation: RIVM
+    orcid: 'https://orcid.org/0009-0002-9101-0353'
+    email: thomas.hofman@rivm.nl
+repository-code: 'https://github.com/rivm-syso/FOTO-NL'
+url: 'https://github.com/rivm-syso/FOTO-NL'
+abstract: >
+  Data on chemical pollutants in surface waters were
+  collated from the 21 current Dutch regional Waterboards
+  and the national Rijkswaterstaat authority, covering the
+  whole country and the period between July 7, 1952, and
+  August 1, 2020. Data were curated and harmonized to
+  provide a resource, the FOTO-NL chemical pollution
+  database, for scientific research and practical purposes
+  in characterization, prevention, and mitigation of
+  chemical pollution of surface waters. The collated dataset
+  contains a total of 42.5 million place-time specified
+  measured water quality parameters, representing the most
+  dense water quality set of Europe, readily available for
+  the evaluation of the water quality policy goals of the
+  Water Framework Directive in 2027 and beyond.
+keywords:
+  - Chemical
+  - Pollution
+  - Monitoring
+  - Spatial
+  - Temporal
+  - Data
+license: CC-BY-4.0
+version: 1.0
+date-released: '2025-01-15'
