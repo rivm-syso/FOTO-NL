@@ -1,6 +1,5 @@
 # This CITATION.cff file was generated with cffinit.
 # Visit https://bit.ly/cffinit to generate yours today!
-
 cff-version: 1.2.0
 title: >-
   FOTO-NL Long-term chemical pollution monitoring data of
@@ -41,4 +40,5 @@ keywords:
   - Data
 license: CC-BY-SA-4.0
 version: 1.0.0
-date-released: '2025-01-15'
+date-released: 2025-01-23
+doi: 10.21945/13ec755b-abdc-4ef8-9692-12a3360b9871
