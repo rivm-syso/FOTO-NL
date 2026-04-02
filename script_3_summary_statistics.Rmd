@@ -13,8 +13,15 @@ knitr::opts_chunk$set(echo = F)
 
 ```{r}
 #list all packages
-list.of.packages <- c("gridExtra", "readr", "tidyverse", "dplyr", "sf", "ggplot2", "scales", "lubridate")
-for(i in list.of.packages) if(!require(i, character.only = TRUE)) install.packages(i)
+list.of.packages <- c("gridExtra", "readr", "dplyr", "sf", "ggplot2", "scales", "lubridate", "tidyr", "tibble", "forcats")
+missing_pkgs <- setdiff(list.of.packages, rownames(installed.packages()))
+if (length(missing_pkgs) > 0) {
+  stop(
+    "Missing required packages: ",
+    paste(missing_pkgs, collapse = ", "),
+    ". Install them in bart-env before rendering."
+  )
+}
 
 # Load all packages
 lapply(list.of.packages, require, character.only = TRUE)
@@ -31,10 +38,33 @@ if(!dir.exists(out_dir)) dir.create(out_dir)
 AllData <- readRDS("AllDataNL.rds")
 AllData$MeasuredValue<- as.numeric(AllData$MeasuredValue)
 
+scientific4_scalar <- function(x) {
+  if (length(x) == 0 || is.na(x)) return(NA_character_)
+  sprintf("%.4e", as.numeric(x))
+}
+
+write_selected_scientific_csv <- function(df, path, cols) {
+  out <- df
+  cols <- intersect(cols, names(out))
+  for (col in cols) {
+    out[[col]] <- vapply(out[[col]], scientific4_scalar, character(1))
+  }
+  write_csv(out, path, na = "")
+}
+
+# Normalize column aliases from the current stage-1/stage-2 output contract.
+if (!"Parametercode" %in% names(AllData) && "AquoCode" %in% names(AllData)) {
+  AllData$Parametercode <- AllData$AquoCode
+}
+if (!"LocationCode" %in% names(AllData) && "Locationcode" %in% names(AllData)) {
+  AllData$LocationCode <- AllData$Locationcode
+}
+
 # Define a global color palette for consistency
 all_sources <- unique(AllData$DataSource)
 global_colors <- setNames(scales::hue_pal()(length(all_sources)), all_sources)
 global_colors["All"] <- "black"
+legend_levels <- c("All", all_sources)
 
 head(AllData)
 ```
@@ -58,11 +88,13 @@ Substance_df_fn <- function(substance, plottype) {
   # Calculate range of MeasuredValue in scientific notation
   min_value <- min(subdata$MeasuredValue, na.rm = TRUE)
   max_value <- max(subdata$MeasuredValue, na.rm = TRUE)
-  range_text <- paste("Range:", formatC(min_value, format = "e", digits = 2), "-", formatC(max_value, format = "e", digits = 2))
+  range_text <- paste("Range:", scientific4_scalar(min_value), "-", scientific4_scalar(max_value))
 
   # Prepare ECDF data
   loc_all_df <- subdata %>% group_by(DataSource) %>% summarize(MeasuredValue = list(MeasuredValue)) %>% unnest(cols = MeasuredValue) %>% mutate(SampleID = DataSource)
-  ecdf_df <- bind_rows(loc_all_df, subdata %>% mutate(SampleID = "All")) %>% arrange(desc(SampleID == "All"))
+  ecdf_df <- bind_rows(loc_all_df, subdata %>% mutate(SampleID = "All")) %>%
+    mutate(SampleID = factor(SampleID, levels = legend_levels)) %>%
+    arrange(desc(SampleID == "All"))
 
   # Plot with global color palette
   ggplot(ecdf_df, aes(x = MeasuredValue, color = SampleID)) +
@@ -76,7 +108,7 @@ Substance_df_fn <- function(substance, plottype) {
     ) +
     scale_size_identity() +
     scale_alpha_identity() +
-    scale_color_manual(values = global_colors) +
+    scale_color_manual(values = global_colors, limits = legend_levels, drop = FALSE) +
     theme_minimal(base_family = "Calibri", base_size = 14) +
     theme(
       plot.title = element_text(size = 16, face = "bold"),
@@ -120,8 +152,8 @@ create_overview_table <- function(substance_list) {
     # Return a data frame row for this substance
     data.frame(
       Substance = substance,
-      Lower_Whisker = formatC(lower_whisker, format = "e", digits = 2),
-      Upper_Whisker = formatC(upper_whisker, format = "e", digits = 2),
+      Lower_Whisker = scientific4_scalar(lower_whisker),
+      Upper_Whisker = scientific4_scalar(upper_whisker),
       Below_Whisker = below_whisker,
       Above_Whisker = above_whisker,
       Total_Records = total_records,
@@ -205,7 +237,7 @@ substanceplotter(plots_iqr, group_color = "white", substances = substance_list, 
 
 # Generate plots and overview table
 overview_table <- create_overview_table(substance_list)
-write_csv(overview_table, "summary_stats/substance_iqr_table.csv")
+write_selected_scientific_csv(overview_table, "summary_stats/substance_iqr_table.csv", c("Lower_Whisker", "Upper_Whisker"))
 
 ```
 
@@ -220,7 +252,7 @@ substanceplotter(metal_plots_iqr, group_color = "white", substances = metal_subs
 
 # Generate overview table
 overview_table <- create_overview_table(metal_substance_list)
-write_csv(overview_table, "summary_stats/metal_iqr_table.csv")
+write_selected_scientific_csv(overview_table, "summary_stats/metal_iqr_table.csv", c("Lower_Whisker", "Upper_Whisker"))
 ```
 
 ### Pesticides/Herbicides
@@ -232,7 +264,7 @@ substanceplotter(pest_plots_iqr, group_color = "white", substances = pesticide_l
 
 # Generate overview table
 overview_table <- create_overview_table(pesticide_list)
-write_csv(overview_table, "summary_stats/pesticide_iqr_table.csv")
+write_selected_scientific_csv(overview_table, "summary_stats/pesticide_iqr_table.csv", c("Lower_Whisker", "Upper_Whisker"))
 ```
 
 ## Summary Data

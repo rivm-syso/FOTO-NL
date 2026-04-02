@@ -1,0 +1,33 @@
+name: foto-nl-20260402
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandoc
+  - gdal
+  - geos
+  - proj
+  - udunits2
+  - r-base
+  - r-data.table
+  - r-readxl
+  - r-openxlsx
+  - r-dplyr
+  - r-readr
+  - r-tibble
+  - r-sf
+  - r-mapview
+  - r-lubridate
+  - r-gridextra
+  - r-ggplot2
+  - r-scales
+  - r-tidyr
+  - r-forcats
+  - r-mgcv
+  - r-rmarkdown
+  - r-knitr
+  - r-writexl
+  - r-yaml
+  - pip
+  - pip:
+      - snakemake==7.32.4

@@ -37,27 +37,27 @@ CheckMapConc <- function(x, DataSource = NA,
   stopifnot(length(ChemIDnames) > 0)
   if(is.na(SampleID)) {
     SampleID = "SampleID"
-    x$SampleID <- NA
+    x$SampleID <- rep(NA, nrow(x))
   } 
   if(is.na(PreTreatment)) {
     PreTreatment <- "PreTreatment"
-    x$PreTreatment <- NA
+    x$PreTreatment <- rep(NA, nrow(x))
   }
   if(is.na(LimitIndicator)) {
     LimitIndicator = "LimitIndicator"
-    x$LimitIndicator <- NA
+    x$LimitIndicator <- rep(NA, nrow(x))
   } 
   if(is.na(Meetpuntcode)) {
     Meetpuntcode = "Meetpuntcode"
-    x$Meetpuntcode <- NA
+    x$Meetpuntcode <- rep(NA, nrow(x))
   } 
   if(is.na(X)) {
-    Meetpuntcode = "X"
-    x$Meetpuntcode <- NA
+    X <- "X"
+    x$X <- rep(NA, nrow(x))
   } 
   if(is.na(Y)) {
-    Meetpuntcode = "Y"
-    x$Meetpuntcode <- NA
+    Y <- "Y"
+    x$Y <- rep(NA, nrow(x))
   } 
   
   keyNames <- match(tolower(c(SampleID, ChemIDnames, MeasuredValue, Unit, Meetpuntcode, 
@@ -75,15 +75,36 @@ CheckMapConc <- function(x, DataSource = NA,
   if(length(addedColomns)>0) ret <- cbind(ret,Adding)
   if (fac2ugL != 1)  ret$MeasuredValue <- ret$MeasuredValue * fac2ugL else
     ret$MeasuredValue <- as.numeric(ret$MeasuredValue)
-  ret$DataSource <- DataSource
+  ret$DataSource <- rep(DataSource, nrow(ret))
   if (DateAsYearMonthDay == T) { #== T, it can be a string, avoids error
     stopifnot("Year" %in% names(x), "Month" %in% names(x) , "Day" %in% names(x))
     ret$SampleDate <- as.Date(paste(x$Year, x$Month , x$Day, sep = "-"))
   } else if (is.character(DateAsYearMonthDay)) {
-    ret$SampleDate <- as.Date(x[,SampleDate], DateAsYearMonthDay)
+    sample_date_vec <- x[, SampleDate]
+    if (inherits(sample_date_vec, "Date")) {
+      ret$SampleDate <- as.Date(sample_date_vec)
+    } else if (is.numeric(sample_date_vec)) {
+      # Some generated workbooks store dates as Excel serials even when
+      # a string format is provided in the calling code.
+      ret$SampleDate <- excelDate2Date(sample_date_vec)
+    } else {
+      ret$SampleDate <- as.Date(sample_date_vec, DateAsYearMonthDay)
+    }
   } else {#it's an excel-date trick!
     stopifnot(SampleDate %in% names(x))
-    ret$SampleDate <- excelDate2Date(x[,SampleDate])
+    sample_date_vec <- x[, SampleDate]
+    if (inherits(sample_date_vec, "Date")) {
+      ret$SampleDate <- as.Date(sample_date_vec)
+    } else if (is.numeric(sample_date_vec)) {
+      ret$SampleDate <- excelDate2Date(sample_date_vec)
+    } else {
+      # Support TSV-based handoff where dates can already be stored as strings.
+      parsed <- as.Date(sample_date_vec)
+      if (all(is.na(parsed))) parsed <- as.Date(sample_date_vec, "%Y-%m-%d")
+      if (all(is.na(parsed))) parsed <- as.Date(sample_date_vec, "%d-%m-%Y")
+      if (all(is.na(parsed))) parsed <- as.Date(sample_date_vec, "%Y/%m/%d")
+      ret$SampleDate <- parsed
+    }
   }
   #NB fixed substitutions !!
   for (nm in ChemIDnames){

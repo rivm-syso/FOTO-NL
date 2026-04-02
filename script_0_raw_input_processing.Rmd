@@ -1,0 +1,42 @@
+---
+title: "0. Raw Input Processing"
+author: "FOTO NL workflow"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+show_script_0_messages <- tolower(Sys.getenv("SCRIPT_0_SHOW_MESSAGES", "false")) == "true"
+show_script_0_warnings <- tolower(Sys.getenv("SCRIPT_0_SHOW_WARNINGS", "false")) == "true"
+knitr::opts_chunk$set(echo = TRUE, message = show_script_0_messages, warning = show_script_0_warnings)
+run_processing <- tolower(Sys.getenv("RUN_0_RAW_INPUT_PROCESSING", "false")) == "true"
+```
+
+This stage converts raw chemistry exports into the standardized script_0 input used by the downstream workflow.
+
+The implementation is delegated to the shared reconstruction engine in `helpers/script_0/build_input_common.R` with board definitions from `helpers/script_0/build_input_board_configs.R`. This R Markdown file serves as the documented entry point for script_0 and exposes the runtime switches used for batch runs and debug runs.
+
+At execution time it reads runtime settings from environment variables or command-line arguments, including `RAW_ROOT`, `REFERENCE_INPUT_ROOT`, `OUTPUT_ROOT`, `OUTPUT_FORMAT`, `ONLY_SOURCES`, `OVERWRITE`, `DRY_RUN`, `USE_REFERENCE_FILTER`, `MAX_ROWS_PER_FILE`, `MAX_ROWS_PER_SHEET`, `SKIP_REFERENCE_READ`, `MAX_REFERENCE_ROWS`, and `INCLUDE_LEGACY_INPUTS`. The current `build_*` engine only accepts `OUTPUT_FORMAT=csv`; `TSV_LAYOUT` remains a compatibility variable but is not used by the active writer.
+
+Set `RUN_0_RAW_INPUT_PROCESSING=true` to actually run processing during render.
+
+```{r run-toggle, echo=TRUE}
+run_processing
+```
+
+```{r script_0_core, eval=run_processing, echo=FALSE, error=FALSE}
+script_path <- {
+  file_flag <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
+  if (length(file_flag) == 0L) "" else sub("^--file=", "", file_flag[1])
+}
+script_dir <- if (nzchar(script_path)) dirname(normalizePath(script_path)) else getwd()
+
+source(file.path(script_dir, "helpers", "script_0", "build_input_common.R"))
+source(file.path(script_dir, "helpers", "script_0", "build_input_board_configs.R"))
+
+run_script_0_pipeline(
+  configs = get_board_configs(),
+  argv = commandArgs(trailingOnly = TRUE),
+  base_dir = script_dir
+)
+```

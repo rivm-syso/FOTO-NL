@@ -16,16 +16,25 @@ This script
 ## Download and install required packages
 
 ```{r}
-list.of.packages <- c("remotes","RPostgreSQL", "RPostgres","readr", "tidyverse", "DBI", "sf", "mapview", "httr", "ows4R", "data.table") #add all required packages
-for(i in 1:length(list.of.packages)){if(!(list.of.packages[i] %in% rownames(installed.packages()))){install.packages(list.of.packages[i])}} #only download uninstalled packages
-lapply(list.of.packages, require, character.only = T) #load all packages
+list.of.packages <- c(
+  "readr", "dplyr", "tibble", "sf", "mapview", "data.table", "lubridate"
+)
+missing_pkgs <- setdiff(list.of.packages, rownames(installed.packages()))
+if (length(missing_pkgs) > 0) {
+  stop(
+    "Missing required packages: ",
+    paste(missing_pkgs, collapse = ", "),
+    ". Install them in bart-env before rendering."
+  )
+}
+suppressPackageStartupMessages(lapply(list.of.packages, require, character.only = TRUE))
 ```
 
 #### Read the final datafile from script_1\_read_and_clean
 
 extract the coordinates in this file and give a quick overview
 
-```{r}
+```{r include=FALSE}
 AllData <- readRDS("AllData.RDS")
 
 #add year param
@@ -37,7 +46,9 @@ coords_sf <- st_as_sf(coords, coords = c("X", "Y"), crs = "EPSG:28992", remove =
 coords$xy <- paste0(coords$X,coords$Y)
 
 #quick overview
-mapview(coords_sf, zcol = "SampleID", legend = T, cex = 2)
+if (interactive()) {
+  mapview(coords_sf, zcol = "SampleID", legend = TRUE, cex = 2)
+}
 ```
 
 #### qgis export
@@ -54,35 +65,62 @@ write_csv(coords_year, "unique_x_y_mpc.csv")
 Some points are not in NL and are likely to be errors, these are removed from the dataset. As points just outside NL could be real sampling points, a 2km buffer around NL is created.
 
 ```{r}
-#Read NL shape and convert to siple feature
-NL_shape <- read.csv("R/adm_landsgrens.csv")
-NL_shape_sf <- st_as_sfc(NL_shape$st_astext, crs = "EPSG:28992")
-NL_shape_2023 <- NL_shape_sf[1]
+#Read NL shape and convert to simple feature (optional input).
+landsgrens_candidates <- c(
+  "auxiliary_input/adm_landsgrens.csv",
+  "../auxiliary_input/adm_landsgrens.csv",
+  "zenodo_ready_20260330/auxiliary_workflow_input/adm_landsgrens.csv",
+  "R/adm_landsgrens.csv",
+  "R/data/adm_landsgrens.csv",
+  "data/adm_landsgrens.csv",
+  "data/zenodo_14652471/input/adm_landsgrens.csv"
+)
+landsgrens_file <- landsgrens_candidates[file.exists(landsgrens_candidates)][1]
 
-#buffer two km around NL
-NL_shape_2023_buffer_2k <- sf::st_buffer(NL_shape_2023,2000)
+if (!is.na(landsgrens_file) && nzchar(landsgrens_file)) {
+  NL_shape <- read.csv(landsgrens_file)
+  NL_shape_sf <- st_as_sfc(NL_shape$st_astext, crs = "EPSG:28992")
+  NL_shape_2023 <- NL_shape_sf[1]
 
-#het points that are in NL + 2km
-points_in_nl <- sf::st_intersection(coords_sf,NL_shape_2023_buffer_2k)
+  #buffer two km around NL
+  NL_shape_2023_buffer_2k <- sf::st_buffer(NL_shape_2023,2000)
 
-#get id's of points that are not in NL
-not_nl <- coords_sf[which(!coords_sf$geometry %in% points_in_nl$geometry),]
-not_nl_coords <- do.call(rbind, st_geometry(not_nl)) %>%
-  as_tibble() %>% setNames(c("x","y"))
+  #get points that are in NL + 2km
+  points_in_nl <- suppressWarnings(sf::st_intersection(coords_sf, NL_shape_2023_buffer_2k))
 
+  #get id's of points that are not in NL
+  not_nl <- coords_sf[which(!coords_sf$geometry %in% points_in_nl$geometry),]
+  not_nl_coords <- do.call(rbind, st_geometry(not_nl)) %>%
+    as_tibble() %>% setNames(c("x","y"))
 
-
-in_nl <- coords_sf[which(coords_sf$geometry %in% points_in_nl$geometry),]
-in_nl <- do.call(rbind, st_geometry(in_nl)) %>%
-as_tibble() %>% setNames(c("x","y"))
+  in_nl <- coords_sf[which(coords_sf$geometry %in% points_in_nl$geometry),]
+  in_nl <- do.call(rbind, st_geometry(in_nl)) %>%
+    as_tibble() %>% setNames(c("x","y"))
+} else {
+  warning("adm_landsgrens.csv not found; skipping NL buffer filter and keeping all coordinates.")
+  in_nl <- do.call(rbind, st_geometry(coords_sf)) %>%
+    as_tibble() %>% setNames(c("x","y"))
+  not_nl_coords <- tibble(x = numeric(0), y = numeric(0))
+}
 
 #check
-mapview(in_nl$x, in_nl$y)
+if (interactive()) {
+  mapview(st_as_sf(in_nl, coords = c("x", "y"), crs = "EPSG:28992"))
+}
 ```
 
 #### Remove coordinates outside the bufferzone and save the output and last clean steps
 
 ```{r}
+# Format measured values consistently in the final exported CSV.
+scientific4 <- function(x) {
+  vals <- suppressWarnings(as.numeric(x))
+  out <- rep(NA_character_, length(vals))
+  ok <- !is.na(vals)
+  out[ok] <- sprintf("%.4e", vals[ok])
+  out
+}
+
 #filter points that are not in NL
 AllDataNL <- AllData[which(paste0(AllData$X,"_", AllData$Y) %in% paste0(in_nl$x, "_",in_nl$y)),]
 
@@ -91,21 +129,23 @@ AllDataNL <- AllData[which(paste0(AllData$X,"_", AllData$Y) %in% paste0(in_nl$x,
 coordsNL <- unique(AllDataNL[,c("DataSource","Meetpuntcode","X", "Y")])
 write_csv(coordsNL, "coordsNL.csv")
 
-mapview(st_as_sf(coordsNL, coords = c("X", "Y"), crs = "EPSG:28992"))
+if (interactive()) {
+  mapview(st_as_sf(coordsNL, coords = c("X", "Y"), crs = "EPSG:28992"))
+}
 
 
 #clean up 
 AllDataNL$year <- lubridate::year(AllDataNL$SampleDate)
 AllDataNL$`NA` <- NULL
 AllDataNL <- AllDataNL %>% rename(LocationCode = Meetpuntcode)
-AllDataNL$MeasuredValue <- formatC(AllDataNL$MeasuredValue, format = "e", digits = 3)
+AllDataNL$MeasuredValue <- scientific4(AllDataNL$MeasuredValue)
 AllDataNL$X <- round(AllDataNL$X, digits = 0)
 AllDataNL$Y <- round(AllDataNL$Y, digits = 0)
 
 
 
 #save
-saveRDS(AllDataNL, "AllDataNL.rds")
+saveRDS(AllDataNL, "foto_nl_dataset_clean.rds")
 if(!dir.exists("output")){dir.create("output")}
-fwrite(AllDataNL, "output/FOTO_NL_output_raw.csv", sep = ";")
+fwrite(AllDataNL, "output/foto_nl_dataset_raw.csv", sep = ";")
 ```

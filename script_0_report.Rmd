@@ -1,0 +1,323 @@
+---
+title: "0. Raw Input Processing Report"
+author: "FOTO NL workflow"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+if (!nzchar(Sys.getenv("SCRIPT_0_COLLECT_DEBUG", unset = ""))) {
+  Sys.setenv(SCRIPT_0_COLLECT_DEBUG = "true")
+}
+if (!nzchar(Sys.getenv("DRY_RUN", unset = ""))) {
+  Sys.setenv(DRY_RUN = "true")
+}
+if (!nzchar(Sys.getenv("SCRIPT_0_REPORT_PREVIEW_N", unset = ""))) {
+  Sys.setenv(SCRIPT_0_REPORT_PREVIEW_N = "8")
+}
+
+resolve_script_0_report_dir <- function() {
+  input_file <- tryCatch(knitr::current_input(dir = TRUE), error = function(...) "")
+  if (nzchar(input_file) && file.exists(input_file)) {
+    return(dirname(normalizePath(input_file)))
+  }
+
+  file_flag <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
+  if (length(file_flag) > 0L) {
+    script_path <- sub("^--file=", "", file_flag[1])
+    if (file.exists(script_path)) {
+      return(dirname(normalizePath(script_path)))
+    }
+  }
+
+  getwd()
+}
+
+script_dir <- resolve_script_0_report_dir()
+
+source(file.path(script_dir, "helpers", "script_0", "build_input_common.R"))
+source(file.path(script_dir, "helpers", "script_0", "build_input_board_configs.R"))
+
+script_0_report_board <- Sys.getenv("SCRIPT_0_REPORT_BOARD", unset = "")
+if (!nzchar(script_0_report_board)) {
+  only_sources <- csv_arg(Sys.getenv("ONLY_SOURCES", unset = ""))
+  if (length(only_sources) > 0L) script_0_report_board <- only_sources[[1]]
+}
+if (!nzchar(script_0_report_board)) {
+  stop("Set SCRIPT_0_REPORT_BOARD or ONLY_SOURCES to render a board-level script_0 report.")
+}
+
+select_board_config <- function(configs, board_value) {
+  board_key <- norm_key_text(board_value)
+  matches <- Filter(function(cfg) {
+    norm_key_text(cfg$datasource) == board_key || norm_key_text(cfg$board_id) == board_key
+  }, configs)
+  if (length(matches) == 0L) {
+    stop("No board config matches: ", board_value)
+  }
+  matches[[1]]
+}
+
+ctx <- parse_context_args(commandArgs(trailingOnly = TRUE), base_dir = script_dir)
+ctx$collect_debug <- TRUE
+cfg <- select_board_config(get_board_configs(), script_0_report_board)
+result <- run_board_reconstruction(cfg, ctx)
+summary_dt <- result$summary
+report <- result$report
+
+fmt_runtime <- function(ctx) {
+  data.frame(
+    key = c(
+      "datasource", "board_id", "raw_root", "reference_input_root", "output_root",
+      "dry_run", "overwrite", "use_reference_filter", "collect_debug"
+    ),
+    value = c(
+      report$datasource,
+      report$board_id,
+      ctx$raw_root,
+      ctx$reference_input_root,
+      ctx$output_root,
+      ctx$dry_run,
+      ctx$overwrite,
+      ctx$use_reference_filter,
+      ctx$collect_debug
+    ),
+    stringsAsFactors = FALSE
+  )
+}
+
+missing_lookup <- function(stage_obj) {
+  out <- stage_obj$missing
+  if (nrow(out) == 0L) return(setNames(numeric(0), character(0)))
+  vals <- out$missing_n
+  names(vals) <- out$column
+  vals
+}
+
+value_lookup <- function(stage_obj) {
+  if (nrow(stage_obj$value_summary) == 0L) return(list(
+    non_missing = NA_real_, negative_n = NA_real_, zero_n = NA_real_,
+    min_value = NA_real_, max_value = NA_real_
+  ))
+  as.list(stage_obj$value_summary[1, , drop = FALSE])
+}
+
+stage_overview_table <- function(report) {
+  stage_order <- c(
+    "raw_combined",
+    "mapped_template",
+    "after_enrich",
+    "after_board_logic",
+    "after_generic_filter",
+    "matched_reference",
+    "final_output"
+  )
+  stage_order <- stage_order[stage_order %in% names(report$stages)]
+  rows <- vector("list", length(stage_order))
+  prev_rows <- NA_integer_
+  for (i in seq_along(stage_order)) {
+    nm <- stage_order[[i]]
+    st <- report$stages[[nm]]
+    vals <- value_lookup(st)
+    miss <- missing_lookup(st)
+    rows[[i]] <- data.frame(
+      stage = nm,
+      rows = st$n_rows,
+      row_delta = if (is.na(prev_rows)) NA_integer_ else st$n_rows - prev_rows,
+      cols = st$n_cols,
+      meetwaarde_non_missing = vals$non_missing,
+      negative_values = vals$negative_n,
+      missing_date = unname(miss["Datum"]),
+      missing_parametercode = unname(miss["Parametercode"]),
+      missing_meetpunt = unname(miss["Meetpunt code"]),
+      stringsAsFactors = FALSE
+    )
+    prev_rows <- st$n_rows
+  }
+  do.call(rbind, rows)
+}
+
+missing_delta_table <- function(before_stage, after_stage, label) {
+  before <- missing_lookup(before_stage)
+  after <- missing_lookup(after_stage)
+  cols <- sort(unique(c(names(before), names(after))))
+  if (length(cols) == 0L) return(data.frame())
+  before_vals <- before[cols]
+  after_vals <- after[cols]
+  before_vals[is.na(before_vals)] <- 0
+  after_vals[is.na(after_vals)] <- 0
+  out <- data.frame(
+    column = cols,
+    missing_before = as.numeric(before_vals),
+    missing_after = as.numeric(after_vals),
+    stringsAsFactors = FALSE
+  )
+  out$filled_n <- pmax(out$missing_before - out$missing_after, 0)
+  out$new_missing_n <- pmax(out$missing_after - out$missing_before, 0)
+  out <- out[out$filled_n > 0 | out$new_missing_n > 0, , drop = FALSE]
+  if (nrow(out) == 0L) return(out)
+  out$change_context <- label
+  out[order(-out$filled_n, -out$new_missing_n, out$column), c(
+    "change_context", "column", "missing_before", "missing_after", "filled_n", "new_missing_n"
+  )]
+}
+
+value_delta_table <- function(before_stage, after_stage, label) {
+  before <- value_lookup(before_stage)
+  after <- value_lookup(after_stage)
+  data.frame(
+    change_context = label,
+    non_missing_before = before$non_missing,
+    non_missing_after = after$non_missing,
+    negative_before = before$negative_n,
+    negative_after = after$negative_n,
+    zero_before = before$zero_n,
+    zero_after = after$zero_n,
+    min_before = before$min_value,
+    min_after = after$min_value,
+    max_before = before$max_value,
+    max_after = after$max_value,
+    stringsAsFactors = FALSE
+  )
+}
+
+compact_stage_snapshot <- function(stage_obj) {
+  vals <- value_lookup(stage_obj)
+  miss <- missing_lookup(stage_obj)
+  data.frame(
+    rows = stage_obj$n_rows,
+    cols = stage_obj$n_cols,
+    non_missing_meetwaarde = vals$non_missing,
+    negative_values = vals$negative_n,
+    missing_date = unname(miss["Datum"]),
+    missing_parametercode = unname(miss["Parametercode"]),
+    missing_meetpunt = unname(miss["Meetpunt code"]),
+    stringsAsFactors = FALSE
+  )
+}
+```
+
+This report uses the same script_0 engine as the production path in `helpers/script_0/build_input_common.R`, but runs it in `collect_debug` mode so each major transformation step is summarized.
+
+## Runtime Context
+
+```{r runtime-context}
+knitr::kable(fmt_runtime(ctx), format = "simple")
+```
+
+## Board Config
+
+```{r board-config}
+knitr::kable(data.frame(
+  field = c("datasource", "board_id", "output_file", "raw_patterns_n"),
+  value = c(cfg$datasource, cfg$board_id, cfg$output_file, length(cfg$raw_patterns)),
+  stringsAsFactors = FALSE
+), format = "simple")
+cat("\nRaw patterns:\n")
+print(cfg$raw_patterns)
+```
+
+## Raw File Discovery
+
+```{r raw-file-discovery}
+knitr::kable(report$raw_file_summary, format = "simple")
+```
+
+## Stage Overview
+
+```{r stage-overview}
+knitr::kable(stage_overview_table(report), format = "simple")
+```
+
+## Enrichment Impact
+
+```{r stage-enrichment-impact}
+enrich_delta <- missing_delta_table(report$stages$mapped_template, report$stages$after_enrich, "mapped_to_enriched")
+if (nrow(enrich_delta) == 0L) {
+  cat("No field-level missingness changes detected during enrichment.\n")
+} else {
+  knitr::kable(enrich_delta, format = "simple")
+}
+```
+
+## Board Logic Impact
+
+```{r stage-board-logic-impact}
+board_logic_delta <- missing_delta_table(report$stages$after_enrich, report$stages$after_board_logic, "enriched_to_board_logic")
+board_logic_values <- value_delta_table(report$stages$after_enrich, report$stages$after_board_logic, "enriched_to_board_logic")
+if (nrow(board_logic_delta) == 0L) {
+  cat("No field-level missingness changes detected during board logic.\n\n")
+} else {
+  print(knitr::kable(board_logic_delta, format = "simple"))
+  cat("\n")
+}
+print(knitr::kable(board_logic_values, format = "simple", digits = 3))
+```
+
+## Generic Filter Impact
+
+```{r stage-filter-impact}
+filter_delta <- missing_delta_table(report$stages$after_board_logic, report$stages$after_generic_filter, "board_logic_to_generic_filter")
+filter_values <- value_delta_table(report$stages$after_board_logic, report$stages$after_generic_filter, "board_logic_to_generic_filter")
+filter_summary <- data.frame(
+  rows_before = report$stages$after_board_logic$n_rows,
+  rows_after = report$stages$after_generic_filter$n_rows,
+  rows_dropped = report$stages$after_board_logic$n_rows - report$stages$after_generic_filter$n_rows,
+  stringsAsFactors = FALSE
+)
+print(knitr::kable(filter_summary, format = "simple"))
+cat("\n")
+if (nrow(filter_delta) > 0L) {
+  print(knitr::kable(filter_delta, format = "simple"))
+  cat("\n")
+}
+print(knitr::kable(filter_values, format = "simple", digits = 3))
+```
+
+## Reference Match
+
+```{r reference-comparison}
+knitr::kable(data.frame(
+  field = c("reference_file", "reference_rows", "matched_rows", "coverage", "signature_mode", "sig_intersect_unique"),
+  value = c(
+    report$reference$reference_file,
+    report$reference$reference_rows,
+    report$reference$matched_rows,
+    report$reference$coverage,
+    report$reference$signature_mode,
+    report$reference$sig_intersect_unique
+  ),
+  stringsAsFactors = FALSE
+), format = "simple")
+if (length(report$reference$read_errors) > 0L) {
+  cat("\nRead errors:\n")
+  print(report$reference$read_errors)
+}
+```
+
+## Final Output Snapshot
+
+```{r final-output}
+knitr::kable(compact_stage_snapshot(report$stages$final_output), format = "simple", digits = 3)
+cat("\nSample rows:\n")
+print(knitr::kable(report$stages$final_output$sample, format = "simple"))
+```
+
+## Diagnostics And Output
+
+```{r diagnostics-output}
+knitr::kable(data.frame(
+  field = c("board_out_dir", "output_file", "diagnostic_file", "read_error_file"),
+  value = c(
+    report$diagnostics$board_out_dir,
+    report$diagnostics$output_file,
+    report$diagnostics$diagnostic_file,
+    report$diagnostics$read_error_file
+  ),
+  stringsAsFactors = FALSE
+), format = "simple")
+cat("\nSummary row:\n")
+print(knitr::kable(report$diagnostics$summary, format = "simple"))
+```

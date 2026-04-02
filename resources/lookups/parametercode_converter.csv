@@ -1,0 +1,181 @@
+﻿Par.Naam,Aquo.Parnaam,Parametercode,Parameteromschrijving
+Temperatuur water,Temperatuur,T,Temperatuur
+Zuurstof percentage,zuurstof,O2,zuurstof
+Zuurstof,zuurstof,O2,zuurstof
+Chloride,chloride,Cl,chloride
+Chlorofyl-A,chlorofyl-a,CHLFa,chlorofyl-a
+Feofytine A,Feofytine a,FEOa,Feofytine a
+Zwevende Stof,Onopgeloste stoffen,OS,Onopgeloste stoffen
+Bicarbonaat,waterstofcarbonaat,HCO3,waterstofcarbonaat
+Biochemisch zuurstofverbruik met allylthioureum,Biochemisch zuurstofverbruik over 5 dagen,BZV5,Biochemisch zuurstofverbruik over 5 dagen
+Nitraat,nitraat,NO3,nitraat
+Nitriet,nitriet,NO2,nitriet
+Stikstof Kjeldahl,stikstof Kjeldahl,NKj,stikstof Kjeldahl
+stikstof totaal (N),stikstof totaal,Ntot,stikstof totaal
+Orthofosfaat (P),fosfaat,PO4,fosfaat
+fosfor totaal (P),fosfor totaal,Ptot,fosfor totaal
+Bromide,bromide,Br,bromide
+Calcium,calcium,Ca,calcium
+Kalium,kalium,K,kalium
+Magnesium,magnesium,Mg,magnesium
+Natrium,natrium,Na,natrium
+Sulfide (nf),sulfide,S,sulfide
+Som nitraat en nitriet,som nitraat en nitriet,sNO3NO2,som nitraat en nitriet
+Cadmium,cadmium,Cd,cadmium
+Chroom,chroom,Cr,chroom
+Ijzer,ijzer,Fe,ijzer
+Koper,koper,Cu,koper
+Lood,lood,Pb,lood
+Nikkel,nikkel,Ni,nikkel
+Zink,zink,Zn,zink
+indoxacarb,indoxacarb (S-isomeer),indxcb,indoxacarb (S-isomeer)
+2-methyl-4-chloorfenoxypropionzuur (mecoprop),mecoprop,MCPP,mecoprop
+Temperatuur lucht,Temperatuur,T,Temperatuur
+Microcystines,som microcystines,sMICCTNS,som microcystines
+Arseen,arseen,As,arseen
+Arseen (nf),arseen,As,arseen
+Cadmium (nf),cadmium,Cd,cadmium
+Chroom (nf),chroom,Cr,chroom
+Koper (nf),koper,Cu,koper
+Lood (nf),lood,Pb,lood
+Nikkel (nf),nikkel,Ni,nikkel
+Zink (nf),zink,Zn,zink
+Minerale Olie,minerale olie,minrlole,minerale olie
+"2,4-dichloordifenyldichloorethaan","2,4'-dichloordifenyldichloorethaan",24DDD,"2,4'-dichloordifenyldichloorethaan"
+"2,4-dichloordifenyldichlooretheen","2,4'-dichloordifenyldichlooretheen",24DDE,"2,4'-dichloordifenyldichlooretheen"
+"2,4-dichloordifenyltrichloorethaan","2,4'-dichloordifenyltrichloorethaan",24DDT,"2,4'-dichloordifenyltrichloorethaan"
+"4,4-dichloordifenyldichlooretheen","4,4'-dichloordifenyldichlooretheen",44DDE,"4,4'-dichloordifenyldichlooretheen"
+"4,4-dichloordifenyltrichloorethaan","4,4'-dichloordifenyltrichloorethaan",44DDT,"4,4'-dichloordifenyltrichloorethaan"
+"4,4-dichloordifenyldichloorethaan","4,4'-dichloordifenyldichloorethaan",44DDD,"4,4'-dichloordifenyldichloorethaan"
+koolstof organisch (nf) (DOC),koolstof organisch,Corg,koolstof organisch
+koolstof organisch (TOC),koolstof organisch,Corg,koolstof organisch
+Barium (nf),barium,Ba,barium
+Seleen  (nf),seleen,Se,seleen
+"2,2,4,4,6-pentabroomdifenylether","2,2',4,4',6-pentabroomdifenylether",PBDE100,"2,2',4,4',6-pentabroomdifenylether"
+"2,4,4-tribroomdifenylether","2,4,4'-tribroomdifenylether",PBDE28,"2,4,4'-tribroomdifenylether"
+"2,4,4,6-tetrabroomdifenylether","2,4,4',6-tetrabroomdifenylether",PBDE75,"2,4,4',6-tetrabroomdifenylether"
+"2,3,4,4-tetrabroomdifenylether","2,3',4,4'-tetrabroomdifenylether",PBDE66,"2,3',4,4'-tetrabroomdifenylether"
+"2,3,4,6-tetrabroomdifenylether","2,3',4',6-tetrabroomdifenylether",PBDE71,"2,3',4',6-tetrabroomdifenylether"
+"2,2,4,4-tetrabroomdifenylether","2,2',4,4'-tetrabroomdifenylether",PBDE47,"2,2',4,4'-tetrabroomdifenylether"
+"2,2,4,4,5-pentabroomdifenylether","2,2',4,4',5-pentabroomdifenylether",PBDE99,"2,2',4,4',5-pentabroomdifenylether"
+"2,2,4,4,5,6-hexabroomdifenylether","2,2',4,4',5,6'-hexabroomdifenylether",PBDE154,"2,2',4,4',5,6'-hexabroomdifenylether"
+"2,2,4,4,5,5-hexabroomdifenylether","2,2',4,4',5,5'-hexabroomdifenylether",PBDE153,"2,2',4,4',5,5'-hexabroomdifenylether"
+"2,2,3,4,4-pentabroomdifenylether","2,2',3,4,4'-pentabroomdifenylether",PBDE85,"2,2',3,4,4'-pentabroomdifenylether"
+"2,2,3,4,4,5-hexabroomdifenylether","2,2',3,4,4',5'-hexabroomdifenylether",PBDE138,"2,2',3,4,4',5'-hexabroomdifenylether"
+"2,2,3,4,4,5,6-heptabroomdifenylether","2,2',3,4,4',5',6-heptabroomdifenylether",PBDE183,"2,2',3,4,4',5',6-heptabroomdifenylether"
+"2,2,4,5-tetrabroomdifenylether","2,2',4,5'-tetrabroomdifenylether",PBDE49,"2,2',4,5'-tetrabroomdifenylether"
+"2,2,3,4,4,5,5-heptachloorbifenyl","2,2',3,4,4',5,5'-heptachloorbifenyl",PCB180,"2,2',3,4,4',5,5'-heptachloorbifenyl"
+"2,2,3,4,4,5-hexachloorbifenyl","2,2',3,4,4',5'-hexachloorbifenyl",PCB138,"2,2',3,4,4',5'-hexachloorbifenyl"
+"2,2,4,4,5,5-hexachloorbifenyl","2,2',4,4',5,5'-hexachloorbifenyl",PCB153,"2,2',4,4',5,5'-hexachloorbifenyl"
+"2,2,4,5,5-pentachloorbifenyl","2,2',4,5,5'-pentachloorbifenyl",PCB101,"2,2',4,5,5'-pentachloorbifenyl"
+"2,2,5,5-tetrachloorbifenyl","2,2',5,5'-tetrachloorbifenyl",PCB52,"2,2',5,5'-tetrachloorbifenyl"
+"2,3,4,4,5-pentachloorbifenyl","2,3',4,4',5-pentachloorbifenyl",PCB118,"2,3',4,4',5-pentachloorbifenyl"
+"2,4,4-trichloorbifenyl","2,4,4'-trichloorbifenyl",PCB28,"2,4,4'-trichloorbifenyl"
+Fluoroprobe totaal,chlorofyl-a,CHLFa,chlorofyl-a
+Fluoroprobe cyano,chlorofyl-a,CHLFa,chlorofyl-a
+(GW) chloride (nf),chloride,Cl,chloride
+(GW) nitraat (Nnf),nitraat,NO3,nitraat
+(GW) nitriet (Nnf),nitriet,NO2,nitriet
+(GW) som nitraat en nitriet (Nnf),som nitraat en nitriet,sNO3NO2,som nitraat en nitriet
+(GW) stikstof Kjeldahl (Nnf),stikstof Kjeldahl,NKj,stikstof Kjeldahl
+(GW) stikstof totaal (Nnf),stikstof totaal,Ntot,stikstof totaal
+(GW) Orthofosfaat (Pnf),fosfaat,PO4,fosfaat
+(GW) fosfor totaal (Pnf),fosfor totaal,Ptot,fosfor totaal
+(GW) calcium (nf),calcium,Ca,calcium
+(GW) ijzer (nf),ijzer,Fe,ijzer
+(GW) kalium (nf),kalium,K,kalium
+(GW) magnesium (nf),magnesium,Mg,magnesium
+(GW) natrium (nf),natrium,Na,natrium
+Baseverbruik,Aciditeit,ACDTT,Aciditeit
+Zuurverbruik,Alkaliteit,ALKLTT,Alkaliteit
+Fluoride,fluoride,F,fluoride
+Ureum,ureum,urum,ureum
+som heptachloor en heptachloorepoxide,som heptachloor en cis- en trans-heptachloorepoxide,sHpCl2,som heptachloor en cis- en trans-heptachloorepoxide
+"som 2,4- en 4,4-DDT","som 2,4'- en 4,4'-DDT",sDDT,"som 2,4'- en 4,4'-DDT"
+Som penta BDE,"som PBDE28, 47, 99, 100, 153, 154",sPBDE6,"som PBDE28, 47, 99, 100, 153, 154"
+Ethyleenbisdithiocarbamaten,zineb,zinb,zineb
+oleandomycine,oleandomycin,oladmcn,oleandomycin
+Aluminium,aluminium,Al,aluminium
+som demeton-isomeren,som o-demeton en s-demeton,sdmtn,som o-demeton en s-demeton
+(BS) fosfor totaal,fosfor totaal,Ptot,fosfor totaal
+(BS) stikstof Kjeldahl,stikstof Kjeldahl,NKj,stikstof Kjeldahl
+(BS) ijzer,ijzer,Fe,ijzer
+milbemectin,milbemycin A3,milbmcA3,milbemycin A3
+(BS) zink,zink,Zn,zink
+chlorofyl-a cryptofy,chlorofyl-a,CHLFa,chlorofyl-a
+chlorofyl-a diatomee,chlorofyl-a,CHLFa,chlorofyl-a
+chlorofyl-a groenalg,chlorofyl-a,CHLFa,chlorofyl-a
+chlorofyl-a L470nm,chlorofyl-a,CHLFa,chlorofyl-a
+chlorofyl-a toxblauw,chlorofyl-a,CHLFa,chlorofyl-a
+koolstof anorganisch (nf),koolstof anorganisch,Canorg,koolstof anorganisch
+(BS) zwavel totaal,zwavel totaal,Stot,zwavel totaal
+(BS) koper,koper,Cu,koper
+(BS) nikkel,nikkel,Ni,nikkel
+Zwavel,zwavel totaal,Stot,zwavel totaal
+Aluminium (nf),aluminium,Al,aluminium
+Ijzer (nf),ijzer,Fe,ijzer
+Barium,barium,Ba,barium
+(GW) Koper (nf),koper,Cu,koper
+(GW) nikkel (nf),nikkel,Ni,nikkel
+(GW) Zink (nf),zink,Zn,zink
+(GW) Temperatuur,Temperatuur,T,Temperatuur
+(GW) Zuurstof (%),zuurstof,O2,zuurstof
+(GW) Zuurstof (mg/l),zuurstof,O2,zuurstof
+CHLFa [ug/l] [toxblauw] [OW],chlorofyl-a,CHLFa,chlorofyl-a
+Chlorofyl-A Totaal (Blauwalg),chlorofyl-a,CHLFa,chlorofyl-a
+siliciumdioxide (nf),siliciumdioxide,SiO2,siliciumdioxide
+(GW) calcium,calcium,Ca,calcium
+(GW) IJzer,ijzer,Fe,ijzer
+(GW) Kalium,kalium,K,kalium
+(GW) Magnesium,magnesium,Mg,magnesium
+(GW) Natrium,natrium,Na,natrium
+(BS) minerale olie,minerale olie,minrlole,minerale olie
+(BS) arseen,arseen,As,arseen
+(BS) barium,barium,Ba,barium
+(BS) cadmium,cadmium,Cd,cadmium
+(BS) chroom,chroom,Cr,chroom
+(BS) kobalt,kobalt,Co,kobalt
+(BS) lood,lood,Pb,lood
+"(BS) 2,2,3,4,4,5,5-heptachloorbifenyl","2,2',3,4,4',5,5'-heptachloorbifenyl",PCB180,"2,2',3,4,4',5,5'-heptachloorbifenyl"
+"(BS) 2,2,3,4,4,5-hexachloorbifenyl","2,2',3,4,4',5'-hexachloorbifenyl",PCB138,"2,2',3,4,4',5'-hexachloorbifenyl"
+"(BS) 2,2,4,4,5,5-hexachloorbifenyl","2,2',4,4',5,5'-hexachloorbifenyl",PCB153,"2,2',4,4',5,5'-hexachloorbifenyl"
+"(BS) 2,2,4,5,5-pentachloorbifenyl","2,2',4,5,5'-pentachloorbifenyl",PCB101,"2,2',4,5,5'-pentachloorbifenyl"
+"(BS) 2,2,5,5-tetrachloorbifenyl","2,2',5,5'-tetrachloorbifenyl",PCB52,"2,2',5,5'-tetrachloorbifenyl"
+"(BS) 2,3,4,4,5-pentachloorbifenyl","2,3',4,4',5-pentachloorbifenyl",PCB118,"2,3',4,4',5-pentachloorbifenyl"
+"(BS) 2,4,4-trichloorbifenyl","2,4,4'-trichloorbifenyl",PCB28,"2,4,4'-trichloorbifenyl"
+"(BS) 2,4-dichloordifenyldichloorethaan","2,4'-dichloordifenyldichloorethaan",24DDD,"2,4'-dichloordifenyldichloorethaan"
+"(BS) 2,4-dichloordifenyldichlooretheen","2,4'-dichloordifenyldichlooretheen",24DDE,"2,4'-dichloordifenyldichlooretheen"
+"(BS) 2,4-dichloordifenyltrichloorethaan","2,4'-dichloordifenyltrichloorethaan",24DDT,"2,4'-dichloordifenyltrichloorethaan"
+"(BS) 4,4-dichloordifenyldichloorethaan","4,4'-dichloordifenyldichloorethaan",44DDD,"4,4'-dichloordifenyldichloorethaan"
+"(BS) 4,4-dichloordifenyldichlooretheen","4,4'-dichloordifenyldichlooretheen",44DDE,"4,4'-dichloordifenyldichlooretheen"
+"(BS) 4,4-dichloordifenyltrichloorethaan","4,4'-dichloordifenyltrichloorethaan",44DDT,"4,4'-dichloordifenyltrichloorethaan"
+"(BS) som 2,4- en 4,4-DDD","som 2,4'- en 4,4'-DDD",sDDD,"som 2,4'- en 4,4'-DDD"
+"(BS) som 2,4- en 4,4-DDE","som 2,4'- en 4,4'-DDE",sDDE,"som 2,4'- en 4,4'-DDE"
+"(BS) som 2,4- en 4,4-DDT","som 2,4'- en 4,4'-DDT",sDDT,"som 2,4'- en 4,4'-DDT"
+"(BS) som 2,4-, 4,4-DDT, 2,4-, 4,4-DDD, 2,4- en 4,4-DDE","som 2,4'-, 4,4'-DDT, 2,4'-, 4,4'-DDD, 2,4'- en 4,4'-DDE",sDDX6,"som 2,4'-, 4,4'-DDT, 2,4'-, 4,4'-DDD, 2,4'- en 4,4'-DDE"
+(GW) Koper,koper,Cu,koper
+(GW) Nikkel,nikkel,Ni,nikkel
+(GW) Zink,zink,Zn,zink
+kobalt (nf),kobalt,Co,kobalt
+"som 2,4- en 4,4-DDD","som 2,4'- en 4,4'-DDD",sDDD,"som 2,4'- en 4,4'-DDD"
+"som 2,4- en 4,4-DDE","som 2,4'- en 4,4'-DDE",sDDE,"som 2,4'- en 4,4'-DDE"
+"som 2,4-, 4,4-DDT, 2,4-, 4,4-DDD, 2,4- en 4,4-DDE","som 2,4'-, 4,4'-DDT, 2,4'-, 4,4'-DDD, 2,4'- en 4,4'-DDE",sDDX6,"som 2,4'-, 4,4'-DDT, 2,4'-, 4,4'-DDD, 2,4'- en 4,4'-DDE"
+Stikstof Kjeldahl (Nnf),stikstof Kjeldahl,NKj,stikstof Kjeldahl
+fosfor totaal (Pnf),fosfor totaal,Ptot,fosfor totaal
+(BS) som nitraat en nitriet,som nitraat en nitriet,sNO3NO2,som nitraat en nitriet
+(BS) indoxacarb (S-isomeer),indoxacarb (S-isomeer),indxcb,indoxacarb (S-isomeer)
+(BS) mecoprop,mecoprop,MCPP,mecoprop
+(GW) zwavel totaal,zwavel totaal,Stot,zwavel totaal
+zilver (nf),zilver,Ag,zilver
+thallium (nf),thallium,Tl,thallium
+vanadium (nf),vanadium,V,vanadium
+(AW) fosfor totaal,fosfor totaal,Ptot,fosfor totaal
+(AW) minerale olie,minerale olie,minrlole,minerale olie
+(AW) Onopgeloste stoffen,Onopgeloste stoffen,OS,Onopgeloste stoffen
+(AW) koper,koper,Cu,koper
+(AW) lood,lood,Pb,lood
+(AW) zink,zink,Zn,zink
+calcium (nf),calcium,Ca,calcium
+kalium (nf),kalium,K,kalium
+magnesium (nf),magnesium,Mg,magnesium
+natrium (nf),natrium,Na,natrium

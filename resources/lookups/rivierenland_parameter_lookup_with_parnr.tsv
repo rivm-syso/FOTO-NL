@@ -1,0 +1,1170 @@
+raw_name_key	Par_Nr	Raw_ParameterNaam	raw_code_key	raw_rows	Lookup_Parameteromschrijving	Lookup_Parametercode	lookup_code_key	lookup_rows	mismatch_type
+temperatuurwater	150	Temperatuur water	150	97534					lookup_missing_for_name
+zuurgraad	151	Zuurgraad	151	90956	Zuurgraad	pH	ph	1	par_nr_vs_lookup_code_mismatch
+zuurstof	153	Zuurstof	153	89227	zuurstof	O2	o2	1	par_nr_vs_lookup_code_mismatch
+geleidendheid	299	Geleidendheid	299	85983	Geleidendheid	GELDHD	geldhd	1	par_nr_vs_lookup_code_mismatch
+fosfortotaalp	1071	fosfor totaal (P)	1071	85130					lookup_missing_for_name
+ammonium	1051	ammonium	1051	84486	ammonium	NH4	nh4	1	par_nr_vs_lookup_code_mismatch
+chloride	1000	Chloride	1000	81391	chloride	Cl	cl	1	par_nr_vs_lookup_code_mismatch
+stikstofkjeldahl	1060	Stikstof Kjeldahl	1060	81232	stikstof Kjeldahl	NKj	nkj	1	par_nr_vs_lookup_code_mismatch
+nitraat	1052	Nitraat	1052	79808	nitraat	NO3	no3	1	par_nr_vs_lookup_code_mismatch
+nitriet	1053	Nitriet	1053	79765	nitriet	NO2	no2	1	par_nr_vs_lookup_code_mismatch
+doorzicht	102	Doorzicht	102	79028	Doorzicht	ZICHT	zicht	1	par_nr_vs_lookup_code_mismatch
+verhoudingclorideegv	9003	Verhouding Cloride / EGV	9003	77967					lookup_missing_for_name
+zuurstofpercentage	152	Zuurstof percentage	152	73818					lookup_missing_for_name
+verhoudingo2o2mgl	9006	Verhouding O2 (%) / O2 (mg/l)	9006	73620					lookup_missing_for_name
+kleur	111	Kleur	111	73205					lookup_missing_for_name
+geur	110	Geur	110	73054					lookup_missing_for_name
+ntotaalberekenddawaco	9002	N-totaal Berekend Dawaco	9002	70507					lookup_missing_for_name
+orthofosfaatp	1070	Orthofosfaat (P)	1070	70078					lookup_missing_for_name
+sulfaat	1100	sulfaat	1100	67890	sulfaat	SO4	so4	1	par_nr_vs_lookup_code_mismatch
+diepte	101	Diepte	101	64953					lookup_missing_for_name
+kroos	113	Kroos	113	63929					lookup_missing_for_name
+verhoudingdoorzichtdiepte	9005	Verhouding Doorzicht / Diepte	9005	63763					lookup_missing_for_name
+zichtbareverontreiniging	112	Zichtbare Verontreiniging	112	62697					lookup_missing_for_name
+chlorofyla	1010	Chlorofyl-A	1010	62136	chlorofyl-a	CHLFa	chlfa	1	par_nr_vs_lookup_code_mismatch
+biochemischzuurstofverbruikmetallylthioureum	1040	Biochemisch zuurstofverbruik met allylthioureum	1040	55308					lookup_missing_for_name
+stroomrichting	130	Stroomrichting	130	52070					lookup_missing_for_name
+feofytinea	1011	Feofytine A	1011	49786	Feofytine a	FEOa	feoa	1	par_nr_vs_lookup_code_mismatch
+stikstoftotaaln	1062	stikstof totaal (N)	1062	49568					lookup_missing_for_name
+bicarbonaat	1031	Bicarbonaat	1031	46445					lookup_missing_for_name
+carbonaat	1030	carbonaat	1030	45369	carbonaat	CO3	co3	1	par_nr_vs_lookup_code_mismatch
+zwevendestof	1021	Zwevende Stof	1021	43726					lookup_missing_for_name
+stroomsnelheid	131	Stroomsnelheid	131	39754					lookup_missing_for_name
+schoning	9122	Schoning	9122	39458					lookup_missing_for_name
+calcium	2514	Calcium	2514	38409	calcium	Ca	ca	1	par_nr_vs_lookup_code_mismatch
+ijzer	2520	Ijzer	2520	38193	ijzer	Fe	fe	1	par_nr_vs_lookup_code_mismatch
+magnesium	2535	Magnesium	2535	36407	magnesium	Mg	mg	1	par_nr_vs_lookup_code_mismatch
+kalium	2523	Kalium	2523	36406	kalium	K	k	1	par_nr_vs_lookup_code_mismatch
+natrium	2540	Natrium	2540	36392	natrium	Na	na	1	par_nr_vs_lookup_code_mismatch
+schuim	9113	Schuim	9113	31695					lookup_missing_for_name
+olie	9111	Olie	9111	31650					lookup_missing_for_name
+verhoudingorthoptotaalp	9007	Verhouding Ortho P / Totaal P	9007	28660					lookup_missing_for_name
+koper	2527	Koper	2527	27858	koper	Cu	cu	1	par_nr_vs_lookup_code_mismatch
+somnitraatennitriet	1055	Som nitraat en nitriet	1055	26819	som nitraat en nitriet	sNO3NO2	sno3no2	1	par_nr_vs_lookup_code_mismatch
+gloeirest	1022	Gloeirest	1022	24139					lookup_missing_for_name
+weergesteldheid	9119	Weergesteldheid	9119	22038					lookup_missing_for_name
+koolstoforganischtoc	1026	koolstof organisch (TOC)	1026	21751					lookup_missing_for_name
+zink	2562	Zink	2562	19404	zink	Zn	zn	1	par_nr_vs_lookup_code_mismatch
+nikkel	2542	Nikkel	2542	18410	nikkel	Ni	ni	1	par_nr_vs_lookup_code_mismatch
+koolstoforganischnfdoc	1025	koolstof organisch (nf) (DOC)	1025	16208					lookup_missing_for_name
+verhoudingdoctoc	9004	Verhouding DOC / TOC	9004	14292					lookup_missing_for_name
+nikkelnf	2543	Nikkel (nf)	2543	13150					lookup_missing_for_name
+breedte	9104	Breedte	9104	12018					lookup_missing_for_name
+overmatigegroeihogerewaterplanten	9118	Overmatige Groei Hogere Waterplanten	9118	11813					lookup_missing_for_name
+uitgediept	9125	Uitgediept	9125	11614					lookup_missing_for_name
+lood	2533	Lood	2533	10455	lood	Pb	pb	1	par_nr_vs_lookup_code_mismatch
+cadmium	2512	Cadmium	2512	10382	cadmium	Cd	cd	1	par_nr_vs_lookup_code_mismatch
+chroom	2516	Chroom	2516	10283	chroom	Cr	cr	1	par_nr_vs_lookup_code_mismatch
+bromide	1106	Bromide	1106	9437	bromide	Br	br	1	par_nr_vs_lookup_code_mismatch
+zinknf	2563	Zink (nf)	2563	9286					lookup_missing_for_name
+nkjeldahlberekend	9008	N-Kjeldahl berekend	9008	7188					lookup_missing_for_name
+noxnf	1054	NOx (nf)	1054	5618					lookup_missing_for_name
+thermotolerantecolisincubatiebij44c	2101	Thermotolerante Colis (incubatie bij 44 C)	2101	4967					lookup_missing_for_name
+badgasteninhetwater	9103	Badgasten in het water	9103	4849					lookup_missing_for_name
+escherichiacoli	2102	Escherichia coli	2102	4819					lookup_missing_for_name
+ijsdek	9107	IJsdek	9107	4716					lookup_missing_for_name
+temperatuurlucht	9114	Temperatuur lucht	9114	4465					lookup_missing_for_name
+kwik	2564	kwik	2564	4398	kwik	Hg	hg	1	par_nr_vs_lookup_code_mismatch
+intestinaleenterococcen	2104	Intestinale enterococcen	2104	4347					lookup_missing_for_name
+totaalcolisincubatiebij37c	2100	Totaal Colis (incubatie bij 37 C)	2100	4115					lookup_missing_for_name
+ammoniak	1050	ammoniak	1050	3765	ammoniak	NH3	nh3	1	par_nr_vs_lookup_code_mismatch
+cyanobacteriedrijflaag	9105	Cyanobacteriedrijflaag	9105	2804					lookup_missing_for_name
+sulfidenf	1101	Sulfide (nf)	1101	2461					lookup_missing_for_name
+kopernf	2528	Koper (nf)	2528	2106					lookup_missing_for_name
+atrazine	4279	atrazine	4279	2083	atrazine	atzne	atzne	1	par_nr_vs_lookup_code_mismatch
+simazine	4626	simazine	4626	2051	simazine	simzne	simzne	1	par_nr_vs_lookup_code_mismatch
+zuurverbruik	9102	Zuurverbruik	9102	2042					lookup_missing_for_name
+dimethoaat	4395	dimethoaat	4395	2019	dimethoaat	Dmtat	dmtat	1	par_nr_vs_lookup_code_mismatch
+pirimicarb	4595	pirimicarb	4595	1991	pirimicarb	pirmcb	pirmcb	1	par_nr_vs_lookup_code_mismatch
+malathion	4532	malathion	4532	1976	malathion	malton	malton	1	par_nr_vs_lookup_code_mismatch
+dichloorvos	4377	dichloorvos	4377	1907	dichloorvos	DClvs	dclvs	1	par_nr_vs_lookup_code_mismatch
+tolclofosmethyl	4689	tolclofos-methyl	4689	1901	tolclofos-methyl	tolcfsC1y	tolcfsc1y	1	par_nr_vs_lookup_code_mismatch
+methylazinfos	4549	methylazinfos	4549	1868	methylazinfos	C1yazfs	c1yazfs	1	par_nr_vs_lookup_code_mismatch
+diazinon	4367	diazinon	4367	1866	diazinon	Daznn	daznn	1	par_nr_vs_lookup_code_mismatch
+baseverbruik	9101	Baseverbruik	9101	1860					lookup_missing_for_name
+metazachloor	4539	metazachloor	4539	1828	metazachloor	mzCl	mzcl	1	par_nr_vs_lookup_code_mismatch
+ethylchloorpyrifos	4425	ethylchloorpyrifos	4425	1815	ethylchloorpyrifos	C2yClprfs	c2yclprfs	1	par_nr_vs_lookup_code_mismatch
+etridiazol	4430	etridiazol	4430	1813	etridiazol	eTDazl	etdazl	1	par_nr_vs_lookup_code_mismatch
+methylparathion	4555	methylparathion	4555	1813	methylparathion	C1yprton	c1yprton	1	par_nr_vs_lookup_code_mismatch
+carbaryl	4308	carbaryl	4308	1804	carbaryl	carbrl	carbrl	1	par_nr_vs_lookup_code_mismatch
+metolachloor	4558	metolachloor	4558	1798	metolachloor	metlCl	metlcl	1	par_nr_vs_lookup_code_mismatch
+benzokfluorantheen	4112	benzo(k)fluorantheen	4112	1787	benzo(k)fluorantheen	BkF	bkf	1	par_nr_vs_lookup_code_mismatch
+benzoapyreen	4109	benzo(a)pyreen	4109	1786	benzo(a)pyreen	BaP	bap	1	par_nr_vs_lookup_code_mismatch
+fluorantheen	4104	fluorantheen	4104	1785	fluorantheen	Flu	flu	1	par_nr_vs_lookup_code_mismatch
+metalaxyl	4537	metalaxyl	4537	1785	metalaxyl	mlxl	mlxl	1	par_nr_vs_lookup_code_mismatch
+antraceen	4107	antraceen	4107	1783	antraceen	Ant	ant	1	par_nr_vs_lookup_code_mismatch
+naftaleen	4115	naftaleen	4115	1783	naftaleen	Naf	naf	1	par_nr_vs_lookup_code_mismatch
+vogel	9117	Vogel	9117	1782					lookup_missing_for_name
+ethylparathion	4428	ethylparathion	4428	1781	ethylparathion	C2yprton	c2yprton	1	par_nr_vs_lookup_code_mismatch
+carbofuran	4310	carbofuran	4310	1778	carbofuran	carbfrn	carbfrn	1	par_nr_vs_lookup_code_mismatch
+indeno123cdpyreen	4114	indeno(1,2,3-cd)pyreen	4114	1778	indeno(1,2,3-cd)pyreen	InP	inp	1	par_nr_vs_lookup_code_mismatch
+benzoghiperyleen	4111	benzo(ghi)peryleen	4111	1775	benzo(ghi)peryleen	BghiPe	bghipe	1	par_nr_vs_lookup_code_mismatch
+triazofos	4702	triazofos	4702	1772	triazofos	Tazfs	tazfs	1	par_nr_vs_lookup_code_mismatch
+chloorprofam	4321	chloorprofam	4321	1756	chloorprofam	Clpfm	clpfm	1	par_nr_vs_lookup_code_mismatch
+methomyl	4546	methomyl	4546	1756	methomyl	metml	metml	1	par_nr_vs_lookup_code_mismatch
+aldicarb	4268	aldicarb	4268	1755	aldicarb	alDcb	aldcb	1	par_nr_vs_lookup_code_mismatch
+methiocarb	4543	methiocarb	4543	1755	methiocarb	metocb	metocb	1	par_nr_vs_lookup_code_mismatch
+chloridazon	4327	chloridazon	4327	1754	chloridazon	Clidzn	clidzn	1	par_nr_vs_lookup_code_mismatch
+propoxur	4608	propoxur	4608	1754	propoxur	propxr	propxr	1	par_nr_vs_lookup_code_mismatch
+diuron	4407	diuron	4407	1749	diuron	Durn	durn	1	par_nr_vs_lookup_code_mismatch
+isoproturon	4514	isoproturon	4514	1746	isoproturon	iptrn	iptrn	1	par_nr_vs_lookup_code_mismatch
+ethylazinfos	4423	ethylazinfos	4423	1743	ethylazinfos	C2yazfs	c2yazfs	1	par_nr_vs_lookup_code_mismatch
+terbutylazine	4669	terbutylazine	4669	1741	terbutylazine	terC4yazne	terc4yazne	1	par_nr_vs_lookup_code_mismatch
+prosulfocarb	4611	prosulfocarb	4611	1718	prosulfocarb	prosfcb	prosfcb	1	par_nr_vs_lookup_code_mismatch
+heptenofos	4496	heptenofos	4496	1716	heptenofos	heptnfs	heptnfs	1	par_nr_vs_lookup_code_mismatch
+fenthion	4453	fenthion	4453	1715	fenthion	fenton	fenton	1	par_nr_vs_lookup_code_mismatch
+benzoaantraceen	4108	benzo(a)antraceen	4108	1708	benzo(a)antraceen	BaA	baa	1	par_nr_vs_lookup_code_mismatch
+chryseen	4113	chryseen	4113	1708	chryseen	Chr	chr	1	par_nr_vs_lookup_code_mismatch
+fenantreen	4103	fenantreen	4103	1708	fenantreen	Fen	fen	1	par_nr_vs_lookup_code_mismatch
+methylpirimifos	4556	methylpirimifos	4556	1695	methylpirimifos	C1yprmfs	c1yprmfs	1	par_nr_vs_lookup_code_mismatch
+chloortoluron	4326	chloortoluron	4326	1694	chloortoluron	Cltlrn	cltlrn	1	par_nr_vs_lookup_code_mismatch
+dimethomorf	4396	dimethomorf	4396	1691	dimethomorf	Dmtmf	dmtmf	1	par_nr_vs_lookup_code_mismatch
+alachloor	4267	alachloor	4267	1684	alachloor	alCl	alcl	1	par_nr_vs_lookup_code_mismatch
+aldicarbsulfon	4269	aldicarbsulfon	4269	1684	aldicarbsulfon	alDcsfn	aldcsfn	1	par_nr_vs_lookup_code_mismatch
+pyrazofos	4615	pyrazofos	4615	1684	pyrazofos	pyrazfs	pyrazfs	1	par_nr_vs_lookup_code_mismatch
+pyrimethanil	4618	pyrimethanil	4618	1680	pyrimethanil	pyrmtnl	pyrmtnl	1	par_nr_vs_lookup_code_mismatch
+benzobfluorantheen	4110	benzo(b)fluorantheen	4110	1679	benzo(b)fluorantheen	BbF	bbf	1	par_nr_vs_lookup_code_mismatch
+fenoxycarb	4446	fenoxycarb	4446	1677	fenoxycarb	fenOxcb	fenoxcb	1	par_nr_vs_lookup_code_mismatch
+kresoximmethyl	4525	kresoxim-methyl	4525	1674	kresoxim-methyl	kresOxmC1y	kresoxmc1y	1	par_nr_vs_lookup_code_mismatch
+chloorfenvinfos	4317	chloorfenvinfos	4317	1665	chloorfenvinfos	Clfvfs	clfvfs	1	par_nr_vs_lookup_code_mismatch
+azoxystrobin	4282	azoxystrobin	4282	1663	azoxystrobin	azoxsbn	azoxsbn	1	par_nr_vs_lookup_code_mismatch
+linuron	4530	linuron	4530	1662	linuron	linrn	linrn	1	par_nr_vs_lookup_code_mismatch
+metoxuron	4561	metoxuron	4561	1652	metoxuron	metxrn	metxrn	1	par_nr_vs_lookup_code_mismatch
+tebuconazol	4662	tebuconazol	4662	1648	tebuconazol	tebcnzl	tebcnzl	1	par_nr_vs_lookup_code_mismatch
+trifloxystrobin	4713	trifloxystrobin	4713	1646	trifloxystrobin	Tfxsbn	tfxsbn	1	par_nr_vs_lookup_code_mismatch
+chlorofylal470nm	2317	chlorofyl-a L470nm	2317	1645					lookup_missing_for_name
+chlorofylacryptofy	2314	chlorofyl-a cryptofy	2314	1645					lookup_missing_for_name
+pyreen	4102	pyreen	4102	1645	pyreen	Pyr	pyr	1	par_nr_vs_lookup_code_mismatch
+chlorofylagroenalg	2316	chlorofyl-a groenalg	2316	1644					lookup_missing_for_name
+chlorofyladiatomee	2315	chlorofyl-a diatomee	2315	1643					lookup_missing_for_name
+dibenzoahantraceen	4101	dibenzo(a,h)antraceen	4101	1643	dibenzo(a,h)antraceen	DBahAnt	dbahant	1	par_nr_vs_lookup_code_mismatch
+carbendazim	4036	carbendazim	4036	1642	carbendazim	carbdzm	carbdzm	1	par_nr_vs_lookup_code_mismatch
+propachloor	4603	propachloor	4603	1640	propachloor	propCl	propcl	1	par_nr_vs_lookup_code_mismatch
+triallaat	4700	triallaat	4700	1609	triallaat	Talt	talt	1	par_nr_vs_lookup_code_mismatch
+imidacloprid	4506	imidacloprid	4506	1607	imidacloprid	imdcpd	imdcpd	1	par_nr_vs_lookup_code_mismatch
+terbutrin	4668	terbutrin	4668	1599	terbutrin	terbtn	terbtn	1	par_nr_vs_lookup_code_mismatch
+disulfoton	4404	disulfoton	4404	1585	disulfoton	Dsftn	dsftn	1	par_nr_vs_lookup_code_mismatch
+deltamethrin	4357	deltamethrin	4357	1580	deltamethrin	dmtn	dmtn	1	par_nr_vs_lookup_code_mismatch
+fluoreen	4100	fluoreen	4100	1560	fluoreen	Fle	fle	1	par_nr_vs_lookup_code_mismatch
+acenafteen	4105	acenafteen	4105	1552	acenafteen	AcNe	acne	1	par_nr_vs_lookup_code_mismatch
+acenaftyleen	4106	acenaftyleen	4106	1546	acenaftyleen	AcNy	acny	1	par_nr_vs_lookup_code_mismatch
+methiocarbsulfon	4544	methiocarbsulfon	4544	1531	methiocarbsulfon	metocbsfn	metocbsfn	1	par_nr_vs_lookup_code_mismatch
+methiocarbsulfoxide	4545	methiocarbsulfoxide	4545	1529	methiocarbsulfoxide	metocbSO	metocbso	1	par_nr_vs_lookup_code_mismatch
+mevinfos	4563	mevinfos	4563	1515	mevinfos	mevfs	mevfs	1	par_nr_vs_lookup_code_mismatch
+iprodion	4510	iprodion	4510	1513	iprodion	ipDon	ipdon	1	par_nr_vs_lookup_code_mismatch
+clomazon	4338	clomazon	4338	1512	clomazon	clomzn	clomzn	1	par_nr_vs_lookup_code_mismatch
+triadimenol	4699	triadimenol	4699	1507	triadimenol	Tadmnl	tadmnl	1	par_nr_vs_lookup_code_mismatch
+chloorthalonil	4325	chloorthalonil	4325	1492	chloorthalonil	Cltlnl	cltlnl	1	par_nr_vs_lookup_code_mismatch
+esfenvaleraat	4414	esfenvaleraat	4414	1488	esfenvaleraat	esfvlrt	esfvlrt	1	par_nr_vs_lookup_code_mismatch
+oxamyl	4580	oxamyl	4580	1485	oxamyl	Oaml	oaml	1	par_nr_vs_lookup_code_mismatch
+monsterdiepte	120	Monsterdiepte	120	1477					lookup_missing_for_name
+fauna	9109	Fauna	9109	1460					lookup_missing_for_name
+huisdieren	9106	Huisdieren	9106	1460					lookup_missing_for_name
+onderhoudstrand	9112	Onderhoud strand	9112	1459					lookup_missing_for_name
+vee	9126	Vee	9126	1459					lookup_missing_for_name
+pyriproxyfen	4619	pyriproxyfen	4619	1459	pyriproxyfen	pyrpxfn	pyrpxfn	1	par_nr_vs_lookup_code_mismatch
+dichlobenil	4372	dichlobenil	4372	1457	dichlobenil	Dcbnl	dcbnl	1	par_nr_vs_lookup_code_mismatch
+trifluraline	4716	trifluraline	4716	1457	trifluraline	Tfrlne	tfrlne	1	par_nr_vs_lookup_code_mismatch
+pyridaben	4616	pyridaben	4616	1453	pyridaben	pyrdbn	pyrdbn	1	par_nr_vs_lookup_code_mismatch
+metamitron	4538	metamitron	4538	1436	metamitron	mmtn	mmtn	1	par_nr_vs_lookup_code_mismatch
+ethofumesaat	4421	ethofumesaat	4421	1425	ethofumesaat	etfmst	etfmst	1	par_nr_vs_lookup_code_mismatch
+gammahexachloorcyclohexaanlindaan	4044	gamma-hexachloorcyclohexaan (lindaan)	4044	1418	gamma-hexachloorcyclohexaan (lindaan)	cHCH	chch	1	par_nr_vs_lookup_code_mismatch
+bitertanol	4293	bitertanol	4293	1416	bitertanol	bittnl	bittnl	1	par_nr_vs_lookup_code_mismatch
+fenpropimorf	4450	fenpropimorf	4450	1415	fenpropimorf	fenppmf	fenppmf	1	par_nr_vs_lookup_code_mismatch
+methylbromofos	4550	methylbromofos	4550	1415	methylbromofos	C1yBrfs	c1ybrfs	1	par_nr_vs_lookup_code_mismatch
+procymidon	4599	procymidon	4599	1415	procymidon	procmdn	procmdn	1	par_nr_vs_lookup_code_mismatch
+bupirimaat	4299	bupirimaat	4299	1414	bupirimaat	buprmt	buprmt	1	par_nr_vs_lookup_code_mismatch
+chlorofylatotaalblauwalg	2313	Chlorofyl-A Totaal (Blauwalg)	2313	1409					lookup_missing_for_name
+desmetryn	4365	desmetryn	4365	1399	desmetryn	desmtn	desmtn	1	par_nr_vs_lookup_code_mismatch
+monolinuron	4568	monolinuron	4568	1391	monolinuron	Mlnrn	mlnrn	1	par_nr_vs_lookup_code_mismatch
+propyzamide	4610	propyzamide	4610	1380	propyzamide	propAd	propad	1	par_nr_vs_lookup_code_mismatch
+metribuzin	4562	metribuzin	4562	1373	metribuzin	metbzn	metbzn	1	par_nr_vs_lookup_code_mismatch
+cyprodinil	4353	cyprodinil	4353	1372	cyprodinil	cypdnl	cypdnl	1	par_nr_vs_lookup_code_mismatch
+difenoconazool	4386	difenoconazool	4386	1371	difenoconazool	Dfncnzl	dfncnzl	1	par_nr_vs_lookup_code_mismatch
+furalaxyl	4487	furalaxyl	4487	1364	furalaxyl	furlxl	furlxl	1	par_nr_vs_lookup_code_mismatch
+fluazinam	4463	fluazinam	4463	1356	fluazinam	fluaznm	fluaznm	1	par_nr_vs_lookup_code_mismatch
+indoxacarb	4508	indoxacarb	4508	1349					lookup_missing_for_name
+vinclozolin	4722	vinclozolin	4722	1344	vinclozolin	vinczln	vinczln	1	par_nr_vs_lookup_code_mismatch
+methylchloorpyrifos	4551	methylchloorpyrifos	4551	1338	methylchloorpyrifos	C1yClprfs	c1yclprfs	1	par_nr_vs_lookup_code_mismatch
+ethylbromofos	4424	ethylbromofos	4424	1329	ethylbromofos	C2yBrfs	c2ybrfs	1	par_nr_vs_lookup_code_mismatch
+fluoroprobecyano	2321	Fluoroprobe cyano	2321	1320					lookup_missing_for_name
+fluoroprobetotaal	2318	Fluoroprobe totaal	2318	1320					lookup_missing_for_name
+buprofezin	4300	buprofezin	4300	1319	buprofezin	bupfzn	bupfzn	1	par_nr_vs_lookup_code_mismatch
+diethyltoluamide	4385	diethyltoluamide	4385	1317	diethyltoluamide	DEET	deet	1	par_nr_vs_lookup_code_mismatch
+dodemorf	4408	dodemorf	4408	1317	dodemorf	dodmf	dodmf	1	par_nr_vs_lookup_code_mismatch
+dichlofluanide	4374	dichlofluanide	4374	1315	dichlofluanide	Dcfande	dcfande	1	par_nr_vs_lookup_code_mismatch
+flutolanil	4475	flutolanil	4475	1313	flutolanil	flutlnl	flutlnl	1	par_nr_vs_lookup_code_mismatch
+regen	9110	Regen	9110	1307					lookup_missing_for_name
+imazalil	4504	imazalil	4504	1307	imazalil	imzll	imzll	1	par_nr_vs_lookup_code_mismatch
+diethofencarb	4383	diethofencarb	4383	1304	diethofencarb	Detfcb	detfcb	1	par_nr_vs_lookup_code_mismatch
+4dimethylaminosulfotoluidide	4256	4-dimethylaminosulfotoluidide	4256	1301	4-dimethylaminosulfotoluidide	DMST	dmst	1	par_nr_vs_lookup_code_mismatch
+tolylfluanide	4691	tolylfluanide	4691	1289	tolylfluanide	tolfande	tolfande	1	par_nr_vs_lookup_code_mismatch
+fosalon	4481	fosalon	4481	1288	fosalon	fosln	fosln	1	par_nr_vs_lookup_code_mismatch
+flonicamid	4458	flonicamid	4458	1259	flonicamid	floncmd	floncmd	1	par_nr_vs_lookup_code_mismatch
+2methyl4chloorfenoxyazijnzuur	4241	2-methyl-4-chloorfenoxyazijnzuur	4241	1254	2-methyl-4-chloorfenoxyazijnzuur	MCPA	mcpa	1	par_nr_vs_lookup_code_mismatch
+spinosad	4655	spinosad	4655	1253	spinosad	spinsd	spinsd	1	par_nr_vs_lookup_code_mismatch
+2methyl4chloorfenoxypropionzuurmecoprop	4534	2-methyl-4-chloorfenoxypropionzuur (mecoprop)	4534	1231					lookup_missing_for_name
+bentazon	4284	bentazon	4284	1210	bentazon	bentzn	bentzn	1	par_nr_vs_lookup_code_mismatch
+desethylatrazine	4361	desethylatrazine	4361	1202	desethylatrazine	desC2yatzne	desc2yatzne	1	par_nr_vs_lookup_code_mismatch
+acetamiprid	4264	acetamiprid	4264	1183	acetamiprid	actmpd	actmpd	1	par_nr_vs_lookup_code_mismatch
+methoxyfenozide	4049	methoxyfenozide	4049	1183	methoxyfenozide	C1oxfnzde	c1oxfnzde	1	par_nr_vs_lookup_code_mismatch
+propazine	4606	propazine	4606	1183	propazine	propzne	propzne	1	par_nr_vs_lookup_code_mismatch
+thiacloprid	4678	thiacloprid	4678	1183	thiacloprid	thiacpd	thiacpd	1	par_nr_vs_lookup_code_mismatch
+thiamethoxam	4679	thiamethoxam	4679	1183	thiamethoxam	thiamtxm	thiamtxm	1	par_nr_vs_lookup_code_mismatch
+4tertiairoctylfenol	4260	4-tertiair-octylfenol	4260	1182	4-tertiair-octylfenol	4ttC8yFol	4ttc8yfol	1	par_nr_vs_lookup_code_mismatch
+4nonylfenol	4259	4-nonylfenol	4259	1181	4-nonylfenol	4C9yFol	4c9yfol	1	par_nr_vs_lookup_code_mismatch
+pymetrozine	4613	pymetrozine	4613	1178	pymetrozine	pymtzne	pymtzne	1	par_nr_vs_lookup_code_mismatch
+26dichloorbenzamide	4236	2,6-dichloorbenzamide	4236	1169	2,6-dichloorbenzamide	26DClBenAd	26dclbenad	1	par_nr_vs_lookup_code_mismatch
+som4chlorofylafracties	2322	som 4 chlorofyl-a fracties	2322	1150	som 4 chlorofyl-a fracties	sCHLFa4	schlfa4	1	par_nr_vs_lookup_code_mismatch
+thiometon	4687	thiometon	4687	1147	thiometon	tomtn	tomtn	1	par_nr_vs_lookup_code_mismatch
+troebelheid	141	Troebelheid	141	1146	Troebelheid	TROEBHD	troebhd	1	par_nr_vs_lookup_code_mismatch
+thiofanaatmethyl	4683	thiofanaat-methyl	4683	1143	thiofanaat-methyl	tofnC1y	tofnc1y	1	par_nr_vs_lookup_code_mismatch
+categoriecyanobacteriedrijflaag	2001	Categorie Cyanobacteriedrijflaag	2001	1141					lookup_missing_for_name
+fosfamidon	4482	fosfamidon	4482	1138	fosfamidon	fosfmdn	fosfmdn	1	par_nr_vs_lookup_code_mismatch
+fipronil	4457	fipronil	4457	1137	fipronil	fipnl	fipnl	1	par_nr_vs_lookup_code_mismatch
+zon	9121	Zon	9121	1135					lookup_missing_for_name
+24dichloorfenoxypropionzuur	4233	2,4-dichloorfenoxypropionzuur	4233	1135	2,4-dichloorfenoxypropionzuur	24DP	24dp	1	par_nr_vs_lookup_code_mismatch
+windrichting	9120	Windrichting	9120	1134					lookup_missing_for_name
+hexachloorbenzeen	4046	hexachloorbenzeen	4046	1116	hexachloorbenzeen	HCB	hcb	1	par_nr_vs_lookup_code_mismatch
+abamectine	4261	abamectine	4261	1114	abamectine	abmtne	abmtne	1	par_nr_vs_lookup_code_mismatch
+alfaendosulfan	4033	alfa-endosulfan	4033	1114	alfa-endosulfan	aedsfn	aedsfn	1	par_nr_vs_lookup_code_mismatch
+24dichloorfenoxyazijnzuur	4231	2,4-dichloorfenoxyazijnzuur	4231	1112	2,4-dichloorfenoxyazijnzuur	24D	24d	1	par_nr_vs_lookup_code_mismatch
+cyromazine	4354	cyromazine	4354	1102	cyromazine	cyrmzne	cyrmzne	1	par_nr_vs_lookup_code_mismatch
+lambdacyhalothrin	4526	lambda-cyhalothrin	4526	1100	lambda-cyhalothrin	lcyhltn	lcyhltn	1	par_nr_vs_lookup_code_mismatch
+24dichloorfenoxyboterzuur	4232	2,4-dichloorfenoxyboterzuur	4232	1099	2,4-dichloorfenoxyboterzuur	24DB	24db	1	par_nr_vs_lookup_code_mismatch
+2methyl4chloorfenoxyboterzuur	4242	2-methyl-4-chloorfenoxyboterzuur	4242	1099	2-methyl-4-chloorfenoxyboterzuur	MCPB	mcpb	1	par_nr_vs_lookup_code_mismatch
+pendimethalin	4587	pendimethalin	4587	1097	pendimethalin	pendmtln	pendmtln	1	par_nr_vs_lookup_code_mismatch
+transpermethrin	4696	trans-permethrin	4696	1096	trans-permethrin	tpermtn	tpermtn	1	par_nr_vs_lookup_code_mismatch
+transpyrifenox	4697	trans-pyrifenox	4697	1095	trans-pyrifenox	tpyrfnx	tpyrfnx	1	par_nr_vs_lookup_code_mismatch
+fluroxypyr	4472	fluroxypyr	4472	1092	fluroxypyr	flurOxpr	fluroxpr	1	par_nr_vs_lookup_code_mismatch
+245trichloorfenoxyazijnzuur	4225	2,4,5-trichloorfenoxyazijnzuur	4225	1088	2,4,5-trichloorfenoxyazijnzuur	245T	245t	1	par_nr_vs_lookup_code_mismatch
+dicamba	4371	dicamba	4371	1088	dicamba	Dcba	dcba	1	par_nr_vs_lookup_code_mismatch
+demetonsmethyl	4359	demeton-S-methyl	4359	1074	demeton-S-methyl	demtSC1y	demtsc1y	1	par_nr_vs_lookup_code_mismatch
+triflumizool	4714	triflumizool	4714	1065	triflumizool	Tfmzl	tfmzl	1	par_nr_vs_lookup_code_mismatch
+4chloorfenoxyazijnzuur	4254	4-chloorfenoxyazijnzuur	4254	1058	4-chloorfenoxyazijnzuur	4CPA	4cpa	1	par_nr_vs_lookup_code_mismatch
+broomoxynil	4297	broomoxynil	4297	1044	broomoxynil	BrOxnl	broxnl	1	par_nr_vs_lookup_code_mismatch
+ioxynil	4509	ioxynil	4509	1044	ioxynil	iOxnl	ioxnl	1	par_nr_vs_lookup_code_mismatch
+triclopyr	4707	triclopyr	4707	1044	triclopyr	Tcpr	tcpr	1	par_nr_vs_lookup_code_mismatch
+haloxyfop	4494	haloxyfop	4494	1031	haloxyfop	halOxfp	haloxfp	1	par_nr_vs_lookup_code_mismatch
+helderheid	140	Helderheid	140	1008					lookup_missing_for_name
+fluazifop	4460	fluazifop	4460	998	fluazifop	fluazfp	fluazfp	1	par_nr_vs_lookup_code_mismatch
+fenvaleraat	4456	fenvaleraat	4456	992	fenvaleraat	fenvlrt	fenvlrt	1	par_nr_vs_lookup_code_mismatch
+4chlooraniline	4252	4-chlooraniline	4252	951	4-chlooraniline	4ClAn	4clan	1	par_nr_vs_lookup_code_mismatch
+alfacypermethrin	4271	alfa-cypermethrin	4271	898	alfa-cypermethrin	acpmtn	acpmtn	1	par_nr_vs_lookup_code_mismatch
+124trichloorbenzeen	4141	1,2,4-trichloorbenzeen	4141	853	1,2,4-trichloorbenzeen	124TClBen	124tclben	1	par_nr_vs_lookup_code_mismatch
+metabenzthiazuron	4536	metabenzthiazuron	4536	851	metabenzthiazuron	metbtazrn	metbtazrn	1	par_nr_vs_lookup_code_mismatch
+endrin	4043	endrin	4043	837	endrin	endn	endn	1	par_nr_vs_lookup_code_mismatch
+nicosulfuron	4573	nicosulfuron	4573	815	nicosulfuron	nicsfrn	nicsfrn	1	par_nr_vs_lookup_code_mismatch
+teflubenzuron	4665	teflubenzuron	4665	814	teflubenzuron	tefbzrn	tefbzrn	1	par_nr_vs_lookup_code_mismatch
+44dichloordifenyltrichloorethaan	4031	4,4-dichloordifenyltrichloorethaan	4031	813	4,4'-dichloordifenyltrichloorethaan	44DDT	44ddt	1	par_nr_vs_lookup_code_mismatch
+44dichloordifenyldichlooretheen	4030	4,4-dichloordifenyldichlooretheen	4030	809	4,4'-dichloordifenyldichlooretheen	44DDE	44dde	1	par_nr_vs_lookup_code_mismatch
+cispyrifenox	4331	cis-pyrifenox	4331	806	cis-pyrifenox	cpyrfnx	cpyrfnx	1	par_nr_vs_lookup_code_mismatch
+propamocarb	4604	propamocarb	4604	801	propamocarb	propmcb	propmcb	1	par_nr_vs_lookup_code_mismatch
+isodrin	4048	isodrin	4048	788	isodrin	idn	idn	1	par_nr_vs_lookup_code_mismatch
+alfahexachloorcyclohexaan	4034	alfa-hexachloorcyclohexaan	4034	785	alfa-hexachloorcyclohexaan	aHCH	ahch	1	par_nr_vs_lookup_code_mismatch
+heptachloor	4045	heptachloor	4045	781	heptachloor	HpCl	hpcl	1	par_nr_vs_lookup_code_mismatch
+aldrin	4032	aldrin	4032	776	aldrin	aldn	aldn	1	par_nr_vs_lookup_code_mismatch
+betahexachloorcyclohexaan	4287	beta-hexachloorcyclohexaan	4287	776	beta-hexachloorcyclohexaan	bHCH	bhch	1	par_nr_vs_lookup_code_mismatch
+dieldrin	4040	dieldrin	4040	776	dieldrin	dieldn	dieldn	1	par_nr_vs_lookup_code_mismatch
+tetrachloorvinfosmixedisomeren	4674	tetrachloorvinfos (mixed isomeren)	4674	775	tetrachloorvinfos (mixed isomeren)	T4Clvfs	t4clvfs	1	par_nr_vs_lookup_code_mismatch
+44dichloordifenyldichloorethaan	4249	4,4-dichloordifenyldichloorethaan	4249	773	4,4'-dichloordifenyldichloorethaan	44DDD	44ddd	1	par_nr_vs_lookup_code_mismatch
+deltahexachloorcyclohexaan	4039	delta-hexachloorcyclohexaan	4039	763	delta-hexachloorcyclohexaan	dHCH	dhch	1	par_nr_vs_lookup_code_mismatch
+24dichloordifenyltrichloorethaan	4029	2,4-dichloordifenyltrichloorethaan	4029	762	2,4'-dichloordifenyltrichloorethaan	24DDT	24ddt	1	par_nr_vs_lookup_code_mismatch
+diflubenzuron	4389	diflubenzuron	4389	756	diflubenzuron	Dfbzrn	dfbzrn	1	par_nr_vs_lookup_code_mismatch
+pencycuron	4586	pencycuron	4586	756	pencycuron	penccrn	penccrn	1	par_nr_vs_lookup_code_mismatch
+tetrahydroftaalimide	9115	tetrahydroftaalimide	9115	744	tetrahydroftaalimide	T4Hflmde	t4hflmde	1	par_nr_vs_lookup_code_mismatch
+azaconazool	4280	azaconazool	4280	736	azaconazool	azacnzl	azacnzl	1	par_nr_vs_lookup_code_mismatch
+captan	4306	captan	4306	697	captan	captn	captn	1	par_nr_vs_lookup_code_mismatch
+telodrin	4052	telodrin	4052	688	telodrin	teldn	teldn	1	par_nr_vs_lookup_code_mismatch
+glyfosaat	4493	glyfosaat	4493	682	glyfosaat	glyfst	glyfst	1	par_nr_vs_lookup_code_mismatch
+24dichloordifenyldichloorethaan	4027	2,4-dichloordifenyldichloorethaan	4027	680	2,4'-dichloordifenyldichloorethaan	24DDD	24ddd	1	par_nr_vs_lookup_code_mismatch
+24dichloordifenyldichlooretheen	4028	2,4-dichloordifenyldichlooretheen	4028	668	2,4'-dichloordifenyldichlooretheen	24DDE	24dde	1	par_nr_vs_lookup_code_mismatch
+cistetrachloorvinfoszisomeer	4332	cis-tetrachloorvinfos (Z-isomeer)	4332	659	cis-tetrachloorvinfos (Z-isomeer)	cT4Clvfs	ct4clvfs	1	par_nr_vs_lookup_code_mismatch
+endosulfansulfaat	4042	endosulfansulfaat	4042	658	endosulfansulfaat	endsfSO4	endsfso4	1	par_nr_vs_lookup_code_mismatch
+cyproconazool	4352	cyproconazool	4352	645	cyproconazool	cypcnzl	cypcnzl	1	par_nr_vs_lookup_code_mismatch
+somvluchtigeorganischehalogeenverbindingen	4652	som vluchtige organische halogeenverbindingen	4652	639	som vluchtige organische halogeenverbindingen	sVOX	svox	1	par_nr_vs_lookup_code_mismatch
+aminomethylfosfonzuur	4276	aminomethylfosfonzuur	4276	638	aminomethylfosfonzuur	AMPA	ampa	1	par_nr_vs_lookup_code_mismatch
+hexythiazox	4500	hexythiazox	4500	635	hexythiazox	hextazx	hextazx	1	par_nr_vs_lookup_code_mismatch
+sulcotrion	4658	sulcotrion	4658	635	sulcotrion	sulcton	sulcton	1	par_nr_vs_lookup_code_mismatch
+cisheptachloorepoxide	4038	cis-heptachloorepoxide	4038	632	cis-heptachloorepoxide	cHpClepO	chpclepo	1	par_nr_vs_lookup_code_mismatch
+glufosinaat	4491	glufosinaat	4491	610	glufosinaat	glufsnt	glufsnt	1	par_nr_vs_lookup_code_mismatch
+fenitrothion	4440	fenitrothion	4440	607	fenitrothion	feNO2ton	feno2ton	1	par_nr_vs_lookup_code_mismatch
+pentachloorbenzeen	4050	pentachloorbenzeen	4050	605	pentachloorbenzeen	PeClBen	peclben	1	par_nr_vs_lookup_code_mismatch
+fenmedifam	4441	fenmedifam	4441	602	fenmedifam	fenmdfm	fenmdfm	1	par_nr_vs_lookup_code_mismatch
+cymoxanil	4350	cymoxanil	4350	587	cymoxanil	cymOanl	cymoanl	1	par_nr_vs_lookup_code_mismatch
+betaendosulfan	4035	beta-endosulfan	4035	583	beta-endosulfan	bedsfn	bedsfn	1	par_nr_vs_lookup_code_mismatch
+somcholinesteraseremmers	4642	som cholinesteraseremmers	4642	570	som cholinesteraseremmers	sChER	scher	1	par_nr_vs_lookup_code_mismatch
+diflufenican	4390	diflufenican	4390	567	diflufenican	Dffncn	dffncn	1	par_nr_vs_lookup_code_mismatch
+cycloxydim	4348	cycloxydim	4348	541	cycloxydim	cycxdm	cycxdm	1	par_nr_vs_lookup_code_mismatch
+bifenox	4290	bifenox	4290	540	bifenox	bfnx	bfnx	1	par_nr_vs_lookup_code_mismatch
+amidosulfuron	4274	amidosulfuron	4274	539	amidosulfuron	amdsfrn	amdsfrn	1	par_nr_vs_lookup_code_mismatch
+cischloordaan	4037	cis-chloordaan	4037	538	cis-chloordaan	cCldn	ccldn	1	par_nr_vs_lookup_code_mismatch
+dimethenamide	4393	dimethenamide	4393	535	dimethenamide	DmtAd	dmtad	1	par_nr_vs_lookup_code_mismatch
+fenhexamide	4439	fenhexamide	4439	531	fenhexamide	fenhxAd	fenhxad	1	par_nr_vs_lookup_code_mismatch
+pentachloorfenol	4588	pentachloorfenol	4588	531	pentachloorfenol	PeClFol	peclfol	1	par_nr_vs_lookup_code_mismatch
+som16polyaromatischekoolwaterstoffenepa	4117	som 16 polyaromatische koolwaterstoffen (EPA)	4117	530					lookup_missing_for_name
+som24en25dichloorfenol	4629	som 2,4- en 2,5-dichloorfenol	4629	518	som 2,4- en 2,5-dichloorfenol	s2425DClFol	s2425dclfol	1	par_nr_vs_lookup_code_mismatch
+2345tetrachloorfenol	4217	2,3,4,5-tetrachloorfenol	4217	516	2,3,4,5-tetrachloorfenol	2345T4ClFol	2345t4clfol	1	par_nr_vs_lookup_code_mismatch
+2346tetrachloorfenol	4218	2,3,4,6-tetrachloorfenol	4218	516	2,3,4,6-tetrachloorfenol	2346T4ClFol	2346t4clfol	1	par_nr_vs_lookup_code_mismatch
+234trichloorfenol	4219	2,3,4-trichloorfenol	4219	516	2,3,4-trichloorfenol	234TClFol	234tclfol	1	par_nr_vs_lookup_code_mismatch
+2356tetrachloorfenol	4220	2,3,5,6-tetrachloorfenol	4220	516	2,3,5,6-tetrachloorfenol	2356T4ClFol	2356t4clfol	1	par_nr_vs_lookup_code_mismatch
+235trichloorfenol	4221	2,3,5-trichloorfenol	4221	516	2,3,5-trichloorfenol	235TClFol	235tclfol	1	par_nr_vs_lookup_code_mismatch
+236trichloorfenol	4222	2,3,6-trichloorfenol	4222	516	2,3,6-trichloorfenol	236TClFol	236tclfol	1	par_nr_vs_lookup_code_mismatch
+23dichloorfenol	4223	2,3-dichloorfenol	4223	516	2,3-dichloorfenol	23DClFol	23dclfol	1	par_nr_vs_lookup_code_mismatch
+345trichloorfenol	4243	3,4,5-trichloorfenol	4243	516	3,4,5-trichloorfenol	345TClFol	345tclfol	1	par_nr_vs_lookup_code_mismatch
+34dichloorfenol	4245	3,4-dichloorfenol	4245	516	3,4-dichloorfenol	34DClFol	34dclfol	1	par_nr_vs_lookup_code_mismatch
+35dichloorfenol	4246	3,5-dichloorfenol	4246	516	3,5-dichloorfenol	35DClFol	35dclfol	1	par_nr_vs_lookup_code_mismatch
+245trichloorfenol	4224	2,4,5-trichloorfenol	4224	515	2,4,5-trichloorfenol	245TClFol	245tclfol	1	par_nr_vs_lookup_code_mismatch
+methylmetsulfuron	4553	methyl-metsulfuron	4553	513	methyl-metsulfuron	C1ymsfrn	c1ymsfrn	1	par_nr_vs_lookup_code_mismatch
+gwammoniumnnf	1351	(GW) ammonium (Nnf)	1351	511					lookup_missing_for_name
+gwfosfortotaalpnf	1371	(GW) fosfor totaal (Pnf)	1371	511					lookup_missing_for_name
+gwnitraatnnf	1352	(GW) nitraat (Nnf)	1352	511					lookup_missing_for_name
+gwnitrietnnf	1353	(GW) nitriet (Nnf)	1353	511					lookup_missing_for_name
+gwstikstoftotaalnnf	1362	(GW) stikstof totaal (Nnf)	1362	511					lookup_missing_for_name
+gworthofosfaatpnf	1370	(GW) Orthofosfaat (Pnf)	1370	510					lookup_missing_for_name
+gwzuurgraad	351	(GW) Zuurgraad	351	510					lookup_missing_for_name
+gwchloridenf	1300	(GW) chloride (nf)	1300	510					lookup_missing_for_name
+gwstikstofkjeldahlnnf	1360	(GW) stikstof Kjeldahl (Nnf)	1360	510					lookup_missing_for_name
+gwsulfaatnf	1400	(GW) sulfaat (nf)	1400	510					lookup_missing_for_name
+gwgeleidendheid	599	(GW) Geleidendheid	599	509					lookup_missing_for_name
+26dichloorfenol	4237	2,6-dichloorfenol	4237	508	2,6-dichloorfenol	26DClFol	26dclfol	1	par_nr_vs_lookup_code_mismatch
+gwsomnitraatennitrietnnf	1355	(GW) som nitraat en nitriet (Nnf)	1355	507					lookup_missing_for_name
+aclonifen	4265	aclonifen	4265	507	aclonifen	acnfn	acnfn	1	par_nr_vs_lookup_code_mismatch
+ethiofencarb	4416	ethiofencarb	4416	506	ethiofencarb	etofcb	etofcb	1	par_nr_vs_lookup_code_mismatch
+chlorofylatoxblauw	2320	chlorofyl-a toxblauw	2320	502					lookup_missing_for_name
+som10polyaromatischekoolwaterstoffenvrom	4116	som 10 polyaromatische koolwaterstoffen (VROM)	4116	499					lookup_missing_for_name
+ethyleenthioureum	4427	ethyleenthioureum	4427	496	ethyleenthioureum	C2yetourum	c2yetourum	1	par_nr_vs_lookup_code_mismatch
+246trimethylfenol	4230	2,4,6-trimethylfenol	4230	493	2,4,6-trimethylfenol	246TC1yFol	246tc1yfol	1	par_nr_vs_lookup_code_mismatch
+2chloorfenol	4238	2-chloorfenol	4238	493	2-chloorfenol	2ClFol	2clfol	1	par_nr_vs_lookup_code_mismatch
+3chloorfenol	4247	3-chloorfenol	4247	493	3-chloorfenol	3ClFol	3clfol	1	par_nr_vs_lookup_code_mismatch
+4chloorfenol	4253	4-chloorfenol	4253	493	4-chloorfenol	4ClFol	4clfol	1	par_nr_vs_lookup_code_mismatch
+pyraclostrobin	4614	pyraclostrobin	4614	491	pyraclostrobin	pyrcsbn	pyrcsbn	1	par_nr_vs_lookup_code_mismatch
+ethoprofos	4422	ethoprofos	4422	480	ethoprofos	etpfs	etpfs	1	par_nr_vs_lookup_code_mismatch
+4chloor3methylfenol	4251	4-chloor-3-methylfenol	4251	474	4-chloor-3-methylfenol	4Cl3C1yFol	4cl3c1yfol	1	par_nr_vs_lookup_code_mismatch
+transmevinfos	4695	trans-mevinfos	4695	472	trans-mevinfos	tmevfs	tmevfs	1	par_nr_vs_lookup_code_mismatch
+mesotrion	4535	mesotrion	4535	469	mesotrion	meston	meston	1	par_nr_vs_lookup_code_mismatch
+tebufenpyrad	4664	tebufenpyrad	4664	468	tebufenpyrad	tebfprd	tebfprd	1	par_nr_vs_lookup_code_mismatch
+daminozide	4355	daminozide	4355	466	daminozide	damnzde	damnzde	1	par_nr_vs_lookup_code_mismatch
+mineraleolie	1200	Minerale Olie	1200	459	minerale olie	minrlole	minrlole	1	par_nr_vs_lookup_code_mismatch
+arseen	2504	Arseen	2504	456	arseen	As	as	1	par_nr_vs_lookup_code_mismatch
+triflusulfuronmethyl	4717	triflusulfuron-methyl	4717	449	triflusulfuron-methyl	TfsfrnC1y	tfsfrnc1y	1	par_nr_vs_lookup_code_mismatch
+pyrifenox	4617	pyrifenox	4617	437	pyrifenox	pyrfnx	pyrfnx	1	par_nr_vs_lookup_code_mismatch
+propamocarbhydrochloride	4605	propamocarb hydrochloride	4605	435	propamocarb hydrochloride	propmcbHCl	propmcbhcl	1	par_nr_vs_lookup_code_mismatch
+metobromuron	4557	metobromuron	4557	430	metobromuron	metbmrn	metbmrn	1	par_nr_vs_lookup_code_mismatch
+aphanizomenon	2302	Aphanizomenon	2302	416					lookup_missing_for_name
+microcystis	2304	Microcystis	2304	416					lookup_missing_for_name
+planktothrix	2306	Planktothrix	2306	416					lookup_missing_for_name
+woronichinia	2308	Woronichinia	2308	416					lookup_missing_for_name
+chloorbromuron	4314	chloorbromuron	4314	414	chloorbromuron	Clbmrn	clbmrn	1	par_nr_vs_lookup_code_mismatch
+anabaena	2300	Anabaena	2300	404					lookup_missing_for_name
+boscalid	4294	boscalid	4294	401	boscalid	boscld	boscld	1	par_nr_vs_lookup_code_mismatch
+spirodiclofen	4657	spirodiclofen	4657	394	spirodiclofen	spirdcfn	spirdcfn	1	par_nr_vs_lookup_code_mismatch
+afmeldredennietgenomenmonster	10	Afmeldreden niet genomen monster	10	388					lookup_missing_for_name
+chemischzuurstofverbruik	1041	Chemisch zuurstofverbruik	1041	385	Chemisch zuurstofverbruik	CZV	czv	1	par_nr_vs_lookup_code_mismatch
+anabaenacel	2301	Anabaena (Cel)	2301	375					lookup_missing_for_name
+aphanizomenoncel	2303	Aphanizomenon (cel)	2303	375					lookup_missing_for_name
+microcystiscel	2305	Microcystis (cel)	2305	375					lookup_missing_for_name
+woronichiniacel	2309	Woronichinia (cel)	2309	375					lookup_missing_for_name
+som5toxischeblauwalgen	2310	som 5 toxische blauwalgen	2310	375					lookup_missing_for_name
+planktothrixcel	2307	Planktothrix (cel)	2307	374					lookup_missing_for_name
+som5toxischeblauwalgencel	2311	som 5 toxische blauwalgen (cel)	2311	374					lookup_missing_for_name
+244trichloorbifenyl	4026	2,4,4-trichloorbifenyl	4026	374	2,4,4'-trichloorbifenyl	PCB28	pcb28	1	par_nr_vs_lookup_code_mismatch
+propiconazol	4607	propiconazol	4607	373					lookup_missing_for_name
+clopyralid	4339	clopyralid	4339	371	clopyralid	cloprld	cloprld	1	par_nr_vs_lookup_code_mismatch
+dithianon	4406	dithianon	4406	371	dithianon	Dtann	dtann	1	par_nr_vs_lookup_code_mismatch
+phormidium	2326	Phormidium	2326	368					lookup_missing_for_name
+223445hexachloorbifenyl	4021	2,2,3,4,4,5-hexachloorbifenyl	4021	365	2,2',3,4,4',5'-hexachloorbifenyl	PCB138	pcb138	1	par_nr_vs_lookup_code_mismatch
+224455hexachloorbifenyl	4022	2,2,4,4,5,5-hexachloorbifenyl	4022	365	2,2',4,4',5,5'-hexachloorbifenyl	PCB153	pcb153	1	par_nr_vs_lookup_code_mismatch
+2255tetrachloorbifenyl	4024	2,2,5,5-tetrachloorbifenyl	4024	365	2,2',5,5'-tetrachloorbifenyl	PCB52	pcb52	1	par_nr_vs_lookup_code_mismatch
+23445pentachloorbifenyl	4025	2,3,4,4,5-pentachloorbifenyl	4025	365	2,3',4,4',5-pentachloorbifenyl	PCB118	pcb118	1	par_nr_vs_lookup_code_mismatch
+22455pentachloorbifenyl	4023	2,2,4,5,5-pentachloorbifenyl	4023	362	2,2',4,5,5'-pentachloorbifenyl	PCB101	pcb101	1	par_nr_vs_lookup_code_mismatch
+fenamifos	4434	fenamifos	4434	361	fenamifos	fenamfs	fenamfs	1	par_nr_vs_lookup_code_mismatch
+penconazool	4585	penconazool	4585	358	penconazool	pencnzl	pencnzl	1	par_nr_vs_lookup_code_mismatch
+paclobutrazol	4584	paclobutrazol	4584	344	paclobutrazol	pacbtzl	pacbtzl	1	par_nr_vs_lookup_code_mismatch
+2234455heptachloorbifenyl	4020	2,2,3,4,4,5,5-heptachloorbifenyl	4020	342	2,2',3,4,4',5,5'-heptachloorbifenyl	PCB180	pcb180	1	par_nr_vs_lookup_code_mismatch
+demetons	4358	demeton-S	4358	342	demeton-S	demtnS	demtns	1	par_nr_vs_lookup_code_mismatch
+epoxiconazool	4411	epoxiconazool	4411	333	epoxiconazool	epxcnzl	epxcnzl	1	par_nr_vs_lookup_code_mismatch
+desmedifam	4364	desmedifam	4364	328	desmedifam	desmdfm	desmdfm	1	par_nr_vs_lookup_code_mismatch
+difenoxuron	4387	difenoxuron	4387	328	difenoxuron	Dfnxrn	dfnxrn	1	par_nr_vs_lookup_code_mismatch
+isoxaflutool	4516	isoxaflutool	4516	328	isoxaflutool	iOaftl	ioaftl	1	par_nr_vs_lookup_code_mismatch
+carbetamide	4309	carbetamide	4309	323	carbetamide	carbtAd	carbtad	1	par_nr_vs_lookup_code_mismatch
+badgastenoever	2000	Badgasten oever	2000	322					lookup_missing_for_name
+flumioxazin	4467	flumioxazin	4467	320	flumioxazin	flumoxzn	flumoxzn	1	par_nr_vs_lookup_code_mismatch
+gwmagnesium	3026	(GW) Magnesium	3026	317					lookup_missing_for_name
+gwnatrium	3028	(GW) Natrium	3028	317					lookup_missing_for_name
+lenacil	4527	lenacil	4527	316	lenacil	lencl	lencl	1	par_nr_vs_lookup_code_mismatch
+tepraloxydim	4666	tepraloxydim	4666	314	tepraloxydim	teplxdm	teplxdm	1	par_nr_vs_lookup_code_mismatch
+hexachloorbutadieen	4047	hexachloorbutadieen	4047	311	hexachloorbutadieen	HxClbtDen	hxclbtden	1	par_nr_vs_lookup_code_mismatch
+gwijzer	3016	(GW) IJzer	3016	309					lookup_missing_for_name
+gwkalium	3018	(GW) Kalium	3018	309					lookup_missing_for_name
+gwcalcium	3012	(GW) calcium	3012	309					lookup_missing_for_name
+carfentrazonethyl	4312	carfentrazon-ethyl	4312	309	carfentrazon-ethyl	carftznC2y	carftznc2y	1	par_nr_vs_lookup_code_mismatch
+fenamidon	4433	fenamidon	4433	309	fenamidon	fenmdn	fenmdn	1	par_nr_vs_lookup_code_mismatch
+bromacil	4295	bromacil	4295	308	bromacil	bromcl	bromcl	1	par_nr_vs_lookup_code_mismatch
+chlooroxuron	4319	chlooroxuron	4319	308	chlooroxuron	Cloxrn	cloxrn	1	par_nr_vs_lookup_code_mismatch
+ethyldipropylthiocarbamaat	4426	ethyldipropylthiocarbamaat	4426	308	ethyldipropylthiocarbamaat	EPTC	eptc	1	par_nr_vs_lookup_code_mismatch
+sulfotep	4661	sulfotep	4661	308	sulfotep	sulftp	sulftp	1	par_nr_vs_lookup_code_mismatch
+gwbicarbonaat	1331	(GW) Bicarbonaat	1331	307					lookup_missing_for_name
+gwcarbonaat	1330	(GW) Carbonaat	1330	307					lookup_missing_for_name
+dodine	4409	dodine	4409	302	dodine	dodne	dodne	1	par_nr_vs_lookup_code_mismatch
+prosulfuron	4612	prosulfuron	4612	302	prosulfuron	prosfrn	prosfrn	1	par_nr_vs_lookup_code_mismatch
+22344pentabroomdifenylether	4009	2,2,3,4,4-pentabroomdifenylether	4009	299	2,2',3,4,4'-pentabroomdifenylether	PBDE85	pbde85	1	par_nr_vs_lookup_code_mismatch
+224455hexabroomdifenylether	4008	2,2,4,4,5,5-hexabroomdifenylether	4008	299	2,2',4,4',5,5'-hexabroomdifenylether	PBDE153	pbde153	1	par_nr_vs_lookup_code_mismatch
+224456hexabroomdifenylether	4007	2,2,4,4,5,6-hexabroomdifenylether	4007	299	2,2',4,4',5,6'-hexabroomdifenylether	PBDE154	pbde154	1	par_nr_vs_lookup_code_mismatch
+22445pentabroomdifenylether	4006	2,2,4,4,5-pentabroomdifenylether	4006	299	2,2',4,4',5-pentabroomdifenylether	PBDE99	pbde99	1	par_nr_vs_lookup_code_mismatch
+22446pentabroomdifenylether	4000	2,2,4,4,6-pentabroomdifenylether	4000	299	2,2',4,4',6-pentabroomdifenylether	PBDE100	pbde100	1	par_nr_vs_lookup_code_mismatch
+2244tetrabroomdifenylether	4005	2,2,4,4-tetrabroomdifenylether	4005	299	2,2',4,4'-tetrabroomdifenylether	PBDE47	pbde47	1	par_nr_vs_lookup_code_mismatch
+2245tetrabroomdifenylether	4012	2,2,4,5-tetrabroomdifenylether	4012	299	2,2',4,5'-tetrabroomdifenylether	PBDE49	pbde49	1	par_nr_vs_lookup_code_mismatch
+244tribroomdifenylether	4001	2,4,4-tribroomdifenylether	4001	299	2,4,4'-tribroomdifenylether	PBDE28	pbde28	1	par_nr_vs_lookup_code_mismatch
+223445hexabroomdifenylether	4010	2,2,3,4,4,5-hexabroomdifenylether	4010	297	2,2',3,4,4',5'-hexabroomdifenylether	PBDE138	pbde138	1	par_nr_vs_lookup_code_mismatch
+somheptachloorepoxidesomcisentrans	4051	som heptachloorepoxide (som cis- en trans-)	4051	296	som heptachloorepoxide (som cis- en trans-)	sHpClepO	shpclepo	1	par_nr_vs_lookup_code_mismatch
+clodinafoppropargyl	4335	clodinafop-propargyl	4335	292	clodinafop-propargyl	clodnfppgl	clodnfppgl	1	par_nr_vs_lookup_code_mismatch
+2344tetrabroomdifenylether	4003	2,3,4,4-tetrabroomdifenylether	4003	291	2,3',4,4'-tetrabroomdifenylether	PBDE66	pbde66	1	par_nr_vs_lookup_code_mismatch
+2346tetrabroomdifenylether	4004	2,3,4,6-tetrabroomdifenylether	4004	291	2,3',4',6-tetrabroomdifenylether	PBDE71	pbde71	1	par_nr_vs_lookup_code_mismatch
+2446tetrabroomdifenylether	4002	2,4,4,6-tetrabroomdifenylether	4002	291	2,4,4',6-tetrabroomdifenylether	PBDE75	pbde75	1	par_nr_vs_lookup_code_mismatch
+2234456heptabroomdifenylether	4011	2,2,3,4,4,5,6-heptabroomdifenylether	4011	289	2,2',3,4,4',5',6-heptabroomdifenylether	PBDE183	pbde183	1	par_nr_vs_lookup_code_mismatch
+endosulfansomalfaenbetaisomeer	4041	endosulfan (som alfa- en beta-isomeer)	4041	287	endosulfan (som alfa- en beta-isomeer)	endsfn	endsfn	1	par_nr_vs_lookup_code_mismatch
+prochloraz	4598	prochloraz	4598	285	prochloraz	proClaz	proclaz	1	par_nr_vs_lookup_code_mismatch
+fluoride	4470	Fluoride	4470	284	fluoride	F	f	1	par_nr_vs_lookup_code_mismatch
+gwstijghoogte	320	(GW) Stijghoogte	320	281					lookup_missing_for_name
+ethiofencarbsulfoxide	4418	ethiofencarbsulfoxide	4418	280	ethiofencarbsulfoxide	etofcbSO	etofcbso	1	par_nr_vs_lookup_code_mismatch
+florasulam	4459	florasulam	4459	280	florasulam	flurslm	flurslm	1	par_nr_vs_lookup_code_mismatch
+4hydroxy256trichloorisoftalonitril	4258	4-hydroxy-2,5,6-trichloorisoftalonitril	4258	279	4-hydroxy-2,5,6-trichloorisoftalonitril	HTI	hti	1	par_nr_vs_lookup_code_mismatch
+gwzwaveltotaal	1401	(GW) zwavel totaal	1401	278					lookup_missing_for_name
+methidathion	4542	methidathion	4542	277	methidathion	metdton	metdton	1	par_nr_vs_lookup_code_mismatch
+desethylterbutylazine	4362	desethylterbutylazine	4362	275	desethylterbutylazine	desC2ytC4yaz	desc2ytc4yaz	1	par_nr_vs_lookup_code_mismatch
+fonofos	4477	fonofos	4477	272	fonofos	fonfs	fonfs	1	par_nr_vs_lookup_code_mismatch
+gwtroebelheid	341	(GW) Troebelheid	341	265					lookup_missing_for_name
+ethiofencarbsulfon	4417	ethiofencarbsulfon	4417	264	ethiofencarbsulfon	etofcbsfn	etofcbsfn	1	par_nr_vs_lookup_code_mismatch
+aldicarbsulfoxide	4270	aldicarbsulfoxide	4270	260	aldicarbsulfoxide	alDcSO	aldcso	1	par_nr_vs_lookup_code_mismatch
+profam	4600	profam	4600	259	profam	profm	profm	1	par_nr_vs_lookup_code_mismatch
+spiromesifen	4740	spiromesifen	4740	259	spiromesifen	spirmsfn	spirmsfn	1	par_nr_vs_lookup_code_mismatch
+spirotetramat	4741	spirotetramat	4741	259	spirotetramat	spirttmt	spirttmt	1	par_nr_vs_lookup_code_mismatch
+dicofol	4380	dicofol	4380	257	dicofol	Dcfl	dcfl	1	par_nr_vs_lookup_code_mismatch
+fenpiclonil	4447	fenpiclonil	4447	257	fenpiclonil	fenpcnl	fenpcnl	1	par_nr_vs_lookup_code_mismatch
+transheptachloorepoxide	4054	trans-heptachloorepoxide	4054	256	trans-heptachloorepoxide	tHpClepO	thpclepo	1	par_nr_vs_lookup_code_mismatch
+bsfosfortotaal	1600	(BS) fosfor totaal	1600	255					lookup_missing_for_name
+bsorganischstof	1702	(BS) organisch stof	1702	255					lookup_missing_for_name
+bsgloeirest	1701	(BS) Gloeirest	1701	245					lookup_missing_for_name
+bsstikstofkjeldahl	1601	(BS) stikstof Kjeldahl	1601	245					lookup_missing_for_name
+bsijzer	3504	(BS) ijzer	3504	244					lookup_missing_for_name
+monuron	4569	monuron	4569	244	monuron	monrn	monrn	1	par_nr_vs_lookup_code_mismatch
+thifensulfuronmethyl	4680	thifensulfuron-methyl	4680	241	thifensulfuron-methyl	thifsfrnC1y	thifsfrnc1y	1	par_nr_vs_lookup_code_mismatch
+bskorrelgroottefractie16	1721	(BS) Korrelgroottefractie < 16	1721	229					lookup_missing_for_name
+bskorrelgroottefractie2	1720	(BS) Korrelgroottefractie < 2	1720	229					lookup_missing_for_name
+fosthiazaat	4484	fosthiazaat	4484	222	fosthiazaat	fostazt	fostazt	1	par_nr_vs_lookup_code_mismatch
+bscalciumcarbonaat	1605	(BS) Calciumcarbonaat	1605	218					lookup_missing_for_name
+bsindamprest	1700	(BS) Indamprest	1700	218					lookup_missing_for_name
+cisfosfamidon	4330	cis-fosfamidon	4330	217	cis-fosfamidon	cfosfmdn	cfosfmdn	1	par_nr_vs_lookup_code_mismatch
+carboxin	4311	carboxin	4311	216	carboxin	carbOxn	carboxn	1	par_nr_vs_lookup_code_mismatch
+thiabendazol	4677	thiabendazol	4677	216	thiabendazol	tabdzl	tabdzl	1	par_nr_vs_lookup_code_mismatch
+fenarimol	4435	fenarimol	4435	209	fenarimol	fenarml	fenarml	1	par_nr_vs_lookup_code_mismatch
+bifenazaat	4289	bifenazaat	4289	205	bifenazaat	bifnzt	bifnzt	1	par_nr_vs_lookup_code_mismatch
+cyanazine	4346	cyanazine	4346	204	cyanazine	CNazne	cnazne	1	par_nr_vs_lookup_code_mismatch
+prometryne	4602	prometryne	4602	204	prometryne	promtne	promtne	1	par_nr_vs_lookup_code_mismatch
+bendiocarb	4283	bendiocarb	4283	201	bendiocarb	benDocb	bendocb	1	par_nr_vs_lookup_code_mismatch
+gwcalciumnf	3013	(GW) calcium (nf)	3013	198					lookup_missing_for_name
+gwijzernf	3017	(GW) ijzer (nf)	3017	198					lookup_missing_for_name
+gwkaliumnf	3019	(GW) kalium (nf)	3019	198					lookup_missing_for_name
+gwmagnesiumnf	3027	(GW) magnesium (nf)	3027	198					lookup_missing_for_name
+gwnatriumnf	3029	(GW) natrium (nf)	3029	198					lookup_missing_for_name
+ametryn	4273	ametryn	4273	196	ametryn	amtn	amtn	1	par_nr_vs_lookup_code_mismatch
+cypermethrin	4351	cypermethrin	4351	196	cypermethrin	cypmtn	cypmtn	1	par_nr_vs_lookup_code_mismatch
+etrimfos	4431	etrimfos	4431	196	etrimfos	etfs	etfs	1	par_nr_vs_lookup_code_mismatch
+folpet	4476	folpet	4476	196	folpet	folpt	folpt	1	par_nr_vs_lookup_code_mismatch
+imazamethabenzmethyl	4505	imazamethabenz-methyl	4505	196	imazamethabenz-methyl	imzmtbzC1y	imzmtbzc1y	1	par_nr_vs_lookup_code_mismatch
+myclobutanil	4570	myclobutanil	4570	196	myclobutanil	mycbtnl	mycbtnl	1	par_nr_vs_lookup_code_mismatch
+nitrothalisopropyl	4574	nitrothal-isopropyl	4574	196	nitrothal-isopropyl	nittliC3y	nittlic3y	1	par_nr_vs_lookup_code_mismatch
+monocrotofos	4567	monocrotofos	4567	194	monocrotofos	Mctfs	mctfs	1	par_nr_vs_lookup_code_mismatch
+omethoaat	4577	omethoaat	4577	194	omethoaat	omtat	omtat	1	par_nr_vs_lookup_code_mismatch
+vamidothion	4721	vamidothion	4721	194	vamidothion	vamdton	vamdton	1	par_nr_vs_lookup_code_mismatch
+topramezon	4692	topramezon	4692	193	topramezon	topmzn	topmzn	1	par_nr_vs_lookup_code_mismatch
+carbamazepine	4307	carbamazepine	4307	192	carbamazepine	carbmzpne	carbmzpne	1	par_nr_vs_lookup_code_mismatch
+245trichloorfenoxypropionzuur	4226	2,4,5-trichloorfenoxypropionzuur	4226	186	2,4,5-trichloorfenoxypropionzuur	245TP	245tp	1	par_nr_vs_lookup_code_mismatch
+46dinitroocresol	4250	4,6-dinitro-o-cresol	4250	181	4,6-dinitro-o-cresol	DNOC	dnoc	1	par_nr_vs_lookup_code_mismatch
+cumafos	4344	cumafos	4344	181	cumafos	cumfs	cumfs	1	par_nr_vs_lookup_code_mismatch
+benzyladenine	4285	benzyladenine	4285	180	benzyladenine	benzadnne	benzadnne	1	par_nr_vs_lookup_code_mismatch
+fluopicolide	4468	fluopicolide	4468	180	fluopicolide	fluopclde	fluopclde	1	par_nr_vs_lookup_code_mismatch
+fluoxastrobin	4471	fluoxastrobin	4471	180	fluoxastrobin	fluoxsbn	fluoxsbn	1	par_nr_vs_lookup_code_mismatch
+quinoclamin	4621	quinoclamin	4621	180	quinoclamin	quincmn	quincmn	1	par_nr_vs_lookup_code_mismatch
+gwkopernf	3023	(GW) Koper (nf)	3023	177					lookup_missing_for_name
+gwzinknf	3034	(GW) Zink (nf)	3034	177					lookup_missing_for_name
+transchloordaan	4053	trans-chloordaan	4053	172	trans-chloordaan	tCldn	tcldn	1	par_nr_vs_lookup_code_mismatch
+fluazifopp	4462	fluazifop-P	4462	170	fluazifop-P	fluazfpP	fluazfpp	1	par_nr_vs_lookup_code_mismatch
+piperonylbutoxide	4594	piperonyl-butoxide	4594	170	piperonyl-butoxide	piprnbO	piprnbo	1	par_nr_vs_lookup_code_mismatch
+butocarboximsulfon	4302	butocarboximsulfon	4302	163	butocarboximsulfon	butcbOxmsfn	butcboxmsfn	1	par_nr_vs_lookup_code_mismatch
+methyl3hydroxyfenylcarbamaat	4548	methyl-3-hydroxyfenylcarbamaat	4548	160	methyl-3-hydroxyfenylcarbamaat	MHPC	mhpc	1	par_nr_vs_lookup_code_mismatch
+bskorrelgroottefractie1000	1729	(BS) Korrelgroottefractie < 1000	1729	158					lookup_missing_for_name
+bskorrelgroottefractie125	1726	(BS) Korrelgroottefractie < 125	1726	158					lookup_missing_for_name
+bskorrelgroottefractie2000	1730	(BS) Korrelgroottefractie < 2000	1730	158					lookup_missing_for_name
+bskorrelgroottefractie250	1727	(BS) Korrelgroottefractie < 250	1727	158					lookup_missing_for_name
+bskorrelgroottefractie32	1722	(BS) Korrelgroottefractie < 32	1722	158					lookup_missing_for_name
+bskorrelgroottefractie50	1724	(BS) Korrelgroottefractie < 50	1724	158					lookup_missing_for_name
+bskorrelgroottefractie500	1728	(BS) Korrelgroottefractie < 500	1728	158					lookup_missing_for_name
+bskorrelgroottefractie63	1725	(BS) Korrelgroottefractie < 63	1725	158					lookup_missing_for_name
+acefaat	4262	acefaat	4262	158	acefaat	acft	acft	1	par_nr_vs_lookup_code_mismatch
+butocarboxim	4301	butocarboxim	4301	149	butocarboxim	butcbOxm	butcboxm	1	par_nr_vs_lookup_code_mismatch
+chloorthaldimethyl	4324	chloorthal-dimethyl	4324	148	chloorthal-dimethyl	cltDC1y	cltdc1y	1	par_nr_vs_lookup_code_mismatch
+bskorrelgroottefractiedg2000	1770	(BS) Korrelgroottefractie Dg2000	1770	147					lookup_missing_for_name
+chlfaugltoxblauwow	2319	CHLFa [ug/l] [toxblauw] [OW]	2319	145					lookup_missing_for_name
+cadmiumnf	2513	Cadmium (nf)	2513	142					lookup_missing_for_name
+bssulfaat	1602	(BS) sulfaat	1602	141					lookup_missing_for_name
+gwkoper	3022	(GW) Koper	3022	140					lookup_missing_for_name
+gwnikkel	3030	(GW) Nikkel	3030	140					lookup_missing_for_name
+gwzink	3033	(GW) Zink	3033	140					lookup_missing_for_name
+fluazifoppbutyl	4744	fluazifop-P-butyl	4744	140	fluazifop-P-butyl	fluazfPC4y	fluazfpc4y	1	par_nr_vs_lookup_code_mismatch
+mepanipyrim	4747	mepanipyrim	4747	140	mepanipyrim	mepnprm	mepnprm	1	par_nr_vs_lookup_code_mismatch
+metrafenon	4748	metrafenon	4748	140	metrafenon	metfnn	metfnn	1	par_nr_vs_lookup_code_mismatch
+quizalofoppethyl	4751	quizalofop-P-ethyl	4751	140	quizalofop-P-ethyl	quizlfPC2y	quizlfpc2y	1	par_nr_vs_lookup_code_mismatch
+gwtemperatuur	350	(GW) Temperatuur	350	138					lookup_missing_for_name
+gwzuurstof	352	(GW) Zuurstof (%)	352	138					lookup_missing_for_name
+gwzuurstofmgl	353	(GW) Zuurstof (mg/l)	353	138					lookup_missing_for_name
+bszink	3511	(BS) zink	3511	137					lookup_missing_for_name
+chloordaan	4316	chloordaan	4316	137	chloordaan	Cldn	cldn	1	par_nr_vs_lookup_code_mismatch
+bskoper	3506	(BS) koper	3506	135					lookup_missing_for_name
+bsnikkel	3510	(BS) nikkel	3510	135					lookup_missing_for_name
+26dichloor4nitroaniline	4235	2,6-dichloor-4-nitroaniline	4235	132	2,6-dichloor-4-nitroaniline	26DCl4NO2An	26dcl4no2an	1	par_nr_vs_lookup_code_mismatch
+picolinafen	4591	picolinafen	4591	132	picolinafen	piclnfn	piclnfn	1	par_nr_vs_lookup_code_mismatch
+quinmerac	4620	quinmerac	4620	132	quinmerac	quinmrc	quinmrc	1	par_nr_vs_lookup_code_mismatch
+azamethifos	4281	azamethifos	4281	130	azamethifos	azmtfs	azmtfs	1	par_nr_vs_lookup_code_mismatch
+furathiocarb	4488	furathiocarb	4488	130	furathiocarb	furtocb	furtocb	1	par_nr_vs_lookup_code_mismatch
+ametoctradin	4752	ametoctradin	4752	129	ametoctradin	amttdn	amttdn	1	par_nr_vs_lookup_code_mismatch
+chlorantraniliprole	4754	chlorantraniliprole	4754	129	chlorantraniliprole	chloratnlpl	chloratnlpl	1	par_nr_vs_lookup_code_mismatch
+cyazofamide	4755	cyazofamide	4755	129	cyazofamide	cyazfAd	cyazfad	1	par_nr_vs_lookup_code_mismatch
+fluopyram	4758	fluopyram	4758	129	fluopyram	fluoprm	fluoprm	1	par_nr_vs_lookup_code_mismatch
+mandipropamide	4759	mandipropamide	4759	129	mandipropamide	mandppAd	mandppad	1	par_nr_vs_lookup_code_mismatch
+mesosulfuronmethyl	4760	mesosulfuron-methyl	4760	129	mesosulfuron-methyl	messfrnC1y	messfrnc1y	1	par_nr_vs_lookup_code_mismatch
+transfluoxastrobin	4763	trans-fluoxastrobin	4763	129	trans-fluoxastrobin	tfluoxsbn	tfluoxsbn	1	par_nr_vs_lookup_code_mismatch
+trinexapacethyl	4764	trinexapac-ethyl	4764	129	trinexapac-ethyl	TnxpcC2y	tnxpcc2y	1	par_nr_vs_lookup_code_mismatch
+12dichloorethaan	4153	1,2-dichloorethaan	4153	126	1,2-dichloorethaan	12DClC2a	12dclc2a	1	par_nr_vs_lookup_code_mismatch
+bs2234455heptachloorbifenyl	7000	(BS) 2,2,3,4,4,5,5-heptachloorbifenyl	7000	125					lookup_missing_for_name
+bs223445hexachloorbifenyl	7001	(BS) 2,2,3,4,4,5-hexachloorbifenyl	7001	125					lookup_missing_for_name
+bs224455hexachloorbifenyl	7002	(BS) 2,2,4,4,5,5-hexachloorbifenyl	7002	125					lookup_missing_for_name
+bs22455pentachloorbifenyl	7003	(BS) 2,2,4,5,5-pentachloorbifenyl	7003	125					lookup_missing_for_name
+bs2255tetrachloorbifenyl	7004	(BS) 2,2,5,5-tetrachloorbifenyl	7004	125					lookup_missing_for_name
+bs23445pentachloorbifenyl	7005	(BS) 2,3,4,4,5-pentachloorbifenyl	7005	125					lookup_missing_for_name
+bs244trichloorbifenyl	7006	(BS) 2,4,4-trichloorbifenyl	7006	125					lookup_missing_for_name
+bsantraceen	7017	(BS) antraceen	7017	125					lookup_missing_for_name
+bsarseen	3500	(BS) arseen	3500	125					lookup_missing_for_name
+bsbarium	3501	(BS) barium	3501	125					lookup_missing_for_name
+bsbenzoaantraceen	7018	(BS) benzo(a)antraceen	7018	125					lookup_missing_for_name
+bsbenzoapyreen	7019	(BS) benzo(a)pyreen	7019	125					lookup_missing_for_name
+bsbenzoghiperyleen	7020	(BS) benzo(ghi)peryleen	7020	125					lookup_missing_for_name
+bsbenzokfluorantheen	7021	(BS) benzo(k)fluorantheen	7021	125					lookup_missing_for_name
+bscadmium	3502	(BS) cadmium	3502	125					lookup_missing_for_name
+bschroom	3503	(BS) chroom	3503	125					lookup_missing_for_name
+bschryseen	7025	(BS) chryseen	7025	125					lookup_missing_for_name
+bsfenantreen	7034	(BS) fenantreen	7034	125					lookup_missing_for_name
+bsfluorantheen	7036	(BS) fluorantheen	7036	125					lookup_missing_for_name
+bsindeno123cdpyreen	7042	(BS) indeno(1,2,3-cd)pyreen	7042	125					lookup_missing_for_name
+bskobalt	3505	(BS) kobalt	3505	125					lookup_missing_for_name
+bskwik	3507	(BS) kwik	3507	125					lookup_missing_for_name
+bslood	3508	(BS) lood	3508	125					lookup_missing_for_name
+bsmineraleolie	1650	(BS) minerale olie	1650	125					lookup_missing_for_name
+bsmolybdeen	3509	(BS) molybdeen	3509	125					lookup_missing_for_name
+bsnaftaleen	7047	(BS) naftaleen	7047	125					lookup_missing_for_name
+bssom10polyaromatischekoolwaterstoffenvrom	7051	(BS) som 10 polyaromatische koolwaterstoffen (VROM)	7051	125					lookup_missing_for_name
+bssom6polychloorbifenylenpcb2852101138153180	7056	(BS) som 6 polychloorbifenylen PCB28, 52, 101, 138, 153, 180	7056	125					lookup_missing_for_name
+bssom7polychloorbifenylenpcb2852101118138153	7057	(BS) som 7 polychloorbifenylen PCB28, 52, 101, 118, 138, 153	7057	125					lookup_missing_for_name
+trichloorbenzeen	4705	trichloorbenzeen	4705	125	trichloorbenzeen	TClBen	tclben	1	par_nr_vs_lookup_code_mismatch
+dichloormethaan	4156	dichloormethaan	4156	123	dichloormethaan	DClC1a	dclc1a	1	par_nr_vs_lookup_code_mismatch
+isopropylanthranilamide	4513	isopropylanthranilamide	4513	122	isopropylanthranilamide	iC3yantnlAd	ic3yantnlad	1	par_nr_vs_lookup_code_mismatch
+tributyltinkation	4732	tributyltin (kation)	4732	121	tributyltin (kation)	TC4ySn	tc4ysn	1	par_nr_vs_lookup_code_mismatch
+3chloor4methylfenylurea	4200	(3-chloor-4-methylfenyl)urea	4200	112	(3-chloor-4-methylfenyl)urea	3Cl4C1yFyura	3cl4c1yfyura	1	par_nr_vs_lookup_code_mismatch
+acridine	4266	acridine	4266	112	acridine	acdne	acdne	1	par_nr_vs_lookup_code_mismatch
+chloorsulfuron	4322	chloorsulfuron	4322	112	chloorsulfuron	Clsfrn	clsfrn	1	par_nr_vs_lookup_code_mismatch
+cloquintoceetmexyl	4340	cloquintoceet-mexyl	4340	112	cloquintoceet-mexyl	cloqtcmxl	cloqtcmxl	1	par_nr_vs_lookup_code_mismatch
+dichloorpropp	4376	dichloorprop-P	4376	112	dichloorprop-P	DClppP	dclppp	1	par_nr_vs_lookup_code_mismatch
+fenpropidin	4449	fenpropidin	4449	112	fenpropidin	fenppdn	fenppdn	1	par_nr_vs_lookup_code_mismatch
+flufenacet	4465	flufenacet	4465	112	flufenacet	flufnct	flufnct	1	par_nr_vs_lookup_code_mismatch
+flurtamon	4474	flurtamon	4474	112	flurtamon	flrtmn	flrtmn	1	par_nr_vs_lookup_code_mismatch
+haloxyfopethoxyethyl	4495	haloxyfop-ethoxyethyl	4495	112	haloxyfop-ethoxyethyl	halOxfC2oxC2	haloxfc2oxc2	1	par_nr_vs_lookup_code_mismatch
+hymexazool	4502	hymexazool	4502	112	hymexazool	hymxzl	hymxzl	1	par_nr_vs_lookup_code_mismatch
+isoxaben	4515	isoxaben	4515	112	isoxaben	isxbn	isxbn	1	par_nr_vs_lookup_code_mismatch
+joodpropynylbutylcarbamaat	4520	joodpropynylbutylcarbamaat	4520	112	joodpropynylbutylcarbamaat	IppnC4ycbmt	ippnc4ycbmt	1	par_nr_vs_lookup_code_mismatch
+nuarimol	4575	nuarimol	4575	112	nuarimol	nuarml	nuarml	1	par_nr_vs_lookup_code_mismatch
+oxasulfuron	4581	oxasulfuron	4581	112	oxasulfuron	Oasfrn	oasfrn	1	par_nr_vs_lookup_code_mismatch
+permethrin	4590	permethrin	4590	108	permethrin	permtn	permtn	1	par_nr_vs_lookup_code_mismatch
+seleennf	2545	Seleen (nf)	2545	105					lookup_missing_for_name
+benzeen	4134	benzeen	4134	105	benzeen	Ben	ben	1	par_nr_vs_lookup_code_mismatch
+bszwaveltotaal	1604	(BS) zwavel totaal	1604	103					lookup_missing_for_name
+trichloormethaanchloroform	4161	trichloormethaan (chloroform)	4161	103	trichloormethaan (chloroform)	TClC1a	tclc1a	1	par_nr_vs_lookup_code_mismatch
+tetramethrin	4676	tetramethrin	4676	98	tetramethrin	T4mtn	t4mtn	1	par_nr_vs_lookup_code_mismatch
+glufosinaatammonium	4492	glufosinaat-ammonium	4492	97	glufosinaat-ammonium	glufsntNH4	glufsntnh4	1	par_nr_vs_lookup_code_mismatch
+ethylbenzeen	4135	ethylbenzeen	4135	95	ethylbenzeen	C2yBen	c2yben	1	par_nr_vs_lookup_code_mismatch
+tolueen	4131	tolueen	4131	95	tolueen	Tol	tol	1	par_nr_vs_lookup_code_mismatch
+methylisothiocyanaat	4552	methylisothiocyanaat	4552	94	methylisothiocyanaat	C1yitoCN	c1yitocn	1	par_nr_vs_lookup_code_mismatch
+bsmonsternamewaterbodem	3	(BS) Monstername waterbodem	3	93					lookup_missing_for_name
+tridemorf	4710	tridemorf	4710	91	tridemorf	Tdmf	tdmf	1	par_nr_vs_lookup_code_mismatch
+111trichloorethaan	4150	1,1,1-trichloorethaan	4150	90	1,1,1-trichloorethaan	111TClC2a	111tclc2a	1	par_nr_vs_lookup_code_mismatch
+112trichloorethaan	4151	1,1,2-trichloorethaan	4151	90	1,1,2-trichloorethaan	112TClC2a	112tclc2a	1	par_nr_vs_lookup_code_mismatch
+11dichloorethaan	4152	1,1-dichloorethaan	4152	90	1,1-dichloorethaan	11DClC2a	11dclc2a	1	par_nr_vs_lookup_code_mismatch
+123trichloorbenzeen	4140	1,2,3-trichloorbenzeen	4140	90	1,2,3-trichloorbenzeen	123TClBen	123tclben	1	par_nr_vs_lookup_code_mismatch
+12dichloorbenzeen	4142	1,2-dichloorbenzeen	4142	90	1,2-dichloorbenzeen	12DClBen	12dclben	1	par_nr_vs_lookup_code_mismatch
+135trichloorbenzeen	4143	1,3,5-trichloorbenzeen	4143	90	1,3,5-trichloorbenzeen	135TClBen	135tclben	1	par_nr_vs_lookup_code_mismatch
+13dichloorbenzeen	4144	1,3-dichloorbenzeen	4144	90	1,3-dichloorbenzeen	13DClBen	13dclben	1	par_nr_vs_lookup_code_mismatch
+14dichloorbenzeen	4145	1,4-dichloorbenzeen	4145	90	1,4-dichloorbenzeen	14DClBen	14dclben	1	par_nr_vs_lookup_code_mismatch
+broompropylaat	4298	broompropylaat	4298	90	broompropylaat	Brpplt	brpplt	1	par_nr_vs_lookup_code_mismatch
+chloorbenzeen	4146	chloorbenzeen	4146	90	chloorbenzeen	ClBen	clben	1	par_nr_vs_lookup_code_mismatch
+cis12dichlooretheen	4155	cis-1,2-dichlooretheen	4155	90	cis-1,2-dichlooretheen	c12DClC2e	c12dclc2e	1	par_nr_vs_lookup_code_mismatch
+fenchloorfos	4438	fenchloorfos	4438	90	fenchloorfos	fenClfs	fenclfs	1	par_nr_vs_lookup_code_mismatch
+tetrachlooretheenper	4157	tetrachlooretheen (per)	4157	90	tetrachlooretheen (per)	T4ClC2e	t4clc2e	1	par_nr_vs_lookup_code_mismatch
+tetrachloormethaantetra	4158	tetrachloormethaan (tetra)	4158	90	tetrachloormethaan (tetra)	T4ClC1a	t4clc1a	1	par_nr_vs_lookup_code_mismatch
+trans12dichlooretheen	4159	trans-1,2-dichlooretheen	4159	90	trans-1,2-dichlooretheen	t12DClC2e	t12dclc2e	1	par_nr_vs_lookup_code_mismatch
+trichlooretheentri	4160	trichlooretheen (tri)	4160	90	trichlooretheen (tri)	TClC2e	tclc2e	1	par_nr_vs_lookup_code_mismatch
+bskorrelgroottefractie38	1723	(BS) Korrelgroottefractie <38	1723	89					lookup_missing_for_name
+bskorrelgroottefractiemd1000	1749	(BS) Korrelgroottefractie md < 1000	1749	89					lookup_missing_for_name
+bskorrelgroottefractiemd125	1746	(BS) Korrelgroottefractie md < 125	1746	89					lookup_missing_for_name
+bskorrelgroottefractiemd16	1741	(BS) Korrelgroottefractie md < 16	1741	89					lookup_missing_for_name
+bskorrelgroottefractiemd2	1740	(BS) Korrelgroottefractie md < 2	1740	89					lookup_missing_for_name
+bskorrelgroottefractiemd2000	1750	(BS) Korrelgroottefractie md < 2000	1750	89					lookup_missing_for_name
+bskorrelgroottefractiemd250	1747	(BS) Korrelgroottefractie md < 250	1747	89					lookup_missing_for_name
+bskorrelgroottefractiemd32	1742	(BS) Korrelgroottefractie md < 32	1742	89					lookup_missing_for_name
+bskorrelgroottefractiemd38	1743	(BS) Korrelgroottefractie md < 38	1743	89					lookup_missing_for_name
+bskorrelgroottefractiemd50	1744	(BS) Korrelgroottefractie md < 50	1744	89					lookup_missing_for_name
+bskorrelgroottefractiemd500	1748	(BS) Korrelgroottefractie md < 500	1748	89					lookup_missing_for_name
+bskorrelgroottefractiemd63	1745	(BS) Korrelgroottefractie md < 63	1745	89					lookup_missing_for_name
+bszand	1703	(BS) Zand	1703	89					lookup_missing_for_name
+streptococcusfaecalis	2103	Streptococcus Faecalis	2103	88					lookup_missing_for_name
+lufenuron	4531	lufenuron	4531	85	lufenuron	lufnrn	lufnrn	1	par_nr_vs_lookup_code_mismatch
+bariumnf	2507	Barium (nf)	2507	84					lookup_missing_for_name
+somdemetonisomeren	4648	som demeton-isomeren	4648	82					lookup_missing_for_name
+3hydroxycarbofuran	4248	3-hydroxycarbofuran	4248	82	3-hydroxycarbofuran	3HOxcbfrn	3hoxcbfrn	1	par_nr_vs_lookup_code_mismatch
+demetonsmethylsulfon	4360	demeton-S-methylsulfon	4360	82	demeton-S-methylsulfon	demtSC1ysfn	demtsc1ysfn	1	par_nr_vs_lookup_code_mismatch
+dicrotofos	4381	dicrotofos	4381	82	dicrotofos	Dctfs	dctfs	1	par_nr_vs_lookup_code_mismatch
+dimethirimol	4394	dimethirimol	4394	82	dimethirimol	Dmtrml	dmtrml	1	par_nr_vs_lookup_code_mismatch
+diniconazool	4399	diniconazool	4399	82	diniconazool	Dncnzl	dncnzl	1	par_nr_vs_lookup_code_mismatch
+disulfotonsulfon	4405	disulfoton-sulfon	4405	82	disulfoton-sulfon	Dsftsfn	dsftsfn	1	par_nr_vs_lookup_code_mismatch
+ethirimol	4420	ethirimol	4420	82	ethirimol	etrml	etrml	1	par_nr_vs_lookup_code_mismatch
+famoxadone	4432	famoxadone	4432	82	famoxadone	famxdne	famxdne	1	par_nr_vs_lookup_code_mismatch
+fensulfothion	4452	fensulfothion	4452	82	fensulfothion	fensfton	fensfton	1	par_nr_vs_lookup_code_mismatch
+fenthionsulfoxide	4454	fenthion-sulfoxide	4454	82	fenthion-sulfoxide	fentoSO	fentoso	1	par_nr_vs_lookup_code_mismatch
+foraat	4478	foraat	4478	82	foraat	fort	fort	1	par_nr_vs_lookup_code_mismatch
+foraatsulfon	4479	foraat-sulfon	4479	82	foraat-sulfon	forsfn	forsfn	1	par_nr_vs_lookup_code_mismatch
+foraatsulfoxide	4480	foraat-sulfoxide	4480	82	foraat-sulfoxide	forSO	forso	1	par_nr_vs_lookup_code_mismatch
+iprovalicarb	4511	iprovalicarb	4511	82	iprovalicarb	ipvlcb	ipvlcb	1	par_nr_vs_lookup_code_mismatch
+methamidofos	4541	methamidofos	4541	82	methamidofos	mtmdfs	mtmdfs	1	par_nr_vs_lookup_code_mismatch
+methyloxydemeton	4554	methyloxydemeton	4554	82	methyloxydemeton	C1yOxdmtn	c1yoxdmtn	1	par_nr_vs_lookup_code_mismatch
+oxycarboxin	4583	oxycarboxin	4583	82	oxycarboxin	OxcbOxn	oxcboxn	1	par_nr_vs_lookup_code_mismatch
+pirimicarbdesmethyl	4596	pirimicarb-desmethyl	4596	82	pirimicarb-desmethyl	pirmcdC1y	pirmcdc1y	1	par_nr_vs_lookup_code_mismatch
+rotenon	4622	rotenon	4622	82	rotenon	rotnn	rotnn	1	par_nr_vs_lookup_code_mismatch
+tebufenozide	4663	tebufenozide	4663	82	tebufenozide	tebfnzde	tebfnzde	1	par_nr_vs_lookup_code_mismatch
+terbufos	4667	terbufos	4667	82	terbufos	terbfs	terbfs	1	par_nr_vs_lookup_code_mismatch
+thiocyclam	4681	thiocyclam	4681	82	thiocyclam	toccm	toccm	1	par_nr_vs_lookup_code_mismatch
+thiodicarb	4682	thiodicarb	4682	82	thiodicarb	toDcb	todcb	1	par_nr_vs_lookup_code_mismatch
+thiofanox	4684	thiofanox	4684	82	thiofanox	tofnx	tofnx	1	par_nr_vs_lookup_code_mismatch
+thiofanoxsulfon	4685	thiofanox-sulfon	4685	82	thiofanox-sulfon	tofnsfn	tofnsfn	1	par_nr_vs_lookup_code_mismatch
+thiofanoxsulfoxide	4686	thiofanox-sulfoxide	4686	82	thiofanox-sulfoxide	tofnSO	tofnso	1	par_nr_vs_lookup_code_mismatch
+triadimefon	4698	triadimefon	4698	82	triadimefon	Tadmfn	tadmfn	1	par_nr_vs_lookup_code_mismatch
+tricyclazool	4708	tricyclazool	4708	82	tricyclazool	Tcczl	tcczl	1	par_nr_vs_lookup_code_mismatch
+triflumuron	4715	triflumuron	4715	82	triflumuron	Tfmrn	tfmrn	1	par_nr_vs_lookup_code_mismatch
+triforine	4718	triforine	4718	82	triforine	Tfrne	tfrne	1	par_nr_vs_lookup_code_mismatch
+metoprolol	4559	metoprolol	4559	80	metoprolol	metpll	metpll	1	par_nr_vs_lookup_code_mismatch
+loodnf	2534	Lood (nf)	2534	79					lookup_missing_for_name
+amidotrizoinezuur	4275	amidotrizoïnezuur	4275	79					lookup_missing_for_name
+metformine	4540	metformine	4540	79	metformine	metfmne	metfmne	1	par_nr_vs_lookup_code_mismatch
+bsammonium	1610	(BS) ammonium	1610	77					lookup_missing_for_name
+bssomnitraatennitriet	1611	(BS) som nitraat en nitriet	1611	77					lookup_missing_for_name
+bezafibraat	4288	bezafibraat	4288	76	bezafibraat	bezafbt	bezafbt	1	par_nr_vs_lookup_code_mismatch
+diclofenac	4378	diclofenac	4378	76	diclofenac	Dclofnc	dclofnc	1	par_nr_vs_lookup_code_mismatch
+fenazonantipyrine	4436	fenazon (antipyrine)	4436	76	fenazon (antipyrine)	fenzn	fenzn	1	par_nr_vs_lookup_code_mismatch
+ibuprofen	4503	ibuprofen	4503	76	ibuprofen	ibpfn	ibpfn	1	par_nr_vs_lookup_code_mismatch
+ketoprofen	4524	ketoprofen	4524	76	ketoprofen	ketpfn	ketpfn	1	par_nr_vs_lookup_code_mismatch
+pentoxifylline	4589	pentoxifylline	4589	76	pentoxifylline	poxflne	poxflne	1	par_nr_vs_lookup_code_mismatch
+sulfamethoxazol	4660	sulfamethoxazol	4660	76	sulfamethoxazol	sulfmtoazl	sulfmtoazl	1	par_nr_vs_lookup_code_mismatch
+lidocaine	4528	lidocaine	4528	75					lookup_missing_for_name
+claritromycine	4333	claritromycine	4333	75	claritromycine	clartmcne	clartmcne	1	par_nr_vs_lookup_code_mismatch
+clindamycine	4334	clindamycine	4334	75	clindamycine	clindmcne	clindmcne	1	par_nr_vs_lookup_code_mismatch
+clozapine	4343	clozapine	4343	75	clozapine	clozpne	clozpne	1	par_nr_vs_lookup_code_mismatch
+dimetridazol	4398	dimetridazol	4398	75	dimetridazol	DmTdzl	dmtdzl	1	par_nr_vs_lookup_code_mismatch
+dipyridamol	4403	dipyridamol	4403	75	dipyridamol	Dpyrdml	dpyrdml	1	par_nr_vs_lookup_code_mismatch
+gabapentine	4489	gabapentine	4489	75	gabapentine	gabptne	gabptne	1	par_nr_vs_lookup_code_mismatch
+hydrochloorthiazide	4501	hydrochloorthiazide	4501	75	hydrochloorthiazide	HCltazde	hcltazde	1	par_nr_vs_lookup_code_mismatch
+irbesartan	4512	irbesartan	4512	75	irbesartan	irbstan	irbstan	1	par_nr_vs_lookup_code_mismatch
+jopamidol	4521	jopamidol	4521	75	jopamidol	jopmdl	jopmdl	1	par_nr_vs_lookup_code_mismatch
+oxazepam	4582	oxazepam	4582	75	oxazepam	oxzpm	oxzpm	1	par_nr_vs_lookup_code_mismatch
+pipamperon	4593	pipamperon	4593	75	pipamperon	pipprn	pipprn	1	par_nr_vs_lookup_code_mismatch
+sotalol	4654	sotalol	4654	75	sotalol	sotll	sotll	1	par_nr_vs_lookup_code_mismatch
+trimethoprim	4719	trimethoprim	4719	75	trimethoprim	Tmtpm	tmtpm	1	par_nr_vs_lookup_code_mismatch
+valsartan	4720	valsartan	4720	75	valsartan	valstan	valstan	1	par_nr_vs_lookup_code_mismatch
+bsslibdikte	600	(BS) Slibdikte	600	69					lookup_missing_for_name
+chroomnf	2518	Chroom (nf)	2518	66					lookup_missing_for_name
+somabcendhch	4638	som a-, b-, c- en d-HCH	4638	65	som a-, b-, c- en d-HCH	sHCH4	shch4	1	par_nr_vs_lookup_code_mismatch
+somaldrindieldrinendrinenisodrin	4639	som aldrin, dieldrin, endrin en isodrin	4639	65	som aldrin, dieldrin, endrin en isodrin	sdrin4	sdrin4	1	par_nr_vs_lookup_code_mismatch
+2fenylfenol	4240	2-fenylfenol	4240	64	2-fenylfenol	2FyFol	2fyfol	1	par_nr_vs_lookup_code_mismatch
+chlofentezin	4313	chlofentezin	4313	64	chlofentezin	chloftzn	chloftzn	1	par_nr_vs_lookup_code_mismatch
+clothianidine	4341	clothianidine	4341	64	clothianidine	clotandne	clotandne	1	par_nr_vs_lookup_code_mismatch
+jodosulfuronmethyl	4517	jodosulfuron-methyl	4517	64	jodosulfuron-methyl	IsfrnC1y	isfrnc1y	1	par_nr_vs_lookup_code_mismatch
+sethoxydim	4625	sethoxydim	4625	64	sethoxydim	sC2oxdm	sc2oxdm	1	par_nr_vs_lookup_code_mismatch
+trichloorfon	4706	trichloorfon	4706	64	trichloorfon	TClfn	tclfn	1	par_nr_vs_lookup_code_mismatch
+som24en44ddt	4632	som 2,4- en 4,4-DDT	4632	63	som 2,4'- en 4,4'-DDT	sDDT	sddt	1	par_nr_vs_lookup_code_mismatch
+kwiknf	2530	Kwik (nf)	2530	62					lookup_missing_for_name
+barium	2506	Barium	2506	62	barium	Ba	ba	1	par_nr_vs_lookup_code_mismatch
+chloorthal	4323	chloorthal	4323	61	chloorthal	cltl	cltl	1	par_nr_vs_lookup_code_mismatch
+awamidotrizoinezuur	8000	(AW) amidotrizoinezuur	8000	60					lookup_missing_for_name
+awbezafibraat	8001	(AW) bezafibraat	8001	60					lookup_missing_for_name
+awcarbamazepine	8002	(AW) carbamazepine	8002	60					lookup_missing_for_name
+awclaritromycine	8004	(AW) claritromycine	8004	60					lookup_missing_for_name
+awclindamycine	8005	(AW) clindamycine	8005	60					lookup_missing_for_name
+awclozapine	8006	(AW) clozapine	8006	60					lookup_missing_for_name
+awdiclofenac	8008	(AW) diclofenac	8008	60					lookup_missing_for_name
+awdimetridazol	8009	(AW) dimetridazol	8009	60					lookup_missing_for_name
+awdipyridamol	8010	(AW) dipyridamol	8010	60					lookup_missing_for_name
+awfenazonantipyrine	8011	(AW) fenazon (antipyrine)	8011	60					lookup_missing_for_name
+awgabapentine	8012	(AW) gabapentine	8012	60					lookup_missing_for_name
+awhydrochloorthiazide	8013	(AW) hydrochloorthiazide	8013	60					lookup_missing_for_name
+awibuprofen	8014	(AW) ibuprofen	8014	60					lookup_missing_for_name
+awirbesartan	8015	(AW) irbesartan	8015	60					lookup_missing_for_name
+awjopamidol	8016	(AW) jopamidol	8016	60					lookup_missing_for_name
+awketoprofen	8017	(AW) ketoprofen	8017	60					lookup_missing_for_name
+awlidocaine	8018	(AW) lidocaine	8018	60					lookup_missing_for_name
+awmetformine	8019	(AW) metformine	8019	60					lookup_missing_for_name
+awmetoprolol	8020	(AW) metoprolol	8020	60					lookup_missing_for_name
+awoxazepam	8021	(AW) oxazepam	8021	60					lookup_missing_for_name
+awpentoxifylline	8022	(AW) pentoxifylline	8022	60					lookup_missing_for_name
+awpipamperon	8023	(AW) pipamperon	8023	60					lookup_missing_for_name
+awsotalol	8024	(AW) sotalol	8024	60					lookup_missing_for_name
+awsulfamethoxazol	8025	(AW) sulfamethoxazol	8025	60					lookup_missing_for_name
+awtrimethoprim	8026	(AW) trimethoprim	8026	60					lookup_missing_for_name
+awvalsartan	8027	(AW) valsartan	8027	60					lookup_missing_for_name
+gwnikkelnf	3031	(GW) nikkel (nf)	3031	60					lookup_missing_for_name
+extinctiel380nm	1107	Extinctie L380nm	1107	60					lookup_missing_for_name
+aluminium	2500	Aluminium	2500	60	aluminium	Al	al	1	par_nr_vs_lookup_code_mismatch
+asulam	4278	asulam	4278	58	asulam	aslm	aslm	1	par_nr_vs_lookup_code_mismatch
+somxyleenisomeren	4653	som xyleen-isomeren	4653	55	som xyleen-isomeren	sxyln	sxyln	1	par_nr_vs_lookup_code_mismatch
+hexachloorethaan	4497	hexachloorethaan	4497	54	hexachloorethaan	HxClC2a	hxclc2a	1	par_nr_vs_lookup_code_mismatch
+diaminomethylideenureum	4366	diaminomethylideenureum	4366	52					lookup_missing_for_name
+ciprofloxacine	4328	ciprofloxacine	4328	52	ciprofloxacine	cipfxcne	cipfxcne	1	par_nr_vs_lookup_code_mismatch
+koolstofanorganischnf	1023	koolstof anorganisch (nf)	1023	49					lookup_missing_for_name
+redoxpotentiaal	1251	Redoxpotentiaal	1251	49	Redoxpotentiaal	REDPTTAL	redpttal	1	par_nr_vs_lookup_code_mismatch
+bs24dichloordifenyldichloorethaan	7007	(BS) 2,4-dichloordifenyldichloorethaan	7007	48					lookup_missing_for_name
+bs24dichloordifenyldichlooretheen	7008	(BS) 2,4-dichloordifenyldichlooretheen	7008	48					lookup_missing_for_name
+bs24dichloordifenyltrichloorethaan	7009	(BS) 2,4-dichloordifenyltrichloorethaan	7009	48					lookup_missing_for_name
+bs44dichloordifenyldichloorethaan	7010	(BS) 4,4-dichloordifenyldichloorethaan	7010	48					lookup_missing_for_name
+bs44dichloordifenyldichlooretheen	7011	(BS) 4,4-dichloordifenyldichlooretheen	7011	48					lookup_missing_for_name
+bs44dichloordifenyltrichloorethaan	7012	(BS) 4,4-dichloordifenyltrichloorethaan	7012	48					lookup_missing_for_name
+bsverhoudingfosfortotaalijzer	1606	(BS) Verhouding fosfor totaal/ijzer	1606	48					lookup_missing_for_name
+bszuurgraad	1603	(BS) Zuurgraad	1603	48					lookup_missing_for_name
+bsaldrin	7013	(BS) aldrin	7013	48					lookup_missing_for_name
+bsalfaendosulfan	7014	(BS) alfa-endosulfan	7014	48					lookup_missing_for_name
+bsalfahexachloorcyclohexaan	7015	(BS) alfa-hexachloorcyclohexaan	7015	48					lookup_missing_for_name
+bsbetahexachloorcyclohexaan	7022	(BS) beta-hexachloorcyclohexaan	7022	48					lookup_missing_for_name
+bscischloordaan	7026	(BS) cis-chloordaan	7026	48					lookup_missing_for_name
+bscisheptachloorepoxide	7027	(BS) cis-heptachloorepoxide	7027	48					lookup_missing_for_name
+bsdeltahexachloorcyclohexaan	7029	(BS) delta-hexachloorcyclohexaan	7029	48					lookup_missing_for_name
+bsdieldrin	7031	(BS) dieldrin	7031	48					lookup_missing_for_name
+bsendosulfansulfaat	7032	(BS) endosulfansulfaat	7032	48					lookup_missing_for_name
+bsendrin	7033	(BS) endrin	7033	48					lookup_missing_for_name
+bsgammahexachloorcyclohexaanlindaan	7037	(BS) gamma-hexachloorcyclohexaan (lindaan)	7037	48					lookup_missing_for_name
+bsheptachloor	7039	(BS) heptachloor	7039	48					lookup_missing_for_name
+bshexachloorbenzeen	7040	(BS) hexachloorbenzeen	7040	48					lookup_missing_for_name
+bshexachloorbutadieen	7041	(BS) hexachloorbutadieen	7041	48					lookup_missing_for_name
+bsisodrin	7043	(BS) isodrin	7043	48					lookup_missing_for_name
+bspentachloorbenzeen	7048	(BS) pentachloorbenzeen	7048	48					lookup_missing_for_name
+bspentachloorfenol	7049	(BS) pentachloorfenol	7049	48					lookup_missing_for_name
+bssom24en44ddd	7052	(BS) som 2,4- en 4,4-DDD	7052	48					lookup_missing_for_name
+bssom24en44dde	7053	(BS) som 2,4- en 4,4-DDE	7053	48					lookup_missing_for_name
+bssom24en44ddt	7054	(BS) som 2,4- en 4,4-DDT	7054	48					lookup_missing_for_name
+bssom2444ddt2444ddd24en44dde	7055	(BS) som 2,4-, 4,4-DDT, 2,4-, 4,4-DDD, 2,4- en 4,4-DDE	7055	48					lookup_missing_for_name
+bssomheptachloorepoxidesomcisentrans	7058	(BS) som heptachloorepoxide (som cis- en trans-)	7058	48					lookup_missing_for_name
+bstelodrin	7061	(BS) telodrin	7061	48					lookup_missing_for_name
+bstranschloordaan	7062	(BS) trans-chloordaan	7062	48					lookup_missing_for_name
+bstransheptachloorepoxide	7063	(BS) trans-heptachloorepoxide	7063	48					lookup_missing_for_name
+chlooroxynil	4320	chlooroxynil	4320	48	chlooroxynil	ClOxnl	cloxnl	1	par_nr_vs_lookup_code_mismatch
+somglucocorticocidestoffen	4730	som glucocorticoÇîde stoffen	4730	46					lookup_missing_for_name
+bifenthrin	4291	bifenthrin	4291	46	bifenthrin	biftn	biftn	1	par_nr_vs_lookup_code_mismatch
+dinoseb	4400	dinoseb	4400	46	dinoseb	Dnsb	dnsb	1	par_nr_vs_lookup_code_mismatch
+metosulam	4560	metosulam	4560	46	metosulam	metslm	metslm	1	par_nr_vs_lookup_code_mismatch
+somantiandrogenestoffen	4728	som anti-androgene stoffen	4728	46	som anti-androgene stoffen	santadgnsfn	santadgnsfn	1	par_nr_vs_lookup_code_mismatch
+somestrogenestoffen	4729	som estrogene stoffen	4729	46	som estrogene stoffen	sestgnsfn	sestgnsfn	1	par_nr_vs_lookup_code_mismatch
+somperoxisoomproliferatorsgamma	4731	som peroxisoom proliferators (gamma)	4731	46	som peroxisoom proliferators (gamma)	speroxsplfrt	speroxsplfrt	1	par_nr_vs_lookup_code_mismatch
+awciprofloxacine	8003	(AW) ciprofloxacine	8003	42					lookup_missing_for_name
+awdiaminomethylideenureum	8007	(AW) diaminomethylideenureum	8007	42					lookup_missing_for_name
+milbemectin	4565	milbemectin	4565	42					lookup_missing_for_name
+acequinocyl	4263	acequinocyl	4263	42	acequinocyl	acqncl	acqncl	1	par_nr_vs_lookup_code_mismatch
+biovolumepervolumeeenheid	2312	Biovolume per volume eenheid	2312	40					lookup_missing_for_name
+12xyleen	4130	1,2-xyleen	4130	40	1,2-xyleen	12xyln	12xyln	1	par_nr_vs_lookup_code_mismatch
+som13en14xyleen	4133	som 1,3- en 1,4-xyleen	4133	40	som 1,3- en 1,4-xyleen	s1314xyln	s1314xyln	1	par_nr_vs_lookup_code_mismatch
+gwafmeldredennietgenomenmonster	11	(GW) Afmeldreden niet genomen monster	11	37					lookup_missing_for_name
+awsomantiandrogenestoffen	8028	(AW) som anti-androgene stoffen	8028	36					lookup_missing_for_name
+awsomestrogenestoffen	8029	(AW) som estrogene stoffen	8029	36					lookup_missing_for_name
+awsomglucocorticoidestoffen	8030	(AW) som glucocorticoide stoffen	8030	36					lookup_missing_for_name
+awsomperoxisoomproliferatorsgamma	8031	(AW) som peroxisoom proliferators (gamma)	8031	36					lookup_missing_for_name
+zwavel	1102	Zwavel	1102	36					lookup_missing_for_name
+1122tetrachloorethaan	4202	1,1,2,2-tetrachloorethaan	4202	36	1,1,2,2-tetrachloorethaan	1122T4ClC2a	1122t4clc2a	1	par_nr_vs_lookup_code_mismatch
+11dichlooretheen	4203	1,1-dichlooretheen	4203	36	1,1-dichlooretheen	11DClC2e	11dclc2e	1	par_nr_vs_lookup_code_mismatch
+12dichloorpropaan	4210	1,2-dichloorpropaan	4210	36	1,2-dichloorpropaan	12DClC3a	12dclc3a	1	par_nr_vs_lookup_code_mismatch
+13dichloorpropaan	4212	1,3-dichloorpropaan	4212	36	1,3-dichloorpropaan	13DClC3a	13dclc3a	1	par_nr_vs_lookup_code_mismatch
+1propylbenzeen	4214	1-propylbenzeen	4214	36	1-propylbenzeen	1C3yBen	1c3yben	1	par_nr_vs_lookup_code_mismatch
+cis13dichloorpropeen	4329	cis-1,3-dichloorpropeen	4329	36	cis-1,3-dichloorpropeen	c13DClC3e	c13dclc3e	1	par_nr_vs_lookup_code_mismatch
+styreen	4132	styreen	4132	36	styreen	styrn	styrn	1	par_nr_vs_lookup_code_mismatch
+trans13dichloorpropeen	4693	trans-1,3-dichloorpropeen	4693	36	trans-1,3-dichloorpropeen	t13DClC3e	t13dclc3e	1	par_nr_vs_lookup_code_mismatch
+arseennf	2505	Arseen (nf)	2505	35					lookup_missing_for_name
+debiet	900	Debiet	900	34					lookup_missing_for_name
+dimethenamidp	4735	dimethenamid-P	4735	34	dimethenamid-P	DmtnmdP	dmtnmdp	1	par_nr_vs_lookup_code_mismatch
+irgarol	4737	irgarol	4737	34	irgarol	irgrl	irgrl	1	par_nr_vs_lookup_code_mismatch
+quinoxyfen	4739	quinoxyfen	4739	34	quinoxyfen	quinoxfn	quinoxfn	1	par_nr_vs_lookup_code_mismatch
+kobaltnf	2526	kobalt (nf)	2526	32					lookup_missing_for_name
+ureum	9116	Ureum	9116	32	ureum	urum	urum	1	par_nr_vs_lookup_code_mismatch
+chloorbufam	4315	chloorbufam	4315	32	chloorbufam	Clbfm	clbfm	1	par_nr_vs_lookup_code_mismatch
+ethylpirimifos	4429	ethylpirimifos	4429	32	ethylpirimifos	C2yprmfs	c2yprmfs	1	par_nr_vs_lookup_code_mismatch
+fuberidazool	4486	fuberidazool	4486	32	fuberidazool	fubrdzl	fubrdzl	1	par_nr_vs_lookup_code_mismatch
+oxadixyl	4579	oxadixyl	4579	32	oxadixyl	OaDxl	oadxl	1	par_nr_vs_lookup_code_mismatch
+tetradifon	4675	tetradifon	4675	32	tetradifon	T4Dfn	t4dfn	1	par_nr_vs_lookup_code_mismatch
+mchp	9123	MCHP	9123	31					lookup_missing_for_name
+transchloorfenvinfos	9124	trans-Chloorfenvinfos	9124	31					lookup_missing_for_name
+amitrol	4277	amitrol	4277	31	amitrol	amtl	amtl	1	par_nr_vs_lookup_code_mismatch
+somchloorfenolen	4641	som chloorfenolen	4641	31	som chloorfenolen	sClFol	sclfol	1	par_nr_vs_lookup_code_mismatch
+categoriecyanobacteriemat	2327	Categorie Cyanobacteriemat	2327	30					lookup_missing_for_name
+2333tetrafluor2heptafluorpropoxypropionzuur	4766	2,3,3,3-tetrafluor-2-(heptafluorpropoxy)propionzuur	4766	30	2,3,3,3-tetrafluor-2-(heptafluorpropoxy)propionzuur	FRD-903	frd-903	1	par_nr_vs_lookup_code_mismatch
+2perfluorhexylethaan1sulfonzuur	4765	2-(perfluorhexyl)ethaan-1-sulfonzuur	4765	30	2-(perfluorhexyl)ethaan-1-sulfonzuur	2PFC6yC2a1sf	2pfc6yc2a1sf	1	par_nr_vs_lookup_code_mismatch
+epsilonhexachloorcyclohexaan	4412	epsilon-hexachloorcyclohexaan	4412	30	epsilon-hexachloorcyclohexaan	eHCH	ehch	1	par_nr_vs_lookup_code_mismatch
+perfluor1butaansulfonaatlineair	4767	perfluor-1-butaansulfonaat (lineair)	4767	30	perfluor-1-butaansulfonaat (lineair)	L_PFBS	l_pfbs	1	par_nr_vs_lookup_code_mismatch
+perfluor1hexaansulfonaatlineair	4768	perfluor-1-hexaansulfonaat (lineair)	4768	30	perfluor-1-hexaansulfonaat (lineair)	L_PFHxS	l_pfhxs	1	par_nr_vs_lookup_code_mismatch
+perfluorbutaanzuur	4769	perfluorbutaanzuur	4769	30	perfluorbutaanzuur	PFBA	pfba	1	par_nr_vs_lookup_code_mismatch
+perfluordecaanzuur	4770	perfluordecaanzuur	4770	30	perfluordecaanzuur	PFDA	pfda	1	par_nr_vs_lookup_code_mismatch
+perfluorheptaanzuur	4771	perfluorheptaanzuur	4771	30	perfluorheptaanzuur	PFHpA	pfhpa	1	par_nr_vs_lookup_code_mismatch
+perfluorhexaanzuur	4772	perfluorhexaanzuur	4772	30	perfluorhexaanzuur	PFHxA	pfhxa	1	par_nr_vs_lookup_code_mismatch
+perfluornonaanzuur	4773	perfluornonaanzuur	4773	30	perfluornonaanzuur	PFNA	pfna	1	par_nr_vs_lookup_code_mismatch
+perfluoroctaansulfonaat	4775	perfluoroctaansulfonaat	4775	30	perfluoroctaansulfonaat	PFOS	pfos	1	par_nr_vs_lookup_code_mismatch
+perfluoroctaanzuur	4774	perfluoroctaanzuur	4774	30	perfluoroctaanzuur	PFOA	pfoa	1	par_nr_vs_lookup_code_mismatch
+perfluorpentaanzuur	4776	perfluorpentaanzuur	4776	30	perfluorpentaanzuur	PFPA	pfpa	1	par_nr_vs_lookup_code_mismatch
+perfluorundecaanzuur	4777	perfluorundecaanzuur	4777	30	perfluorundecaanzuur	PFUdA	pfuda	1	par_nr_vs_lookup_code_mismatch
+picoxystrobin	4592	picoxystrobin	4592	30	picoxystrobin	picxsbn	picxsbn	1	par_nr_vs_lookup_code_mismatch
+zoxamide	4724	zoxamide	4724	30	zoxamide	zOaAd	zoaad	1	par_nr_vs_lookup_code_mismatch
+somtrichloorfenolisomeren	4651	som trichloorfenol-isomeren	4651	28	som trichloorfenol-isomeren	sTClFol	stclfol	1	par_nr_vs_lookup_code_mismatch
+microcystines	2323	Microcystines	2323	26					lookup_missing_for_name
+bs124trichloorbenzeen	7069	(BS) 1,2,4-trichloorbenzeen	7069	25					lookup_missing_for_name
+bs245trichloorfenoxyazijnzuur	7070	(BS) 2,4,5-trichloorfenoxyazijnzuur	7070	25					lookup_missing_for_name
+bs24dichloorfenoxyazijnzuur	7071	(BS) 2,4-dichloorfenoxyazijnzuur	7071	25					lookup_missing_for_name
+bs24dichloorfenoxyboterzuur	7072	(BS) 2,4-dichloorfenoxyboterzuur	7072	25					lookup_missing_for_name
+bs24dichloorfenoxypropionzuur	7073	(BS) 2,4-dichloorfenoxypropionzuur	7073	25					lookup_missing_for_name
+bs26dichloorbenzamide	7074	(BS) 2,6-dichloorbenzamide	7074	25					lookup_missing_for_name
+bs2methyl4chloorfenoxyazijnzuur	7182	(BS) 2-methyl-4-chloorfenoxyazijnzuur	7182	25					lookup_missing_for_name
+bs2methyl4chloorfenoxyboterzuur	7183	(BS) 2-methyl-4-chloorfenoxyboterzuur	7183	25					lookup_missing_for_name
+bs46dinitroocresol	7142	(BS) 4,6-dinitro-o-cresol	7142	25					lookup_missing_for_name
+bs4chloorfenoxyazijnzuur	7076	(BS) 4-chloorfenoxyazijnzuur	7076	25					lookup_missing_for_name
+bs4dimethylaminosulfotoluidide	7137	(BS) 4-dimethylaminosulfotoluidide	7137	25					lookup_missing_for_name
+bs4nonylfenol	7075	(BS) 4-nonylfenol	7075	25					lookup_missing_for_name
+bs4tertiairoctylfenol	7077	(BS) 4-tertiair-octylfenol	7077	25					lookup_missing_for_name
+bsabamectine	7078	(BS) abamectine	7078	25					lookup_missing_for_name
+bsacetamiprid	7081	(BS) acetamiprid	7081	25					lookup_missing_for_name
+bsaclonifen	7080	(BS) aclonifen	7080	25					lookup_missing_for_name
+bsacridine	7079	(BS) acridine	7079	25					lookup_missing_for_name
+bsalachloor	7082	(BS) alachloor	7082	25					lookup_missing_for_name
+bsaldicarb	7083	(BS) aldicarb	7083	25					lookup_missing_for_name
+bsaldicarbsulfon	7084	(BS) aldicarbsulfon	7084	25					lookup_missing_for_name
+bsamidosulfuron	7085	(BS) amidosulfuron	7085	25					lookup_missing_for_name
+bsatrazine	7086	(BS) atrazine	7086	25					lookup_missing_for_name
+bsazaconazool	7087	(BS) azaconazool	7087	25					lookup_missing_for_name
+bsazoxystrobin	7088	(BS) azoxystrobin	7088	25					lookup_missing_for_name
+bsbentazon	7089	(BS) bentazon	7089	25					lookup_missing_for_name
+bsbifenox	7090	(BS) bifenox	7090	25					lookup_missing_for_name
+bsboscalid	7091	(BS) boscalid	7091	25					lookup_missing_for_name
+bsbromacil	7092	(BS) bromacil	7092	25					lookup_missing_for_name
+bsbroomoxynil	7093	(BS) broomoxynil	7093	25					lookup_missing_for_name
+bsbupirimaat	7095	(BS) bupirimaat	7095	25					lookup_missing_for_name
+bsbuprofezin	7094	(BS) buprofezin	7094	25					lookup_missing_for_name
+bscarbaryl	7109	(BS) carbaryl	7109	25					lookup_missing_for_name
+bscarbendazim	7107	(BS) carbendazim	7107	25					lookup_missing_for_name
+bscarbetamide	7110	(BS) carbetamide	7110	25					lookup_missing_for_name
+bscarbofuran	7108	(BS) carbofuran	7108	25					lookup_missing_for_name
+bschloorbromuron	7111	(BS) chloorbromuron	7111	25					lookup_missing_for_name
+bschloorfenvinfos	7112	(BS) chloorfenvinfos	7112	25					lookup_missing_for_name
+bschlooroxuron	7116	(BS) chlooroxuron	7116	25					lookup_missing_for_name
+bschloorprofam	7117	(BS) chloorprofam	7117	25					lookup_missing_for_name
+bschloorsulfuron	7118	(BS) chloorsulfuron	7118	25					lookup_missing_for_name
+bschloortoluron	7119	(BS) chloortoluron	7119	25					lookup_missing_for_name
+bschloridazon	7113	(BS) chloridazon	7113	25					lookup_missing_for_name
+bsclomazon	7114	(BS) clomazon	7114	25					lookup_missing_for_name
+bscloquintoceetmexyl	7115	(BS) cloquintoceet-mexyl	7115	25					lookup_missing_for_name
+bscycloxydim	7120	(BS) cycloxydim	7120	25					lookup_missing_for_name
+bscypermethrin	7123	(BS) cypermethrin	7123	25					lookup_missing_for_name
+bscyproconazool	7121	(BS) cyproconazool	7121	25					lookup_missing_for_name
+bscyprodinil	7122	(BS) cyprodinil	7122	25					lookup_missing_for_name
+bscyromazine	7124	(BS) cyromazine	7124	25					lookup_missing_for_name
+bsdeltamethrin	7141	(BS) deltamethrin	7141	25					lookup_missing_for_name
+bsdemetonsmethyl	7129	(BS) demeton-S-methyl	7129	25					lookup_missing_for_name
+bsdesethylatrazine	7130	(BS) desethylatrazine	7130	25					lookup_missing_for_name
+bsdesethylterbutylazine	7131	(BS) desethylterbutylazine	7131	25					lookup_missing_for_name
+bsdiazinon	7125	(BS) diazinon	7125	25					lookup_missing_for_name
+bsdichlobenil	7126	(BS) dichlobenil	7126	25					lookup_missing_for_name
+bsdichloorvos	7127	(BS) dichloorvos	7127	25					lookup_missing_for_name
+bsdiethyltoluamide	7128	(BS) diethyltoluamide	7128	25					lookup_missing_for_name
+bsdifenoconazool	7135	(BS) difenoconazool	7135	25					lookup_missing_for_name
+bsdifenoxuron	7136	(BS) difenoxuron	7136	25					lookup_missing_for_name
+bsdiflubenzuron	7133	(BS) diflubenzuron	7133	25					lookup_missing_for_name
+bsdiflufenican	7134	(BS) diflufenican	7134	25					lookup_missing_for_name
+bsdimethenamide	7138	(BS) dimethenamide	7138	25					lookup_missing_for_name
+bsdimethoaat	7139	(BS) dimethoaat	7139	25					lookup_missing_for_name
+bsdimethomorf	7140	(BS) dimethomorf	7140	25					lookup_missing_for_name
+bsdisulfoton	7144	(BS) disulfoton	7144	25					lookup_missing_for_name
+bsdiuron	7145	(BS) diuron	7145	25					lookup_missing_for_name
+bsdodine	7143	(BS) dodine	7143	25					lookup_missing_for_name
+bsethiofencarb	7148	(BS) ethiofencarb	7148	25					lookup_missing_for_name
+bsethofumesaat	7147	(BS) ethofumesaat	7147	25					lookup_missing_for_name
+bsethylazinfos	7103	(BS) ethylazinfos	7103	25					lookup_missing_for_name
+bsethylbromofos	7104	(BS) ethylbromofos	7104	25					lookup_missing_for_name
+bsethylchloorpyrifos	7105	(BS) ethylchloorpyrifos	7105	25					lookup_missing_for_name
+bsethylparathion	7106	(BS) ethylparathion	7106	25					lookup_missing_for_name
+bsetridiazol	7146	(BS) etridiazol	7146	25					lookup_missing_for_name
+bsfenamifos	7149	(BS) fenamifos	7149	25					lookup_missing_for_name
+bsfenhexamide	7150	(BS) fenhexamide	7150	25					lookup_missing_for_name
+bsfenitrothion	7151	(BS) fenitrothion	7151	25					lookup_missing_for_name
+bsfenoxycarb	7152	(BS) fenoxycarb	7152	25					lookup_missing_for_name
+bsfenpropidin	7153	(BS) fenpropidin	7153	25					lookup_missing_for_name
+bsfenpropimorf	7154	(BS) fenpropimorf	7154	25					lookup_missing_for_name
+bsfenthion	7155	(BS) fenthion	7155	25					lookup_missing_for_name
+bsfenvaleraat	7156	(BS) fenvaleraat	7156	25					lookup_missing_for_name
+bsfipronil	7157	(BS) fipronil	7157	25					lookup_missing_for_name
+bsflonicamid	7158	(BS) flonicamid	7158	25					lookup_missing_for_name
+bsfluazifoppbutyl	7160	(BS) fluazifop-P-butyl	7160	25					lookup_missing_for_name
+bsfluazinam	7161	(BS) fluazinam	7161	25					lookup_missing_for_name
+bsflufenacet	7162	(BS) flufenacet	7162	25					lookup_missing_for_name
+bsfluroxypyr	7163	(BS) fluroxypyr	7163	25					lookup_missing_for_name
+bsflurtamon	7159	(BS) flurtamon	7159	25					lookup_missing_for_name
+bsflutolanil	7164	(BS) flutolanil	7164	25					lookup_missing_for_name
+bsfosalon	7165	(BS) fosalon	7165	25					lookup_missing_for_name
+bsfuralaxyl	7166	(BS) furalaxyl	7166	25					lookup_missing_for_name
+bsheptenofos	7167	(BS) heptenofos	7167	25					lookup_missing_for_name
+bshexythiazox	7168	(BS) hexythiazox	7168	25					lookup_missing_for_name
+bsimazalil	7171	(BS) imazalil	7171	25					lookup_missing_for_name
+bsimidacloprid	7170	(BS) imidacloprid	7170	25					lookup_missing_for_name
+bsindoxacarbsisomeer	7172	(BS) indoxacarb (S-isomeer)	7172	25					lookup_missing_for_name
+bsioxynil	7173	(BS) ioxynil	7173	25					lookup_missing_for_name
+bsiprodion	7174	(BS) iprodion	7174	25					lookup_missing_for_name
+bsisopropylanthranilamide	7169	(BS) isopropylanthranilamide	7169	25					lookup_missing_for_name
+bsisoproturon	7176	(BS) isoproturon	7176	25					lookup_missing_for_name
+bsisoxaben	7177	(BS) isoxaben	7177	25					lookup_missing_for_name
+bsjoodpropynylbutylcarbamaat	7175	(BS) joodpropynylbutylcarbamaat	7175	25					lookup_missing_for_name
+bskresoximmethyl	7178	(BS) kresoxim-methyl	7178	25					lookup_missing_for_name
+bslenacil	7179	(BS) lenacil	7179	25					lookup_missing_for_name
+bslinuron	7180	(BS) linuron	7180	25					lookup_missing_for_name
+bsmalathion	7181	(BS) malathion	7181	25					lookup_missing_for_name
+bsmecoprop	7184	(BS) mecoprop	7184	25					lookup_missing_for_name
+bsmesotrion	7186	(BS) mesotrion	7186	25					lookup_missing_for_name
+bsmetabenzthiazuron	7188	(BS) metabenzthiazuron	7188	25					lookup_missing_for_name
+bsmetalaxyl	7196	(BS) metalaxyl	7196	25					lookup_missing_for_name
+bsmetamitron	7197	(BS) metamitron	7197	25					lookup_missing_for_name
+bsmetazachloor	7199	(BS) metazachloor	7199	25					lookup_missing_for_name
+bsmethiocarb	7192	(BS) methiocarb	7192	25					lookup_missing_for_name
+bsmethomyl	7191	(BS) methomyl	7191	25					lookup_missing_for_name
+bsmethoxyfenozide	7096	(BS) methoxyfenozide	7096	25					lookup_missing_for_name
+bsmethylmetsulfuron	7100	(BS) methyl-metsulfuron	7100	25					lookup_missing_for_name
+bsmethylazinfos	7097	(BS) methylazinfos	7097	25					lookup_missing_for_name
+bsmethylbromofos	7098	(BS) methylbromofos	7098	25					lookup_missing_for_name
+bsmethylchloorpyrifos	7099	(BS) methylchloorpyrifos	7099	25					lookup_missing_for_name
+bsmethylparathion	7102	(BS) methylparathion	7102	25					lookup_missing_for_name
+bsmethylpirimifos	7101	(BS) methylpirimifos	7101	25					lookup_missing_for_name
+bsmetobromuron	7187	(BS) metobromuron	7187	25					lookup_missing_for_name
+bsmetolachloor	7190	(BS) metolachloor	7190	25					lookup_missing_for_name
+bsmetoxuron	7193	(BS) metoxuron	7193	25					lookup_missing_for_name
+bsmetribuzin	7189	(BS) metribuzin	7189	25					lookup_missing_for_name
+bsmevinfos	7194	(BS) mevinfos	7194	25					lookup_missing_for_name
+bsmonocrotofos	7185	(BS) monocrotofos	7185	25					lookup_missing_for_name
+bsmonolinuron	7195	(BS) monolinuron	7195	25					lookup_missing_for_name
+bsmonuron	7198	(BS) monuron	7198	25					lookup_missing_for_name
+bsnicosulfuron	7200	(BS) nicosulfuron	7200	25					lookup_missing_for_name
+bsnuarimol	7201	(BS) nuarimol	7201	25					lookup_missing_for_name
+bsomethoaat	7204	(BS) omethoaat	7204	25					lookup_missing_for_name
+bsoxamyl	7202	(BS) oxamyl	7202	25					lookup_missing_for_name
+bsoxasulfuron	7203	(BS) oxasulfuron	7203	25					lookup_missing_for_name
+bspencycuron	7205	(BS) pencycuron	7205	25					lookup_missing_for_name
+bspendimethalin	7206	(BS) pendimethalin	7206	25					lookup_missing_for_name
+bspermethrin	7207	(BS) permethrin	7207	25					lookup_missing_for_name
+bspicolinafen	7208	(BS) picolinafen	7208	25					lookup_missing_for_name
+bspirimicarb	7209	(BS) pirimicarb	7209	25					lookup_missing_for_name
+bsprocymidon	7210	(BS) procymidon	7210	25					lookup_missing_for_name
+bspropazine	7214	(BS) propazine	7214	25					lookup_missing_for_name
+bspropoxur	7213	(BS) propoxur	7213	25					lookup_missing_for_name
+bspropyzamide	7211	(BS) propyzamide	7211	25					lookup_missing_for_name
+bsprosulfocarb	7215	(BS) prosulfocarb	7215	25					lookup_missing_for_name
+bsprosulfuron	7216	(BS) prosulfuron	7216	25					lookup_missing_for_name
+bspymetrozine	7217	(BS) pymetrozine	7217	25					lookup_missing_for_name
+bspyraclostrobin	7219	(BS) pyraclostrobin	7219	25					lookup_missing_for_name
+bspyrazofos	7218	(BS) pyrazofos	7218	25					lookup_missing_for_name
+bspyridaben	7220	(BS) pyridaben	7220	25					lookup_missing_for_name
+bspyrimethanil	7221	(BS) pyrimethanil	7221	25					lookup_missing_for_name
+bspyriproxyfen	7222	(BS) pyriproxyfen	7222	25					lookup_missing_for_name
+bssimazine	7223	(BS) simazine	7223	25					lookup_missing_for_name
+bsspirodiclofen	7224	(BS) spirodiclofen	7224	25					lookup_missing_for_name
+bsspiromesifen	7225	(BS) spiromesifen	7225	25					lookup_missing_for_name
+bssulcotrion	7226	(BS) sulcotrion	7226	25					lookup_missing_for_name
+bssulfotep	7227	(BS) sulfotep	7227	25					lookup_missing_for_name
+bstebuconazol	7231	(BS) tebuconazol	7231	25					lookup_missing_for_name
+bstebufenpyrad	7232	(BS) tebufenpyrad	7232	25					lookup_missing_for_name
+bsteflubenzuron	7233	(BS) teflubenzuron	7233	25					lookup_missing_for_name
+bsterbutrin	7234	(BS) terbutrin	7234	25					lookup_missing_for_name
+bsthiacloprid	7239	(BS) thiacloprid	7239	25					lookup_missing_for_name
+bsthiamethoxam	7240	(BS) thiamethoxam	7240	25					lookup_missing_for_name
+bsthifensulfuronmethyl	7241	(BS) thifensulfuron-methyl	7241	25					lookup_missing_for_name
+bsthiometon	7243	(BS) thiometon	7243	25					lookup_missing_for_name
+bstolclofosmethyl	7242	(BS) tolclofos-methyl	7242	25					lookup_missing_for_name
+bstriadimenol	7228	(BS) triadimenol	7228	25					lookup_missing_for_name
+bstriclopyr	7230	(BS) triclopyr	7230	25					lookup_missing_for_name
+bstrifloxystrobin	7238	(BS) trifloxystrobin	7238	25					lookup_missing_for_name
+bstrifluraline	7236	(BS) trifluraline	7236	25					lookup_missing_for_name
+bstriflusulfuronmethyl	7237	(BS) triflusulfuron-methyl	7237	25					lookup_missing_for_name
+bsvamidothion	7244	(BS) vamidothion	7244	25					lookup_missing_for_name
+bsvinclozolin	7245	(BS) vinclozolin	7245	25					lookup_missing_for_name
+dinoterb	4401	dinoterb	4401	25	dinoterb	Dntb	dntb	1	par_nr_vs_lookup_code_mismatch
+bsdesmetryn	7132	(BS) desmetryn	7132	24					lookup_missing_for_name
+bspropachloor	7212	(BS) propachloor	7212	24					lookup_missing_for_name
+bsterbutylazine	7235	(BS) terbutylazine	7235	24					lookup_missing_for_name
+bstriazofos	7229	(BS) triazofos	7229	24					lookup_missing_for_name
+dibutyltinkation	4370	dibutyltin (kation)	4370	24	dibutyltin (kation)	DC4ySn	dc4ysn	1	par_nr_vs_lookup_code_mismatch
+bsamidotrizoinezuur	7016	(BS) amidotrizoinezuur	7016	23					lookup_missing_for_name
+bsbezafibraat	7023	(BS) bezafibraat	7023	23					lookup_missing_for_name
+bscarbamazepine	7024	(BS) carbamazepine	7024	23					lookup_missing_for_name
+bsclindamycine	7028	(BS) clindamycine	7028	23					lookup_missing_for_name
+bsdiclofenac	7030	(BS) diclofenac	7030	23					lookup_missing_for_name
+bsfenazonantipyrine	7035	(BS) fenazon (antipyrine)	7035	23					lookup_missing_for_name
+bsguanylureum	7038	(BS) guanylureum	7038	23					lookup_missing_for_name
+bsketoprofen	7044	(BS) ketoprofen	7044	23					lookup_missing_for_name
+bsmetformine	7045	(BS) metformine	7045	23					lookup_missing_for_name
+bsmetoprolol	7046	(BS) metoprolol	7046	23					lookup_missing_for_name
+bspentoxifylline	7050	(BS) pentoxifylline	7050	23					lookup_missing_for_name
+bssotalol	7059	(BS) sotalol	7059	23					lookup_missing_for_name
+bssulfamethoxazol	7060	(BS) sulfamethoxazol	7060	23					lookup_missing_for_name
+bstrimethoprim	7064	(BS) trimethoprim	7064	23					lookup_missing_for_name
+som6polyaromatischekoolwaterstoffenborneff	4635	som 6 polyaromatische koolwaterstoffen (Borneff)	4635	23					lookup_missing_for_name
+246trichloorfenol	4229	2,4,6-trichloorfenol	4229	23	2,4,6-trichloorfenol	246TClFol	246tclfol	1	par_nr_vs_lookup_code_mismatch
+fenbuconazool	4437	fenbuconazool	4437	23	fenbuconazool	fenbcnzl	fenbcnzl	1	par_nr_vs_lookup_code_mismatch
+calciumnf	2515	calcium (nf)	2515	22					lookup_missing_for_name
+kaliumnf	2524	kalium (nf)	2524	22					lookup_missing_for_name
+magnesiumnf	2536	magnesium (nf)	2536	22					lookup_missing_for_name
+natriumnf	2541	natrium (nf)	2541	22					lookup_missing_for_name
+hardheid	1254	Hardheid	1254	22	Hardheid	HH	hh	1	par_nr_vs_lookup_code_mismatch
+mgetal	4564	M-getal	4564	21					lookup_missing_for_name
+zilvernf	2561	zilver (nf)	2561	21					lookup_missing_for_name
+som232425en26dichloorfenol	4628	som 2,3-, 2,4-, 2,5- en 2,6-dichloorfenol	4628	21	som 2,3-, 2,4-, 2,5- en 2,6-dichloorfenol	s2xDClFol	s2xdclfol	1	par_nr_vs_lookup_code_mismatch
+somdichlooretheenisomeren	4644	som dichlooretheen-isomeren	4644	21	som dichlooretheen-isomeren	sDClC2e	sdclc2e	1	par_nr_vs_lookup_code_mismatch
+thalliumnf	2551	thallium (nf)	2551	20					lookup_missing_for_name
+vanadiumnf	2559	vanadium (nf)	2559	20					lookup_missing_for_name
+246trichlooraniline	4228	2,4,6-trichlooraniline	4228	20	2,4,6-trichlooraniline	246TClAn	246tclan	1	par_nr_vs_lookup_code_mismatch
+bis2ethylhexylftalaatdehp	4292	bis(2-ethylhexyl)ftalaat (DEHP)	4292	20	bis(2-ethylhexyl)ftalaat (DEHP)	DEHP	dehp	1	par_nr_vs_lookup_code_mismatch
+dicyclohexyltinkation	4382	dicyclohexyltin (kation)	4382	20	dicyclohexyltin (kation)	DccC6ySn	dccc6ysn	1	par_nr_vs_lookup_code_mismatch
+difenyltinkation	4388	difenyltin (kation)	4388	20	difenyltin (kation)	DFySn	dfysn	1	par_nr_vs_lookup_code_mismatch
+tetrabutyltin	4671	tetrabutyltin	4671	20	tetrabutyltin	T4C4ySn	t4c4ysn	1	par_nr_vs_lookup_code_mismatch
+tricyclohexyltinkation	4709	tricyclohexyltin (kation)	4709	20	tricyclohexyltin (kation)	TccC6ySn	tccc6ysn	1	par_nr_vs_lookup_code_mismatch
+trifenyltinkation	4712	trifenyltin (kation)	4712	20	trifenyltin (kation)	TFySn	tfysn	1	par_nr_vs_lookup_code_mismatch
+somglucocorticocidestoffen	8516	som glucocorticoÇîde stoffen	8516	18					lookup_missing_for_name
+somglucocorticodestoffen	7067	som glucocortico‹de stoffen	7067	18					lookup_missing_for_name
+chloorfluazuron	4318	chloorfluazuron	4318	18	chloorfluazuron	Clfazrn	clfazrn	1	par_nr_vs_lookup_code_mismatch
+fenpyroximaat	4451	fenpyroximaat	4451	18	fenpyroximaat	fenprxmt	fenprxmt	1	par_nr_vs_lookup_code_mismatch
+somantiandrogenestoffen	7065	som anti-androgene stoffen	7065	18	som anti-androgene stoffen	santadgnsfn	santadgnsfn	1	par_nr_vs_lookup_code_mismatch
+somantiandrogenestoffen	8514	som anti-androgene stoffen	8514	18	som anti-androgene stoffen	santadgnsfn	santadgnsfn	1	par_nr_vs_lookup_code_mismatch
+somestrogenestoffen	7066	som estrogene stoffen	7066	18	som estrogene stoffen	sestgnsfn	sestgnsfn	1	par_nr_vs_lookup_code_mismatch
+somestrogenestoffen	8515	som estrogene stoffen	8515	18	som estrogene stoffen	sestgnsfn	sestgnsfn	1	par_nr_vs_lookup_code_mismatch
+somperoxisoomproliferatorsgamma	7068	som peroxisoom proliferators (gamma)	7068	18	som peroxisoom proliferators (gamma)	speroxsplfrt	speroxsplfrt	1	par_nr_vs_lookup_code_mismatch
+somperoxisoomproliferatorsgamma	8517	som peroxisoom proliferators (gamma)	8517	18	som peroxisoom proliferators (gamma)	speroxsplfrt	speroxsplfrt	1	par_nr_vs_lookup_code_mismatch
+uranium	2556	uranium	2556	18	uranium	U	u	1	par_nr_vs_lookup_code_mismatch
+fluazifopbutyl	4461	fluazifop-butyl	4461	15	fluazifop-butyl	fluazfC4y	fluazfc4y	1	par_nr_vs_lookup_code_mismatch
+uraniumnf	2557	uranium (nf)	2557	14					lookup_missing_for_name
+ethyleenbisdithiocarbamaten	4723	Ethyleenbisdithiocarbamaten	4723	13					lookup_missing_for_name
+cyfluthrin	4349	cyfluthrin	4349	13	cyfluthrin	cyftn	cyftn	1	par_nr_vs_lookup_code_mismatch
+somtetrachloorfenolisomeren	4650	som tetrachloorfenol-isomeren	4650	13	som tetrachloorfenol-isomeren	sT4ClFol	st4clfol	1	par_nr_vs_lookup_code_mismatch
+aluminiumnf	2501	Aluminium (nf)	2501	12					lookup_missing_for_name
+ijzernf	2522	Ijzer (nf)	2522	12					lookup_missing_for_name
+stikstofkjeldahlnnf	1061	Stikstof Kjeldahl (Nnf)	1061	12					lookup_missing_for_name
+fosfortotaalpnf	1072	fosfor totaal (Pnf)	1072	12					lookup_missing_for_name
+somheptachloorenheptachloorepoxide	4645	som heptachloor en heptachloorepoxide	4645	12					lookup_missing_for_name
+somddtddeendddisomeren	4643	som DDT-, DDE- en DDD-isomeren	4643	12	som DDT-, DDE- en DDD-isomeren	sDDX	sddx	1	par_nr_vs_lookup_code_mismatch
+foxim	4485	foxim	4485	10	foxim	fOxm	foxm	1	par_nr_vs_lookup_code_mismatch
+maneb	4533	maneb	4533	10	maneb	manb	manb	1	par_nr_vs_lookup_code_mismatch
+aanwezigheidtoxischeblauwalgvastgesteld	2002	Aanwezigheid toxische blauwalg vastgesteld	2002	9					lookup_missing_for_name
+somabenchch	4726	som a-, b- en c-HCH	4726	8	som a-, b- en c-HCH	sHCH3	shch3	1	par_nr_vs_lookup_code_mismatch
+somchloordaansomcisentrans	4727	som chloordaan (som cis- en trans-)	4727	8	som chloordaan (som cis- en trans-)	sCldn	scldn	1	par_nr_vs_lookup_code_mismatch
+awchemischzuurstofverbruik	1901	(AW) Chemisch zuurstofverbruik	1901	6					lookup_missing_for_name
+awonopgelostestoffen	1905	(AW) Onopgeloste stoffen	1905	6					lookup_missing_for_name
+awacenafteen	8032	(AW) acenafteen	8032	6					lookup_missing_for_name
+awacenaftyleen	8033	(AW) acenaftyleen	8033	6					lookup_missing_for_name
+awammonium	1903	(AW) ammonium	1903	6					lookup_missing_for_name
+awantraceen	8034	(AW) antraceen	8034	6					lookup_missing_for_name
+awbenzoaantraceen	8035	(AW) benzo(a)antraceen	8035	6					lookup_missing_for_name
+awbenzoapyreen	8036	(AW) benzo(a)pyreen	8036	6					lookup_missing_for_name
+awbenzobfluorantheen	8037	(AW) benzo(b)fluorantheen	8037	6					lookup_missing_for_name
+awbenzoghiperyleen	8038	(AW) benzo(ghi)peryleen	8038	6					lookup_missing_for_name
+awbenzokfluorantheen	8039	(AW) benzo(k)fluorantheen	8039	6					lookup_missing_for_name
+awchryseen	8040	(AW) chryseen	8040	6					lookup_missing_for_name
+awdibenzoahantraceen	8041	(AW) dibenzo(a,h)antraceen	8041	6					lookup_missing_for_name
+awfenantreen	8042	(AW) fenantreen	8042	6					lookup_missing_for_name
+awfluorantheen	8044	(AW) fluorantheen	8044	6					lookup_missing_for_name
+awfluoreen	8043	(AW) fluoreen	8043	6					lookup_missing_for_name
+awfosfortotaal	1902	(AW) fosfor totaal	1902	6					lookup_missing_for_name
+awindeno123cdpyreen	8045	(AW) indeno(1,2,3-cd)pyreen	8045	6					lookup_missing_for_name
+awkoper	3901	(AW) koper	3901	6					lookup_missing_for_name
+awlood	3902	(AW) lood	3902	6					lookup_missing_for_name
+awmineraleolie	1904	(AW) minerale olie	1904	6					lookup_missing_for_name
+awnaftaleen	8046	(AW) naftaleen	8046	6					lookup_missing_for_name
+awpyreen	8047	(AW) pyreen	8047	6					lookup_missing_for_name
+awsom10polyaromatischekoolwaterstoffenvrom	8048	(AW) som 10 polyaromatische koolwaterstoffen (VROM)	8048	6					lookup_missing_for_name
+awsom16polyaromatischekoolwaterstoffenepa	8049	(AW) som 16 polyaromatische koolwaterstoffen (EPA)	8049	6					lookup_missing_for_name
+awzink	3903	(AW) zink	3903	6					lookup_missing_for_name
+zbamidotrizoinezuur	8500	(ZB) amidotrizoinezuur	8500	6					lookup_missing_for_name
+zbbezafibraat	8501	(ZB) bezafibraat	8501	6					lookup_missing_for_name
+zbcarbamazepine	8502	(ZB) carbamazepine	8502	6					lookup_missing_for_name
+zbclindamycine	8503	(ZB) clindamycine	8503	6					lookup_missing_for_name
+zbdiclofenac	8504	(ZB) diclofenac	8504	6					lookup_missing_for_name
+zbfenazonantipyrine	8505	(ZB) fenazon (antipyrine)	8505	6					lookup_missing_for_name
+zbguanylureum	8506	(ZB) guanylureum	8506	6					lookup_missing_for_name
+zbketoprofen	8507	(ZB) ketoprofen	8507	6					lookup_missing_for_name
+zbmetformine	8508	(ZB) metformine	8508	6					lookup_missing_for_name
+zbmetoprolol	8509	(ZB) metoprolol	8509	6					lookup_missing_for_name
+zbpentoxifylline	8510	(ZB) pentoxifylline	8510	6					lookup_missing_for_name
+zbsotalol	8511	(ZB) sotalol	8511	6					lookup_missing_for_name
+zbsulfamethoxazol	8512	(ZB) sulfamethoxazol	8512	6					lookup_missing_for_name
+zbtrimethoprim	8513	(ZB) trimethoprim	8513	6					lookup_missing_for_name
+afmeldredennietgenomenmonster	12	Afmeldreden niet genomen monster	12	6					lookup_missing_for_name
+bsbis2ethylhexylftalaatdehp	7248	(BS) bis(2-ethylhexyl)ftalaat (DEHP)	7248	4					lookup_missing_for_name
+bsbitertanol	7246	(BS) bitertanol	7246	4					lookup_missing_for_name
+bscistetrachloorvinfoszisomeer	7247	(BS) cis-tetrachloorvinfos (Z-isomeer)	7247	4					lookup_missing_for_name
+bsdodemorf	7249	(BS) dodemorf	7249	4					lookup_missing_for_name
+bsfosfamidon	7250	(BS) fosfamidon	7250	4					lookup_missing_for_name
+bshaloxyfop	7251	(BS) haloxyfop	7251	4					lookup_missing_for_name
+bslambdacyhalothrin	7252	(BS) lambda-cyhalothrin	7252	4					lookup_missing_for_name
+bspyrifenox	7253	(BS) pyrifenox	7253	4					lookup_missing_for_name
+bstriallaat	7254	(BS) triallaat	7254	4					lookup_missing_for_name
+sompentabde	4649	Som penta BDE	4649	4					lookup_missing_for_name
+zwemmersjeuk	2003	Zwemmersjeuk	2003	4					lookup_missing_for_name
+diisopropylether	4392	diisopropylether	4392	4	diisopropylether	DiC3yEtr	dic3yetr	1	par_nr_vs_lookup_code_mismatch
+som7polychloorbifenylenpcb2852101118138153180	4637	som 7 polychloorbifenylen PCB28, 52, 101, 118, 138, 153, 180	4637	4	som 7 polychloorbifenylen PCB28, 52, 101, 118, 138, 153, 180	sPCB7	spcb7	1	par_nr_vs_lookup_code_mismatch
+somalfaendosulfanenendosulfansulfaat	4640	som alfa-endosulfan en endosulfansulfaat	4640	4	som alfa-endosulfan en endosulfansulfaat	sendsfn2	sendsfn2	1	par_nr_vs_lookup_code_mismatch
+droogstandwatergang	20	Droogstand watergang	20	3					lookup_missing_for_name
+poelslak	2004	Poelslak	2004	3					lookup_missing_for_name
+trichobilharzia	2325	Trichobilharzia	2325	3					lookup_missing_for_name
+benzylbutylftalaat	4286	benzylbutylftalaat	4286	3	benzylbutylftalaat	benzC4yFt	benzc4yft	1	par_nr_vs_lookup_code_mismatch
+som24en44ddd	4630	som 2,4- en 4,4-DDD	4630	2	som 2,4'- en 4,4'-DDD	sDDD	sddd	1	par_nr_vs_lookup_code_mismatch
+som24en44dde	4631	som 2,4- en 4,4-DDE	4631	2	som 2,4'- en 4,4'-DDE	sDDE	sdde	1	par_nr_vs_lookup_code_mismatch
+som2444ddt2444ddd24en44dde	4633	som 2,4-, 4,4-DDT, 2,4-, 4,4-DDD, 2,4- en 4,4-DDE	4633	2	som 2,4'-, 4,4'-DDT, 2,4'-, 4,4'-DDD, 2,4'- en 4,4'-DDE	sDDX6	sddx6	1	par_nr_vs_lookup_code_mismatch
+som6polychloorbifenylenpcb2852101138153180	4636	som 6 polychloorbifenylen PCB28, 52, 101, 138, 153, 180	4636	2	som 6 polychloorbifenylen PCB28, 52, 101, 138, 153, 180	sPCB6	spcb6	1	par_nr_vs_lookup_code_mismatch
+awbiochemischzuurstofverbruikmetallylthioureum	1607	(AW) Biochemisch zuurstofverbruik met allylthioureum	1607	1					lookup_missing_for_name
+oleandomycine	4576	oleandomycine	4576	1					lookup_missing_for_name
+siliciumdioxidenf	1103	siliciumdioxide (nf)	1103	1					lookup_missing_for_name
+clofibraat	4336	clofibraat	4336	1	clofibraat	clofbt	clofbt	1	par_nr_vs_lookup_code_mismatch
+clofibrinezuur	4337	clofibrinezuur	4337	1	clofibrinezuur	clofbnzr	clofbnzr	1	par_nr_vs_lookup_code_mismatch
+cloxacilline	4342	cloxacilline	4342	1	cloxacilline	cloxclne	cloxclne	1	par_nr_vs_lookup_code_mismatch
+cyclofosfamide	4347	cyclofosfamide	4347	1	cyclofosfamide	cycffAd	cycffad	1	par_nr_vs_lookup_code_mismatch
+dapson	4356	dapson	4356	1	dapson	dapsn	dapsn	1	par_nr_vs_lookup_code_mismatch
+dicloxacilline	4379	dicloxacilline	4379	1	dicloxacilline	Dcloxclne	dcloxclne	1	par_nr_vs_lookup_code_mismatch
+erytromycine	4413	erytromycine	4413	1	erytromycine	ertmcne	ertmcne	1	par_nr_vs_lookup_code_mismatch
+fenofibraat	4442	fenofibraat	4442	1	fenofibraat	fenfbt	fenfbt	1	par_nr_vs_lookup_code_mismatch
+fenoprofen	4444	fenoprofen	4444	1	fenoprofen	fenpfn	fenpfn	1	par_nr_vs_lookup_code_mismatch
+fenoterol	4445	fenoterol	4445	1	fenoterol	fentrl	fentrl	1	par_nr_vs_lookup_code_mismatch
+fluorglycofenethyl	4469	fluorglycofen-ethyl	4469	1	fluorglycofen-ethyl	fluogcfnC2y	fluogcfnc2y	1	par_nr_vs_lookup_code_mismatch
+gemfibrozil	4490	gemfibrozil	4490	1	gemfibrozil	gemfbzl	gemfbzl	1	par_nr_vs_lookup_code_mismatch
+indometacine	4507	indometacine	4507	1	indometacine	indmtcne	indmtcne	1	par_nr_vs_lookup_code_mismatch
+lincomycine	4529	lincomycine	4529	1	lincomycine	lincmcne	lincmcne	1	par_nr_vs_lookup_code_mismatch
+monensin	4566	monensin	4566	1	monensin	monsn	monsn	1	par_nr_vs_lookup_code_mismatch
+nafcilline	4571	nafcilline	4571	1	nafcilline	nafclne	nafclne	1	par_nr_vs_lookup_code_mismatch
+naproxen	4572	naproxen	4572	1	naproxen	napxn	napxn	1	par_nr_vs_lookup_code_mismatch
+oxacilline	4578	oxacilline	4578	1	oxacilline	Oaclne	oaclne	1	par_nr_vs_lookup_code_mismatch
+primidon	4597	primidon	4597	1	primidon	primdn	primdn	1	par_nr_vs_lookup_code_mismatch
+progesteron	4601	progesteron	4601	1	progesteron	progtrn	progtrn	1	par_nr_vs_lookup_code_mismatch
+propranolol	4609	propranolol	4609	1	propranolol	propnll	propnll	1	par_nr_vs_lookup_code_mismatch
+roxitromycine	4623	roxitromycine	4623	1	roxitromycine	roxtmcne	roxtmcne	1	par_nr_vs_lookup_code_mismatch
+spiramycine	4656	spiramycine	4656	1	spiramycine	spirmcne	spirmcne	1	par_nr_vs_lookup_code_mismatch
+sulfadimidine	4659	sulfadimidine	4659	1	sulfadimidine	sulfdmdne	sulfdmdne	1	par_nr_vs_lookup_code_mismatch
+tiamuline	4688	tiamuline	4688	1	tiamuline	tiamlne	tiamlne	1	par_nr_vs_lookup_code_mismatch
+tolfenaminezuur	4690	tolfenaminezuur	4690	1	tolfenaminezuur	tolfAezr	tolfaezr	1	par_nr_vs_lookup_code_mismatch

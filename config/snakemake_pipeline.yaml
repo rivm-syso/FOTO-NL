@@ -1,0 +1,39 @@
+env_name: bart-env
+queue: bio
+jobs: 21
+run_tag: ""
+pipeline_root: ""
+raw_root: ../zenodo_ready_20260330/raw_script_0_input
+reference_input_root: ../zenodo_ready_20260330/auxiliary_workflow_input
+baseline_clean_csv: ../zenodo_ready_20260330/workflow_outputs/foto_nl_dataset_clean.csv
+include_script_0_reports: false
+include_raw_branch: true
+include_comparison: false
+include_qa: false
+script_0_write_diagnostics: false
+script_0_mem_mb: 32768
+script_0_runtime_min: 720
+script_0_report_boards: []
+script_0_report_mem_mb: 24576
+script_0_report_runtime_min: 480
+script_0_report_preview_n: 8
+script_0_report_max_rows_per_file: 10000
+script1_threads: 4
+script1_mem_mb: 131072
+script1_runtime_min: 720
+script2_threads: 4
+script2_mem_mb: 98304
+script2_runtime_min: 480
+script2_raw_threads: 4
+script2_raw_mem_mb: 98304
+script2_raw_runtime_min: 480
+script3_threads: 2
+script3_mem_mb: 49152
+script3_runtime_min: 480
+qa:
+  max_orig_only_keys: 200
+  max_new_only_keys: 200
+  max_unit_mismatch_common: 0
+  max_negative_new_mean_common: 0
+  max_abs_mean_rel_diff_over_threshold: 0
+  mean_rel_diff_threshold: 10.0

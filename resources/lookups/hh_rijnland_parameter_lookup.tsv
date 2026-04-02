@@ -1,0 +1,690 @@
+Parameteromschrijving	Parametercode	N	match_method	match_score	match_margin	ref_scope	Lookup_Parameteromschrijving	RawParametercode
+zuurstof	O2	401365	exact_name_key	1		existing	zuurstof	O2
+chloride	Cl	218370	exact_name_key	1		existing	chloride	Cl
+fosfor totaal	Ptot	160171	exact_name_key	1		existing	fosfor totaal	Ptot
+stikstof totaal	Ntot	148220	exact_name_key	1		existing	stikstof totaal	Ntot
+ammonium	NH4	147479	exact_name_key	1		existing	ammonium	NH4
+som nitraat en nitriet	sNO3NO2	141159	exact_name_key	1		existing	som nitraat en nitriet	sNO3NO2
+fosfaat	PO4	131481	exact_name_key	1		existing	fosfaat	PO4
+stikstof Kjeldahl	NKj	93092	exact_name_key	1		existing	stikstof Kjeldahl	NKj
+Biochemisch zuurstofverbruik over 5 dagen	BZV5	66678	exact_name_key	1		existing	Biochemisch zuurstofverbruik over 5 dagen	BZV5
+ammoniak	NH3	63720	exact_name_key	1		existing	ammoniak	NH3
+sulfaat	SO4	60716	exact_name_key	1		existing	sulfaat	SO4
+chlorofyl-a	CHLFa	48455	exact_name_key	1		existing	chlorofyl-a	CHLFa
+waterstofcarbonaat	HCO3	40448	exact_name_key	1		existing	waterstofcarbonaat	HCO3
+Chemisch zuurstofverbruik	CZV	39646	exact_name_key	1		existing	Chemisch zuurstofverbruik	CZV
+nitriet	NO2	32798	exact_name_key	1		existing	nitriet	NO2
+Feofytine a	FEOa	26908	exact_name_key	1		existing	Feofytine a	FEOa
+ijzer	Fe	25366	exact_name_key	1		existing	ijzer	Fe
+koper	Cu	24666	exact_name_key	1		existing	koper	Cu
+zink	Zn	21599	exact_name_key	1		existing	zink	Zn
+calcium	Ca	21367	exact_name_key	1		existing	calcium	Ca
+nikkel	Ni	19079	exact_name_key	1		existing	nikkel	Ni
+nitraat	NO3	16897	exact_name_key	1		existing	nitraat	NO3
+natrium	Na	12381	exact_name_key	1		existing	natrium	Na
+kalium	K	12323	exact_name_key	1		existing	kalium	K
+cadmium	Cd	10749	exact_name_key	1		existing	cadmium	Cd
+lood	Pb	10662	exact_name_key	1		existing	lood	Pb
+chroom	Cr	10490	exact_name_key	1		existing	chroom	Cr
+silicium	Si	9922	exact_name_key	1		existing	silicium	Si
+carbendazim	carbdzm	8800	exact_name_key	1		existing	carbendazim	carbdzm
+kwik	Hg	8737	exact_name_key	1		existing	kwik	Hg
+magnesium	Mg	8678	exact_name_key	1		existing	magnesium	Mg
+diuron	Durn	7681	exact_name_key	1		existing	diuron	Durn
+benzo(ghi)peryleen	BghiPe	7388	exact_name_key	1		existing	benzo(ghi)peryleen	BghiPe
+indeno(1,2,3-cd)pyreen	InP	7388	exact_name_key	1		existing	indeno(1,2,3-cd)pyreen	InP
+fluorantheen	Flu	7367	exact_name_key	1		existing	fluorantheen	Flu
+benzo(k)fluorantheen	BkF	7365	exact_name_key	1		existing	benzo(k)fluorantheen	BkF
+benzo(a)pyreen	BaP	7360	exact_name_key	1		existing	benzo(a)pyreen	BaP
+dichlobenil	Dcbnl	7275	exact_name_key	1		existing	dichlobenil	Dcbnl
+chloridazon	Clidzn	7257	exact_name_key	1		existing	chloridazon	Clidzn
+flutolanil	flutlnl	7203	exact_name_key	1		existing	flutolanil	flutlnl
+simazine	simzne	7164	exact_name_key	1		existing	simazine	simzne
+benzo(a)antraceen	BaA	7033	exact_name_key	1		existing	benzo(a)antraceen	BaA
+chryseen	Chr	7029	exact_name_key	1		existing	chryseen	Chr
+naftaleen	Naf	7028	exact_name_key	1		existing	naftaleen	Naf
+fenantreen	Fen	7024	exact_name_key	1		existing	fenantreen	Fen
+antraceen	Ant	7003	exact_name_key	1		existing	antraceen	Ant
+imidacloprid	imdcpd	6845	exact_name_key	1		existing	imidacloprid	imdcpd
+metamitron	mmtn	6608	exact_name_key	1		existing	metamitron	mmtn
+benzo(b)fluorantheen	BbF	6413	exact_name_key	1		existing	benzo(b)fluorantheen	BbF
+carbofuran	carbfrn	6341	exact_name_key	1		existing	carbofuran	carbfrn
+pirimicarb	pirmcb	6290	exact_name_key	1		existing	pirimicarb	pirmcb
+malathion	malton	6277	exact_name_key	1		existing	malathion	malton
+propoxur	propxr	6245	exact_name_key	1		existing	propoxur	propxr
+chloorprofam	Clpfm	6187	exact_name_key	1		existing	chloorprofam	Clpfm
+pyreen	Pyr	6082	exact_name_key	1		existing	pyreen	Pyr
+dibenzo(a,h)antraceen	DBahAnt	6070	exact_name_key	1		existing	dibenzo(a,h)antraceen	DBahAnt
+iprodion	ipDon	6038	exact_name_key	1		existing	iprodion	ipDon
+fluoreen	Fle	6035	exact_name_key	1		existing	fluoreen	Fle
+acenafteen	AcNe	6022	exact_name_key	1		existing	acenafteen	AcNe
+acenaftyleen	AcNy	6017	exact_name_key	1		existing	acenaftyleen	AcNy
+tolclofos-methyl	tolcfsC1y	6017	exact_name_key	1		existing	tolclofos-methyl	tolcfsC1y
+dichloorvos	DClvs	5998	exact_name_key	1		existing	dichloorvos	DClvs
+isoproturon	iptrn	5990	exact_name_key	1		existing	isoproturon	iptrn
+atrazine	atzne	5951	exact_name_key	1		existing	atrazine	atzne
+chloorfenvinfos	Clfvfs	5883	exact_name_key	1		existing	chloorfenvinfos	Clfvfs
+methylparathion	C1yprton	5810	exact_name_key	1		existing	methylparathion	C1yprton
+chloorthalonil	Cltlnl	5794	exact_name_key	1		existing	chloorthalonil	Cltlnl
+diethyltoluamide	DEET	5788	exact_name_key	1		existing	diethyltoluamide	DEET
+aldicarb	alDcb	5727	exact_name_key	1		existing	aldicarb	alDcb
+metazachloor	mzCl	5670	exact_name_key	1		existing	metazachloor	mzCl
+oxamyl	Oaml	5660	exact_name_key	1		existing	oxamyl	Oaml
+aldicarbsulfon	alDcsfn	5620	exact_name_key	1		existing	aldicarbsulfon	alDcsfn
+methomyl	metml	5616	exact_name_key	1		existing	methomyl	metml
+methiocarb	metocb	5614	exact_name_key	1		existing	methiocarb	metocb
+linuron	linrn	5580	exact_name_key	1		existing	linuron	linrn
+methiocarbsulfon	metocbsfn	5548	exact_name_key	1		existing	methiocarbsulfon	metocbsfn
+vinclozolin	vinczln	5546	exact_name_key	1		existing	vinclozolin	vinczln
+methylpirimifos	C1yprmfs	5474	exact_name_key	1		existing	methylpirimifos	C1yprmfs
+triazofos	Tazfs	5473	exact_name_key	1		existing	triazofos	Tazfs
+propyzamide	propAd	5455	exact_name_key	1		existing	propyzamide	propAd
+ethofumesaat	etfmst	5433	exact_name_key	1		existing	ethofumesaat	etfmst
+metoxuron	metxrn	5426	exact_name_key	1		existing	metoxuron	metxrn
+bitertanol	bittnl	5408	exact_name_key	1		existing	bitertanol	bittnl
+triadimenol	Tadmnl	5401	exact_name_key	1		existing	triadimenol	Tadmnl
+dimethoaat	Dmtat	5329	exact_name_key	1		existing	dimethoaat	Dmtat
+methiocarbsulfoxide	metocbSO	5297	exact_name_key	1		existing	methiocarbsulfoxide	metocbSO
+abamectine	abmtne	5284	exact_name_key	1		existing	abamectine	abmtne
+imazalil	imzll	5253	exact_name_key	1		existing	imazalil	imzll
+monolinuron	Mlnrn	5252	exact_name_key	1		existing	monolinuron	Mlnrn
+thiofanaat-methyl	tofnC1y	5243	exact_name_key	1		existing	thiofanaat-methyl	tofnC1y
+propamocarb	propmcb	5236	exact_name_key	1		existing	propamocarb	propmcb
+thiacloprid	thiacpd	5235	exact_name_key	1		existing	thiacloprid	thiacpd
+pymetrozine	pymtzne	5235	exact_name_key	1		existing	pymetrozine	pymtzne
+thiamethoxam	thiamtxm	5235	exact_name_key	1		existing	thiamethoxam	thiamtxm
+spinosad	spinsd	5235	exact_name_key	1		existing	spinosad	spinsd
+cyromazine	cyrmzne	5235	exact_name_key	1		existing	cyromazine	cyrmzne
+acetamiprid	actmpd	5234	exact_name_key	1		existing	acetamiprid	actmpd
+methoxyfenozide	C1oxfnzde	5225	exact_name_key	1		existing	methoxyfenozide	C1oxfnzde
+diazinon	Daznn	5178	exact_name_key	1		existing	diazinon	Daznn
+mevinfos	mevfs	5134	exact_name_key	1		existing	mevinfos	mevfs
+heptenofos	heptnfs	5131	exact_name_key	1		existing	heptenofos	heptnfs
+metribuzin	metbzn	5117	exact_name_key	1		existing	metribuzin	metbzn
+ethylazinfos	C2yazfs	5112	exact_name_key	1		existing	ethylazinfos	C2yazfs
+chloortoluron	Cltlrn	5089	exact_name_key	1		existing	chloortoluron	Cltlrn
+flonicamid	floncmd	5038	exact_name_key	1		existing	flonicamid	floncmd
+terbutylazine	terC4yazne	4988	exact_name_key	1		existing	terbutylazine	terC4yazne
+fluazinam	fluaznm	4655	exact_name_key	1		existing	fluazinam	fluaznm
+metolachloor	metlCl	4645	exact_name_key	1		existing	metolachloor	metlCl
+gamma-hexachloorcyclohexaan (lindaan)	cHCH	4635	exact_name_key	1		existing	gamma-hexachloorcyclohexaan (lindaan)	cHCH
+hexachloorbenzeen	HCB	4517	exact_name_key	1		existing	hexachloorbenzeen	HCB
+aldrin	aldn	3885	exact_name_key	1		existing	aldrin	aldn
+dieldrin	dieldn	3868	exact_name_key	1		existing	dieldrin	dieldn
+endrin	endn	3863	exact_name_key	1		existing	endrin	endn
+alfa-hexachloorcyclohexaan	aHCH	3718	exact_name_key	1		existing	alfa-hexachloorcyclohexaan	aHCH
+beta-hexachloorcyclohexaan	bHCH	3706	exact_name_key	1		existing	beta-hexachloorcyclohexaan	bHCH
+procymidon	procmdn	3639	exact_name_key	1		existing	procymidon	procmdn
+som 2,4'- en 4,4'-DDE	sDDE	3492	exact_name_key	1		existing	som 2,4'- en 4,4'-DDE	sDDE
+alfa-endosulfan	aedsfn	3490	exact_name_key	1		existing	alfa-endosulfan	aedsfn
+som 2,4'- en 4,4'-DDT	sDDT	3488	exact_name_key	1		existing	som 2,4'- en 4,4'-DDT	sDDT
+som 2,4'- en 4,4'-DDD	sDDD	3482	exact_name_key	1		existing	som 2,4'- en 4,4'-DDD	sDDD
+ethylparathion	C2yprton	3426	exact_name_key	1		existing	ethylparathion	C2yprton
+prosulfocarb	prosfcb	3391	exact_name_key	1		existing	prosulfocarb	prosfcb
+arseen	As	3389	exact_name_key	1		existing	arseen	As
+tolylfluanide	tolfande	3320	exact_name_key	1		existing	tolylfluanide	tolfande
+metalaxyl	mlxl	3317	exact_name_key	1		existing	metalaxyl	mlxl
+carbaryl	carbrl	3272	exact_name_key	1		existing	carbaryl	carbrl
+koolstof organisch	Corg	3231	exact_name_key	1		existing	koolstof organisch	Corg
+tebuconazol	tebcnzl	3117	exact_name_key	1		existing	tebuconazol	tebcnzl
+heptachloor	HpCl	3107	exact_name_key	1		existing	heptachloor	HpCl
+methylazinfos	C1yazfs	3067	exact_name_key	1		existing	methylazinfos	C1yazfs
+furalaxyl	furlxl	3046	exact_name_key	1		existing	furalaxyl	furlxl
+2,6-dichloorbenzamide	26DClBenAd	3029	exact_name_key	1		existing	2,6-dichloorbenzamide	26DClBenAd
+pyrimethanil	pyrmtnl	2961	exact_name_key	1		existing	pyrimethanil	pyrmtnl
+bupirimaat	buprmt	2943	exact_name_key	1		existing	bupirimaat	buprmt
+ethylchloorpyrifos	C2yClprfs	2940	exact_name_key	1		existing	ethylchloorpyrifos	C2yClprfs
+4-tertiair-octylfenol	4ttC8yFol	2940	exact_name_key	1		existing	4-tertiair-octylfenol	4ttC8yFol
+4-nonylfenol	4C9yFol	2939	exact_name_key	1		existing	4-nonylfenol	4C9yFol
+alachloor	alCl	2938	exact_name_key	1		existing	alachloor	alCl
+trifluraline	Tfrlne	2936	exact_name_key	1		existing	trifluraline	Tfrlne
+trans-permethrin	tpermtn	2935	exact_name_key	1		existing	trans-permethrin	tpermtn
+propachloor	propCl	2927	exact_name_key	1		existing	propachloor	propCl
+triallaat	Talt	2908	exact_name_key	1		existing	triallaat	Talt
+pyrazofos	pyrazfs	2902	exact_name_key	1		existing	pyrazofos	pyrazfs
+difenoconazool	Dfncnzl	2900	exact_name_key	1		existing	difenoconazool	Dfncnzl
+etridiazol	eTDazl	2900	exact_name_key	1		existing	etridiazol	eTDazl
+dodemorf	dodmf	2898	exact_name_key	1		existing	dodemorf	dodmf
+propazine	propzne	2895	exact_name_key	1		existing	propazine	propzne
+ethylbromofos	C2yBrfs	2894	exact_name_key	1		existing	ethylbromofos	C2yBrfs
+tetrachloorvinfos (mixed isomeren)	T4Clvfs	2894	exact_name_key	1		existing	tetrachloorvinfos (mixed isomeren)	T4Clvfs
+dichlofluanide	Dcfande	2893	exact_name_key	1		existing	dichlofluanide	Dcfande
+disulfoton	Dsftn	2893	exact_name_key	1		existing	disulfoton	Dsftn
+terbutrin	terbtn	2892	exact_name_key	1		existing	terbutrin	terbtn
+fenoxycarb	fenOxcb	2891	exact_name_key	1		existing	fenoxycarb	fenOxcb
+dimethomorf	Dmtmf	2891	exact_name_key	1		existing	dimethomorf	Dmtmf
+1,2,4-trichloorbenzeen	124TClBen	2891	exact_name_key	1		existing	1,2,4-trichloorbenzeen	124TClBen
+kresoxim-methyl	kresOxmC1y	2891	exact_name_key	1		existing	kresoxim-methyl	kresOxmC1y
+thiometon	tomtn	2890	exact_name_key	1		existing	thiometon	tomtn
+triflumizool	Tfmzl	2890	exact_name_key	1		existing	triflumizool	Tfmzl
+buprofezin	bupfzn	2890	exact_name_key	1		existing	buprofezin	bupfzn
+demeton-S-methyl	demtSC1y	2890	exact_name_key	1		existing	demeton-S-methyl	demtSC1y
+pyridaben	pyrdbn	2890	exact_name_key	1		existing	pyridaben	pyrdbn
+trans-pyrifenox	tpyrfnx	2890	exact_name_key	1		existing	trans-pyrifenox	tpyrfnx
+esfenvaleraat	esfvlrt	2890	exact_name_key	1		existing	esfenvaleraat	esfvlrt
+methylbromofos	C1yBrfs	2890	exact_name_key	1		existing	methylbromofos	C1yBrfs
+fenpropimorf	fenppmf	2890	exact_name_key	1		existing	fenpropimorf	fenppmf
+methylchloorpyrifos	C1yClprfs	2890	exact_name_key	1		existing	methylchloorpyrifos	C1yClprfs
+clomazon	clomzn	2890	exact_name_key	1		existing	clomazon	clomzn
+cyprodinil	cypdnl	2890	exact_name_key	1		existing	cyprodinil	cypdnl
+fenthion	fenton	2890	exact_name_key	1		existing	fenthion	fenton
+fosfamidon	fosfmdn	2890	exact_name_key	1		existing	fosfamidon	fosfmdn
+trifloxystrobin	Tfxsbn	2890	exact_name_key	1		existing	trifloxystrobin	Tfxsbn
+deltamethrin	dmtn	2890	exact_name_key	1		existing	deltamethrin	dmtn
+fipronil	fipnl	2890	exact_name_key	1		existing	fipronil	fipnl
+azoxystrobin	azoxsbn	2890	exact_name_key	1		existing	azoxystrobin	azoxsbn
+fosalon	fosln	2890	exact_name_key	1		existing	fosalon	fosln
+diethofencarb	Detfcb	2890	exact_name_key	1		existing	diethofencarb	Detfcb
+lambda-cyhalothrin	lcyhltn	2890	exact_name_key	1		existing	lambda-cyhalothrin	lcyhltn
+pendimethalin	pendmtln	2890	exact_name_key	1		existing	pendimethalin	pendmtln
+pyriproxyfen	pyrpxfn	2890	exact_name_key	1		existing	pyriproxyfen	pyrpxfn
+desmetryn	desmtn	2874	exact_name_key	1		existing	desmetryn	desmtn
+4-dimethylaminosulfotoluidide	DMST	2873	exact_name_key	1		existing	4-dimethylaminosulfotoluidide	DMST
+desethylatrazine	desC2yatzne	2871	exact_name_key	1		existing	desethylatrazine	desC2yatzne
+cis-pyrifenox	cpyrfnx	2850	exact_name_key	1		existing	cis-pyrifenox	cpyrfnx
+aluminium	Al	2746	exact_name_key	1		existing	aluminium	Al
+beta-endosulfan	bedsfn	2214	exact_name_key	1		existing	beta-endosulfan	bedsfn
+boscalid	boscld	2149	exact_name_key	1		existing	boscalid	boscld
+mesotrion	meston	2149	exact_name_key	1		existing	mesotrion	meston
+clopyralid	cloprld	2149	exact_name_key	1		existing	clopyralid	cloprld
+tebufenpyrad	tebfprd	2149	exact_name_key	1		existing	tebufenpyrad	tebfprd
+spirodiclofen	spirdcfn	2149	exact_name_key	1		existing	spirodiclofen	spirdcfn
+cymoxanil	cymOanl	2149	exact_name_key	1		existing	cymoxanil	cymOanl
+sulcotrion	sulcton	2149	exact_name_key	1		existing	sulcotrion	sulcton
+fenmedifam	fenmdfm	2149	exact_name_key	1		existing	fenmedifam	fenmdfm
+amidosulfuron	amdsfrn	2149	exact_name_key	1		existing	amidosulfuron	amdsfrn
+diflufenican	Dffncn	2149	exact_name_key	1		existing	diflufenican	Dffncn
+daminozide	damnzde	2149	exact_name_key	1		existing	daminozide	damnzde
+dithianon	Dtann	2149	exact_name_key	1		existing	dithianon	Dtann
+som cholinesteraseremmers	sChER	2109	exact_name_key	1		existing	som cholinesteraseremmers	sChER
+pencycuron	penccrn	2084	exact_name_key	1		existing	pencycuron	penccrn
+4-chlooraniline	4ClAn	1943	exact_name_key	1		existing	4-chlooraniline	4ClAn
+prochloraz	proClaz	1892	exact_name_key	1		existing	prochloraz	proClaz
+fenvaleraat	fenvlrt	1762	exact_name_key	1		existing	fenvaleraat	fenvlrt
+alfa-cypermethrin	acpmtn	1759	exact_name_key	1		existing	alfa-cypermethrin	acpmtn
+fenitrothion	feNO2ton	1701	exact_name_key	1		existing	fenitrothion	feNO2ton
+bifenox	bfnx	1701	exact_name_key	1		existing	bifenox	bfnx
+tetrahydroftaalimide	T4Hflmde	1697	exact_name_key	1		existing	tetrahydroftaalimide	T4Hflmde
+aclonifen	acnfn	1697	exact_name_key	1		existing	aclonifen	acnfn
+spirotetramat	spirttmt	1677	exact_name_key	1		existing	spirotetramat	spirttmt
+metabenzthiazuron	metbtazrn	1658	exact_name_key	1		existing	metabenzthiazuron	metbtazrn
+azaconazool	azacnzl	1638	exact_name_key	1		existing	azaconazool	azacnzl
+fenhexamide	fenhxAd	1638	exact_name_key	1		existing	fenhexamide	fenhxAd
+cycloxydim	cycxdm	1638	exact_name_key	1		existing	cycloxydim	cycxdm
+cyproconazool	cypcnzl	1638	exact_name_key	1		existing	cyproconazool	cypcnzl
+hexythiazox	hextazx	1638	exact_name_key	1		existing	hexythiazox	hextazx
+methyl-metsulfuron	C1ymsfrn	1638	exact_name_key	1		existing	methyl-metsulfuron	C1ymsfrn
+dimethenamide	DmtAd	1638	exact_name_key	1		existing	dimethenamide	DmtAd
+nicosulfuron	nicsfrn	1638	exact_name_key	1		existing	nicosulfuron	nicsfrn
+triflusulfuron-methyl	TfsfrnC1y	1638	exact_name_key	1		existing	triflusulfuron-methyl	TfsfrnC1y
+diflubenzuron	Dfbzrn	1638	exact_name_key	1		existing	diflubenzuron	Dfbzrn
+desethylterbutylazine	desC2ytC4yaz	1621	exact_name_key	1		existing	desethylterbutylazine	desC2ytC4yaz
+pyraclostrobin	pyrcsbn	1620	exact_name_key	1		existing	pyraclostrobin	pyrcsbn
+dodine	dodne	1620	exact_name_key	1		existing	dodine	dodne
+spiromesifen	spirmsfn	1620	exact_name_key	1		existing	spiromesifen	spirmsfn
+2,2',5,5'-tetrachloorbifenyl	PCB52	1602	exact_name_key	1		existing	2,2',5,5'-tetrachloorbifenyl	PCB52
+2,4,4'-trichloorbifenyl	PCB28	1601	exact_name_key	1		existing	2,4,4'-trichloorbifenyl	PCB28
+2,2',3,4,4',5'-hexachloorbifenyl	PCB138	1601	exact_name_key	1		existing	2,2',3,4,4',5'-hexachloorbifenyl	PCB138
+2,2',4,4',5,5'-hexachloorbifenyl	PCB153	1601	exact_name_key	1		existing	2,2',4,4',5,5'-hexachloorbifenyl	PCB153
+2,2',3,4,4',5,5'-heptachloorbifenyl	PCB180	1600	exact_name_key	1		existing	2,2',3,4,4',5,5'-heptachloorbifenyl	PCB180
+2,2',4,5,5'-pentachloorbifenyl	PCB101	1598	exact_name_key	1		existing	2,2',4,5,5'-pentachloorbifenyl	PCB101
+thifensulfuron-methyl	thifsfrnC1y	1597	exact_name_key	1		existing	thifensulfuron-methyl	thifsfrnC1y
+prosulfuron	prosfrn	1597	exact_name_key	1		existing	prosulfuron	prosfrn
+som 7 polychloorbifenylen PCB28, 52, 101, 118, 138, 153, 180	sPCB7	1436	exact_name_key	1		existing	som 7 polychloorbifenylen PCB28, 52, 101, 118, 138, 153, 180	sPCB7
+delta-hexachloorcyclohexaan	dHCH	1382	exact_name_key	1		existing	delta-hexachloorcyclohexaan	dHCH
+mecoprop	MCPP	1315	exact_name_key	1		existing	mecoprop	MCPP
+2-methyl-4-chloorfenoxyazijnzuur	MCPA	1309	exact_name_key	1		existing	2-methyl-4-chloorfenoxyazijnzuur	MCPA
+4,6-dinitro-o-cresol	DNOC	1236	exact_name_key	1		existing	4,6-dinitro-o-cresol	DNOC
+pentachloornitrobenzeen (quintozeen)	PeClNO2Ben	1231	exact_name_key	1		existing	pentachloornitrobenzeen (quintozeen)	PeClNO2Ben
+bentazon	bentzn	1155	exact_name_key	1		existing	bentazon	bentzn
+bifenazaat	bifnzt	1131	exact_name_key	1		existing	bifenazaat	bifnzt
+fluazifop-P-butyl	fluazfPC4y	1131	exact_name_key	1		existing	fluazifop-P-butyl	fluazfPC4y
+flumioxazin	flumoxzn	1131	exact_name_key	1		existing	flumioxazin	flumoxzn
+metrafenon	metfnn	1131	exact_name_key	1		existing	metrafenon	metfnn
+piperonyl-butoxide	piprnbO	1131	exact_name_key	1		existing	piperonyl-butoxide	piprnbO
+quizalofop-P-ethyl	quizlfPC2y	1131	exact_name_key	1		existing	quizalofop-P-ethyl	quizlfPC2y
+cypermethrin	cypmtn	1131	exact_name_key	1		existing	cypermethrin	cypmtn
+fosthiazaat	fostazt	1131	exact_name_key	1		existing	fosthiazaat	fostazt
+mepanipyrim	mepnprm	1131	exact_name_key	1		existing	mepanipyrim	mepnprm
+paclobutrazol	pacbtzl	1131	exact_name_key	1		existing	paclobutrazol	pacbtzl
+som ethylparathion en methylparathion	sprton2	1129	exact_name_key	1		existing	som ethylparathion en methylparathion	sprton2
+minerale olie	minrlole	1119	exact_name_key	1		existing	minerale olie	minrlole
+ethoprofos	etpfs	1098	exact_name_key	1		existing	ethoprofos	etpfs
+2-methyl-4-chloorfenoxyboterzuur	MCPB	1091	exact_name_key	1		existing	2-methyl-4-chloorfenoxyboterzuur	MCPB
+penconazool	pencnzl	1079	exact_name_key	1		existing	penconazool	pencnzl
+2,4-dichloorfenoxyazijnzuur	24D	1075	exact_name_key	1		existing	2,4-dichloorfenoxyazijnzuur	24D
+carfentrazon-ethyl	carftznC2y	1068	exact_name_key	1		existing	carfentrazon-ethyl	carftznC2y
+cyazofamide	cyazfAd	1068	exact_name_key	1		existing	cyazofamide	cyazfAd
+epoxiconazool	epxcnzl	1068	exact_name_key	1		existing	epoxiconazool	epxcnzl
+fenamidon	fenmdn	1068	exact_name_key	1		existing	fenamidon	fenmdn
+mandipropamide	mandppAd	1068	exact_name_key	1		existing	mandipropamide	mandppAd
+mesosulfuron-methyl	messfrnC1y	1068	exact_name_key	1		existing	mesosulfuron-methyl	messfrnC1y
+trans-fluoxastrobin	tfluoxsbn	1068	exact_name_key	1		existing	trans-fluoxastrobin	tfluoxsbn
+trinexapac-ethyl	TnxpcC2y	1068	exact_name_key	1		existing	trinexapac-ethyl	TnxpcC2y
+topramezon	topmzn	1068	exact_name_key	1		existing	topramezon	topmzn
+ametoctradin	amttdn	1055	exact_name_key	1		existing	ametoctradin	amttdn
+chlorantraniliprole	chloratnlpl	1055	exact_name_key	1		existing	chlorantraniliprole	chloratnlpl
+fluopyram	fluoprm	1055	exact_name_key	1		existing	fluopyram	fluoprm
+dicofol	Dcfl	1050	exact_name_key	1		existing	dicofol	Dcfl
+2,4-dichloorfenoxypropionzuur	24DP	1025	exact_name_key	1		existing	2,4-dichloorfenoxypropionzuur	24DP
+2,4'-dichloordifenyldichlooretheen	24DDE	1019	exact_name_key	1		existing	2,4'-dichloordifenyldichlooretheen	24DDE
+4,4'-dichloordifenyltrichloorethaan	44DDT	1009	exact_name_key	1		existing	4,4'-dichloordifenyltrichloorethaan	44DDT
+pentachloorfenol	PeClFol	1008	exact_name_key	1		existing	pentachloorfenol	PeClFol
+2,4'-dichloordifenyltrichloorethaan	24DDT	1002	exact_name_key	1		existing	2,4'-dichloordifenyltrichloorethaan	24DDT
+4,4'-dichloordifenyldichlooretheen	44DDE	1002	exact_name_key	1		existing	4,4'-dichloordifenyldichlooretheen	44DDE
+4,4'-dichloordifenyldichloorethaan	44DDD	990	exact_name_key	1		existing	4,4'-dichloordifenyldichloorethaan	44DDD
+2,4'-dichloordifenyldichloorethaan	24DDD	982	exact_name_key	1		existing	2,4'-dichloordifenyldichloorethaan	24DDD
+som fenolen waterdampvluchtig	sFolwv	980	exact_name_key	1		existing	som fenolen waterdampvluchtig	sFolwv
+2,4,5-trichloorfenoxyazijnzuur	245T	978	exact_name_key	1		existing	2,4,5-trichloorfenoxyazijnzuur	245T
+2,4-dichloorfenoxyboterzuur	24DB	977	exact_name_key	1		existing	2,4-dichloorfenoxyboterzuur	24DB
+glyfosaat	glyfst	973	exact_name_key	1		existing	glyfosaat	glyfst
+aminomethylfosfonzuur	AMPA	972	exact_name_key	1		existing	aminomethylfosfonzuur	AMPA
+ethiofencarb	etofcb	934	exact_name_key	1		existing	ethiofencarb	etofcb
+hexachloorbutadieen	HxClbtDen	882	exact_name_key	1		existing	hexachloorbutadieen	HxClbtDen
+Som microcystines	sMICCTNS	881	exact_name_key	1		existing	som microcystines	sMICCTNS
+2,4,6-trichloorfenol	246TClFol	831	exact_name_key	1		existing	2,4,6-trichloorfenol	246TClFol
+2,6-dichloorfenol	26DClFol	831	exact_name_key	1		existing	2,6-dichloorfenol	26DClFol
+2,3,4,6-tetrachloorfenol	2346T4ClFol	830	exact_name_key	1		existing	2,3,4,6-tetrachloorfenol	2346T4ClFol
+2,3,4,5-tetrachloorfenol	2345T4ClFol	830	exact_name_key	1		existing	2,3,4,5-tetrachloorfenol	2345T4ClFol
+2,4,5-trichloorfenol	245TClFol	830	exact_name_key	1		existing	2,4,5-trichloorfenol	245TClFol
+som chloorfenolen	sClFol	798	exact_name_key	1		existing	som chloorfenolen	sClFol
+3-chloorfenol	3ClFol	797	exact_name_key	1		existing	3-chloorfenol	3ClFol
+4-chloorfenol	4ClFol	797	exact_name_key	1		existing	4-chloorfenol	4ClFol
+3,5-dichloorfenol	35DClFol	797	exact_name_key	1		existing	3,5-dichloorfenol	35DClFol
+3,4-dichloorfenol	34DClFol	797	exact_name_key	1		existing	3,4-dichloorfenol	34DClFol
+2,3-dichloorfenol	23DClFol	797	exact_name_key	1		existing	2,3-dichloorfenol	23DClFol
+2-chloorfenol	2ClFol	796	exact_name_key	1		existing	2-chloorfenol	2ClFol
+2,3,5,6-tetrachloorfenol	2356T4ClFol	796	exact_name_key	1		existing	2,3,5,6-tetrachloorfenol	2356T4ClFol
+2,3,6-trichloorfenol	236TClFol	796	exact_name_key	1		existing	2,3,6-trichloorfenol	236TClFol
+2,3,5-trichloorfenol	235TClFol	796	exact_name_key	1		existing	2,3,5-trichloorfenol	235TClFol
+3,4,5-trichloorfenol	345TClFol	796	exact_name_key	1		existing	3,4,5-trichloorfenol	345TClFol
+2,3,4-trichloorfenol	234TClFol	794	exact_name_key	1		existing	2,3,4-trichloorfenol	234TClFol
+carbamazepine	carbmzpne	781	exact_name_key	1		existing	carbamazepine	carbmzpne
+som heptachloorepoxide (som cis- en trans-)	sHpClepO	755	exact_name_key	1		existing	som heptachloorepoxide (som cis- en trans-)	sHpClepO
+pentachloorbenzeen	PeClBen	745	exact_name_key	1		existing	pentachloorbenzeen	PeClBen
+ijzer (tweewaardig)	FeII	737	exact_name_key	1		existing	ijzer (tweewaardig)	FeII
+triclopyr	Tcpr	701	exact_name_key	1		existing	triclopyr	Tcpr
+ioxynil	iOxnl	699	exact_name_key	1		existing	ioxynil	iOxnl
+broomoxynil	BrOxnl	699	exact_name_key	1		existing	broomoxynil	BrOxnl
+teflubenzuron	tefbzrn	699	exact_name_key	1		existing	teflubenzuron	tefbzrn
+fluroxypyr	flurOxpr	698	exact_name_key	1		existing	fluroxypyr	flurOxpr
+4-chloorfenoxyazijnzuur	4CPA	698	exact_name_key	1		existing	4-chloorfenoxyazijnzuur	4CPA
+haloxyfop	halOxfp	695	exact_name_key	1		existing	haloxyfop	halOxfp
+som vluchtige organische halogeenverbindingen	sVOX	693	exact_name_key	1		existing	som vluchtige organische halogeenverbindingen	sVOX
+dicamba	Dcba	685	exact_name_key	1		existing	dicamba	Dcba
+fluazifop	fluazfp	685	exact_name_key	1		existing	fluazifop	fluazfp
+2,4-dichloorfenol	24DClFol	656	exact_name_key	1		existing	2,4-dichloorfenol	24DClFol
+2,5-dichloorfenol	25DClFol	621	exact_name_key	1		existing	2,5-dichloorfenol	25DClFol
+omethoaat	omtat	597	exact_name_key	1		existing	omethoaat	omtat
+captan	captn	568	exact_name_key	1		existing	captan	captn
+mangaan	Mn	563	exact_name_key	1		existing	mangaan	Mn
+chlooroxuron	Cloxrn	563	exact_name_key	1		existing	chlooroxuron	Cloxrn
+fenamifos	fenamfs	561	exact_name_key	1		existing	fenamifos	fenamfs
+monuron	monrn	559	exact_name_key	1		existing	monuron	monrn
+sulfotep	sulftp	557	exact_name_key	1		existing	sulfotep	sulftp
+chloorbromuron	Clbmrn	557	exact_name_key	1		existing	chloorbromuron	Clbmrn
+metobromuron	metbmrn	556	exact_name_key	1		existing	metobromuron	metbmrn
+lenacil	lencl	553	exact_name_key	1		existing	lenacil	lencl
+(3-chloor-4-methylfenyl)urea	3Cl4C1yFyura	552	exact_name_key	1		existing	(3-chloor-4-methylfenyl)urea	3Cl4C1yFyura
+cloquintoceet-mexyl	cloqtcmxl	552	exact_name_key	1		existing	cloquintoceet-mexyl	cloqtcmxl
+ethiofencarbsulfon	etofcbsfn	552	exact_name_key	1		existing	ethiofencarbsulfon	etofcbsfn
+nuarimol	nuarml	552	exact_name_key	1		existing	nuarimol	nuarml
+isopropylanthranilamide	iC3yantnlAd	552	exact_name_key	1		existing	isopropylanthranilamide	iC3yantnlAd
+azamethifos	azmtfs	552	exact_name_key	1		existing	azamethifos	azmtfs
+haloxyfop-ethoxyethyl	halOxfC2oxC2	552	exact_name_key	1		existing	haloxyfop-ethoxyethyl	halOxfC2oxC2
+hymexazool	hymxzl	552	exact_name_key	1		existing	hymexazool	hymxzl
+isoxaben	isxbn	552	exact_name_key	1		existing	isoxaben	isxbn
+monocrotofos	Mctfs	552	exact_name_key	1		existing	monocrotofos	Mctfs
+picolinafen	piclnfn	552	exact_name_key	1		existing	picolinafen	piclnfn
+quinmerac	quinmrc	552	exact_name_key	1		existing	quinmerac	quinmrc
+carbetamide	carbtAd	552	exact_name_key	1		existing	carbetamide	carbtAd
+ethiofencarbsulfoxide	etofcbSO	552	exact_name_key	1		existing	ethiofencarbsulfoxide	etofcbSO
+isoxaflutool	iOaftl	552	exact_name_key	1		existing	isoxaflutool	iOaftl
+oxasulfuron	Oasfrn	552	exact_name_key	1		existing	oxasulfuron	Oasfrn
+furathiocarb	furtocb	552	exact_name_key	1		existing	furathiocarb	furtocb
+joodpropynylbutylcarbamaat	IppnC4ycbmt	552	exact_name_key	1		existing	joodpropynylbutylcarbamaat	IppnC4ycbmt
+desmedifam	desmdfm	552	exact_name_key	1		existing	desmedifam	desmdfm
+flufenacet	flufnct	552	exact_name_key	1		existing	flufenacet	flufnct
+acridine	acdne	552	exact_name_key	1		existing	acridine	acdne
+clodinafop-propargyl	clodnfppgl	552	exact_name_key	1		existing	clodinafop-propargyl	clodnfppgl
+ethyldipropylthiocarbamaat	EPTC	552	exact_name_key	1		existing	ethyldipropylthiocarbamaat	EPTC
+bromacil	bromcl	552	exact_name_key	1		existing	bromacil	bromcl
+difenoxuron	Dfnxrn	552	exact_name_key	1		existing	difenoxuron	Dfnxrn
+fenpropidin	fenppdn	552	exact_name_key	1		existing	fenpropidin	fenppdn
+flurtamon	flrtmn	552	exact_name_key	1		existing	flurtamon	flrtmn
+vamidothion	vamdton	552	exact_name_key	1		existing	vamidothion	vamdton
+chloorsulfuron	Clsfrn	552	exact_name_key	1		existing	chloorsulfuron	Clsfrn
+trans-chloordaan	tCldn	520	exact_name_key	1		existing	trans-chloordaan	tCldn
+cis-chloordaan	cCldn	514	exact_name_key	1		existing	cis-chloordaan	cCldn
+trichloormethaan (chloroform)	TClC1a	493	exact_name_key	1		existing	trichloormethaan (chloroform)	TClC1a
+trichlooretheen (tri)	TClC2e	487	exact_name_key	1		existing	trichlooretheen (tri)	TClC2e
+tetrachloormethaan (tetra)	T4ClC1a	485	exact_name_key	1		existing	tetrachloormethaan (tetra)	T4ClC1a
+tetrachlooretheen (per)	T4ClC2e	483	exact_name_key	1		existing	tetrachlooretheen (per)	T4ClC2e
+zilver	Ag	470	exact_name_key	1		existing	zilver	Ag
+isodrin	idn	463	exact_name_key	1		existing	isodrin	idn
+telodrin	teldn	453	exact_name_key	1		existing	telodrin	teldn
+benzeen	Ben	426	exact_name_key	1		existing	benzeen	Ben
+tributyltin (kation)	TC4ySn	418	exact_name_key	1		existing	tributyltin (kation)	TC4ySn
+som extraheerbare organische halogeenverbindingen	sEOX	396	exact_name_key	1		existing	som extraheerbare organische halogeenverbindingen	sEOX
+aldicarbsulfoxide	alDcSO	385	exact_name_key	1		existing	aldicarbsulfoxide	alDcSO
+ethylbenzeen	C2yBen	382	exact_name_key	1		existing	ethylbenzeen	C2yBen
+tolueen	Tol	382	exact_name_key	1		existing	tolueen	Tol
+butocarboxim	butcbOxm	382	exact_name_key	1		existing	butocarboxim	butcbOxm
+butocarboximsulfoxide	butcbOxmSO	373	exact_name_key	1		existing	butocarboximsulfoxide	butcbOxmSO
+chloordaan	Cldn	359	exact_name_key	1		existing	chloordaan	Cldn
+dichloormethaan	DClC1a	342	exact_name_key	1		existing	dichloormethaan	DClC1a
+1,2-dichloorethaan	12DClC2a	342	exact_name_key	1		existing	1,2-dichloorethaan	12DClC2a
+tricyclohexyltin (kation)	TccC6ySn	333	exact_name_key	1		existing	tricyclohexyltin (kation)	TccC6ySn
+tetrabutyltin	T4C4ySn	333	exact_name_key	1		existing	tetrabutyltin	T4C4ySn
+trifenyltin (kation)	TFySn	333	exact_name_key	1		existing	trifenyltin (kation)	TFySn
+dibutyltin (kation)	DC4ySn	333	exact_name_key	1		existing	dibutyltin (kation)	DC4ySn
+dicyclohexyltin (kation)	DccC6ySn	330	exact_name_key	1		existing	dicyclohexyltin (kation)	DccC6ySn
+difenyltin (kation)	DFySn	329	exact_name_key	1		existing	difenyltin (kation)	DFySn
+cis-heptachloorepoxide	cHpClepO	328	exact_name_key	1		existing	cis-heptachloorepoxide	cHpClepO
+trans-heptachloorepoxide	tHpClepO	323	exact_name_key	1		existing	trans-heptachloorepoxide	tHpClepO
+som xyleen-isomeren	sxyln	320	exact_name_key	1		existing	som xyleen-isomeren	sxyln
+1,1,1-trichloorethaan	111TClC2a	301	exact_name_key	1		existing	1,1,1-trichloorethaan	111TClC2a
+1,1,2-trichloorethaan	112TClC2a	295	exact_name_key	1		existing	1,1,2-trichloorethaan	112TClC2a
+1,1-dichloorethaan	11DClC2a	294	exact_name_key	1		existing	1,1-dichloorethaan	11DClC2a
+2,4,5-trichloorfenoxypropionzuur	245TP	278	exact_name_key	1		existing	2,4,5-trichloorfenoxypropionzuur	245TP
+endosulfansulfaat	endsfSO4	274	exact_name_key	1		existing	endosulfansulfaat	endsfSO4
+methylisothiocyanaat	C1yitoCN	265	exact_name_key	1		existing	methylisothiocyanaat	C1yitoCN
+metformine	metfmne	252	exact_name_key	1		existing	metformine	metfmne
+metoprolol	metpll	252	exact_name_key	1		existing	metoprolol	metpll
+claritromycine	clartmcne	248	exact_name_key	1		existing	claritromycine	clartmcne
+diclofenac	Dclofnc	248	exact_name_key	1		existing	diclofenac	Dclofnc
+fenazon (antipyrine)	fenzn	248	exact_name_key	1		existing	fenazon (antipyrine)	fenzn
+pentoxifylline	poxflne	248	exact_name_key	1		existing	pentoxifylline	poxflne
+trimethoprim	Tmtpm	248	exact_name_key	1		existing	trimethoprim	Tmtpm
+sulfamethoxazol	sulfmtoazl	248	exact_name_key	1		existing	sulfamethoxazol	sulfmtoazl
+oxazepam	oxzpm	248	exact_name_key	1		existing	oxazepam	oxzpm
+bezafibraat	bezafbt	248	exact_name_key	1		existing	bezafibraat	bezafbt
+ketoprofen	ketpfn	248	exact_name_key	1		existing	ketoprofen	ketpfn
+sotalol	sotll	248	exact_name_key	1		existing	sotalol	sotll
+irbesartan	irbstan	248	exact_name_key	1		existing	irbesartan	irbstan
+clindamycine	clindmcne	248	exact_name_key	1		existing	clindamycine	clindmcne
+dimetridazol	DmTdzl	248	exact_name_key	1		existing	dimetridazol	DmTdzl
+gabapentine	gabptne	248	exact_name_key	1		existing	gabapentine	gabptne
+dipyridamol	Dpyrdml	248	exact_name_key	1		existing	dipyridamol	Dpyrdml
+jopamidol	jopmdl	245	exact_name_key	1		existing	jopamidol	jopmdl
+clozapine	clozpne	242	exact_name_key	1		existing	clozapine	clozpne
+pipamperon	pipprn	239	exact_name_key	1		existing	pipamperon	pipprn
+valsartan	valstan	239	exact_name_key	1		existing	valsartan	valstan
+hydrochloorthiazide	HCltazde	239	exact_name_key	1		existing	hydrochloorthiazide	HCltazde
+ibuprofen	ibpfn	239	exact_name_key	1		existing	ibuprofen	ibpfn
+ciprofloxacine	cipfxcne	239	exact_name_key	1		existing	ciprofloxacine	cipfxcne
+fluoride	F	237	exact_name_key	1		existing	fluoride	F
+acefaat	acft	233	exact_name_key	1		existing	acefaat	acft
+dichloorbroommethaan	DClBrC1a	219	exact_name_key	1		existing	dichloorbroommethaan	DClBrC1a
+tribroommethaan	TBrC1a	219	exact_name_key	1		existing	tribroommethaan	TBrC1a
+dibroomchloormethaan	DBrClC1a	218	exact_name_key	1		existing	dibroomchloormethaan	DBrClC1a
+1,2-dichlooretheen	12DClC2e	216	exact_name_key	1		existing	1,2-dichlooretheen	12DClC2e
+2,4,4'-tribroomdifenylether	PBDE28	214	exact_name_key	1		existing	2,4,4'-tribroomdifenylether	PBDE28
+2,2',4,4'-tetrabroomdifenylether	PBDE47	214	exact_name_key	1		existing	2,2',4,4'-tetrabroomdifenylether	PBDE47
+2,2',4,5'-tetrabroomdifenylether	PBDE49	214	exact_name_key	1		existing	2,2',4,5'-tetrabroomdifenylether	PBDE49
+2,2',3,4,4'-pentabroomdifenylether	PBDE85	214	exact_name_key	1		existing	2,2',3,4,4'-pentabroomdifenylether	PBDE85
+2,2',4,4',5-pentabroomdifenylether	PBDE99	214	exact_name_key	1		existing	2,2',4,4',5-pentabroomdifenylether	PBDE99
+2,2',4,4',6-pentabroomdifenylether	PBDE100	214	exact_name_key	1		existing	2,2',4,4',6-pentabroomdifenylether	PBDE100
+2,2',3,4,4',5'-hexabroomdifenylether	PBDE138	214	exact_name_key	1		existing	2,2',3,4,4',5'-hexabroomdifenylether	PBDE138
+2,2',4,4',5,5'-hexabroomdifenylether	PBDE153	214	exact_name_key	1		existing	2,2',4,4',5,5'-hexabroomdifenylether	PBDE153
+2,2',4,4',5,6'-hexabroomdifenylether	PBDE154	214	exact_name_key	1		existing	2,2',4,4',5,6'-hexabroomdifenylether	PBDE154
+4-chloor-3-methylfenol	4Cl3C1yFol	199	exact_name_key	1		existing	4-chloor-3-methylfenol	4Cl3C1yFol
+som monocyclische aromatische koolwaterstoffen (BTEX)	sMAK	193	exact_name_key	1		existing	som monocyclische aromatische koolwaterstoffen (BTEX)	sMAK
+styreen	styrn	191	exact_name_key	1		existing	styreen	styrn
+bromide	Br	190	exact_name_key	1		existing	bromide	Br
+cis-1,2-dichlooretheen	c12DClC2e	188	exact_name_key	1		existing	cis-1,2-dichlooretheen	c12DClC2e
+trans-1,2-dichlooretheen	t12DClC2e	188	exact_name_key	1		existing	trans-1,2-dichlooretheen	t12DClC2e
+glufosinaat	glufsnt	187	exact_name_key	1		existing	glufosinaat	glufsnt
+glycol (monoethyleenglycol)	glycl	185	exact_name_key	1		existing	glycol (monoethyleenglycol)	glycl
+diethyleenglycol	DC2yegcl	185	exact_name_key	1		existing	diethyleenglycol	DC2yegcl
+triethyleenglycol	TC2yegcl	185	exact_name_key	1		existing	triethyleenglycol	TC2yegcl
+1,2-propyleenglycol	12C3yegcl	185	exact_name_key	1		existing	1,2-propyleenglycol	12C3yegcl
+trimethyleenglycol (1,3-propyleenglycol)	TC1yegcl	185	exact_name_key	1		existing	trimethyleenglycol (1,3-propyleenglycol)	TC1yegcl
+tripropyleenglycol	TC3yegcl	185	exact_name_key	1		existing	tripropyleenglycol	TC3yegcl
+bis(2-ethylhexyl)ftalaat (DEHP)	DEHP	184	exact_name_key	1		existing	bis(2-ethylhexyl)ftalaat (DEHP)	DEHP
+seleen	Se	179	exact_name_key	1		existing	seleen	Se
+som monochloorfenol-isomeren	sMClFol	176	exact_name_key	1		existing	som monochloorfenol-isomeren	sMClFol
+som trichloorfenol-isomeren	sTClFol	175	exact_name_key	1		existing	som trichloorfenol-isomeren	sTClFol
+som tetrachloorfenol-isomeren	sT4ClFol	167	exact_name_key	1		existing	som tetrachloorfenol-isomeren	sT4ClFol
+perfluoroctaansulfonaat	PFOS	167	exact_name_key	1		existing	perfluoroctaansulfonaat	PFOS
+perfluoroctaanzuur	PFOA	164	exact_name_key	1		existing	perfluoroctaanzuur	PFOA
+cyanide	CN	162	exact_name_key	1		existing	cyanide	CN
+som adsorbeerbare organische halogeenverbindingen	sAOX	162	exact_name_key	1		existing	som adsorbeerbare organische halogeenverbindingen	sAOX
+som 2,3-, 2,4-, 2,5- en 2,6-dichloorfenol	s2xDClFol	159	exact_name_key	1		existing	som 2,3-, 2,4-, 2,5- en 2,6-dichloorfenol	s2xDClFol
+som 2,4- en 2,5-dichloorfenol	s2425DClFol	159	exact_name_key	1		existing	som 2,4- en 2,5-dichloorfenol	s2425DClFol
+stikstof organisch	Norg	149	exact_name_key	1		existing	stikstof organisch	Norg
+gadolinium	Gd	147	exact_name_key	1		existing	gadolinium	Gd
+1,2-dichloorpropaan	12DClC3a	146	exact_name_key	1		existing	1,2-dichloorpropaan	12DClC3a
+Som 1,2,5,6,9,10-hexabroomcyclododecaan	sHBCD	140	exact_name_key	1		existing	som 1,2,5,6,9,10-hexabroomcyclododecaan	sHBCD
+methamidofos	mtmdfs	128	exact_name_key	1		existing	methamidofos	mtmdfs
+2,6-dichlooraniline	26DClAn	119	exact_name_key	1		existing	2,6-dichlooraniline	26DClAn
+som aromatische amines	sARAM	119	exact_name_key	1		existing	som aromatische amines	sARAM
+aniline	An	119	exact_name_key	1		existing	aniline	An
+3-chlooraniline	3ClAn	119	exact_name_key	1		existing	3-chlooraniline	3ClAn
+3,4-dichlooraniline	34DClAn	119	exact_name_key	1		existing	3,4-dichlooraniline	34DClAn
+2,3-dichlooraniline	23DClAn	119	exact_name_key	1		existing	2,3-dichlooraniline	23DClAn
+2,4-dichlooraniline	24DClAn	119	exact_name_key	1		existing	2,4-dichlooraniline	24DClAn
+3,5-dichlooraniline	35DClAn	119	exact_name_key	1		existing	3,5-dichlooraniline	35DClAn
+2-chlooraniline	2ClAn	119	exact_name_key	1		existing	2-chlooraniline	2ClAn
+2,4,5-trichlooraniline	245TClAn	119	exact_name_key	1		existing	2,4,5-trichlooraniline	245TClAn
+1,2-xyleen	12xyln	109	exact_name_key	1		existing	1,2-xyleen	12xyln
+som 1,3- en 1,4-xyleen	s1314xyln	108	exact_name_key	1		existing	som 1,3- en 1,4-xyleen	s1314xyln
+atenolol	atnll	106	exact_name_key	1		existing	atenolol	atnll
+erytromycine	ertmcne	106	exact_name_key	1		existing	erytromycine	ertmcne
+naproxen	napxn	106	exact_name_key	1		existing	naproxen	napxn
+tramadol	tramdl	106	exact_name_key	1		existing	tramadol	tramdl
+som vertakte PFOS-isomeren	sverttPFOS	104	exact_name_key	1		existing	som vertakte PFOS-isomeren	sverttPFOS
+som vertakte PFOA-isomeren	sverttPFOA	103	exact_name_key	1		existing	som vertakte PFOA-isomeren	sverttPFOA
+diethylftalaat	DC2yFt	102	exact_name_key	1		existing	diethylftalaat	DC2yFt
+diisobutylftalaat	DiC4yFt	102	exact_name_key	1		existing	diisobutylftalaat	DiC4yFt
+azitromycine	aztmcne	97	exact_name_key	1		existing	azitromycine	aztmcne
+furosemide	fursmde	97	exact_name_key	1		existing	furosemide	fursmde
+som C10-C13-chlooralkanen	sC10C13Clakn	96	exact_name_key	1		existing	som C10-C13-chlooralkanen	sC10C13Clakn
+som heptachloor en cis- en trans-heptachloorepoxide	sHpCl2	94	fuzzy_semantic	1	0.39	Ws Scheldestromen	som heptachloor en cis- en trans-heptachloorepoxide	sHpCl2
+4-hydroxy-2,5,6-trichloorisoftalonitril	HTI	90	exact_name_key	1		existing	4-hydroxy-2,5,6-trichloorisoftalonitril	HTI
+hexachloorethaan	HxClC2a	87	exact_name_key	1		existing	hexachloorethaan	HxClC2a
+3-methylaniline	3C1yAn	81	exact_name_key	1		existing	3-methylaniline	3C1yAn
+2-methylaniline	2C1yAn	81	exact_name_key	1		existing	2-methylaniline	2C1yAn
+4-methylaniline	4C1yAn	81	exact_name_key	1		existing	4-methylaniline	4C1yAn
+dinoseb	Dnsb	81	exact_name_key	1		existing	dinoseb	Dnsb
+chloorbenzeen	ClBen	79	exact_name_key	1		existing	chloorbenzeen	ClBen
+ethyleenthioureum	C2yetourum	75	exact_name_key	1		existing	ethyleenthioureum	C2yetourum
+cis-mevinfos	cmevfs	73	exact_name_key	1		existing	cis-mevinfos	cmevfs
+trans-mevinfos	tmevfs	73	exact_name_key	1		existing	trans-mevinfos	tmevfs
+barium	Ba	67	exact_name_key	1		existing	barium	Ba
+1,1-dichlooretheen	11DClC2e	66	exact_name_key	1		existing	1,1-dichlooretheen	11DClC2e
+thiabendazol	tabdzl	64	exact_name_key	1		existing	thiabendazol	tabdzl
+1,1,2,2-tetrachloorethaan	1122T4ClC2a	64	exact_name_key	1		existing	1,1,2,2-tetrachloorethaan	1122T4ClC2a
+chlooretheen (vinylchloride)	ClC2e	60	exact_name_key	1		existing	chlooretheen (vinylchloride)	ClC2e
+2,3',4,4'-tetrabroomdifenylether	PBDE66	60	exact_name_key	1		existing	2,3',4,4'-tetrabroomdifenylether	PBDE66
+2,3',4',6-tetrabroomdifenylether	PBDE71	60	exact_name_key	1		existing	2,3',4',6-tetrabroomdifenylether	PBDE71
+2,4,4',6-tetrabroomdifenylether	PBDE75	60	exact_name_key	1		existing	2,4,4',6-tetrabroomdifenylether	PBDE75
+2,2',3,4,4',5',6-heptabroomdifenylether	PBDE183	60	exact_name_key	1		existing	2,2',3,4,4',5',6-heptabroomdifenylether	PBDE183
+endosulfan (som alfa- en beta-isomeer)	endsfn	58	exact_name_key	1		existing	endosulfan (som alfa- en beta-isomeer)	endsfn
+boor	B	49	exact_name_key	1		existing	boor	B
+1,2,4-trimethylbenzeen	124TC1yBen	49	exact_name_key	1		existing	1,2,4-trimethylbenzeen	124TC1yBen
+cumeen	cumn	49	exact_name_key	1		existing	cumeen	cumn
+1,2,3-trichloorpropaan	123TClC3a	49	exact_name_key	1		existing	1,2,3-trichloorpropaan	123TClC3a
+1,3-dichloorpropaan	13DClC3a	49	exact_name_key	1		existing	1,3-dichloorpropaan	13DClC3a
+dinoterb	Dntb	48	exact_name_key	1		existing	dinoterb	Dntb
+2,3,7,8-tetrachloordibenzo-p-dioxine	PCDD48	48	exact_name_key	1		existing	2,3,7,8-tetrachloordibenzo-p-dioxine	PCDD48
+1,2,3,7,8-pentachloordibenzo-p-dioxine	PCDD54	48	exact_name_key	1		existing	1,2,3,7,8-pentachloordibenzo-p-dioxine	PCDD54
+1,2,3,4,7,8-hexachloordibenzo-p-dioxine	PCDD66	48	exact_name_key	1		existing	1,2,3,4,7,8-hexachloordibenzo-p-dioxine	PCDD66
+1,2,3,6,7,8-hexachloordibenzo-p-dioxine	PCDD67	48	exact_name_key	1		existing	1,2,3,6,7,8-hexachloordibenzo-p-dioxine	PCDD67
+1,2,3,7,8,9-hexachloordibenzo-p-dioxine	PCDD70	48	exact_name_key	1		existing	1,2,3,7,8,9-hexachloordibenzo-p-dioxine	PCDD70
+1,2,3,4,6,7,8-heptachloordibenzo-p-dioxine	PCDD73	48	exact_name_key	1		existing	1,2,3,4,6,7,8-heptachloordibenzo-p-dioxine	PCDD73
+2,3,4,7,8-pentachloordibenzofuraan	PCDF114	48	exact_name_key	1		existing	2,3,4,7,8-pentachloordibenzofuraan	PCDF114
+1,2,3,4,7,8-hexachloordibenzofuraan	PCDF118	48	exact_name_key	1		existing	1,2,3,4,7,8-hexachloordibenzofuraan	PCDF118
+1,2,3,6,7,8-hexachloordibenzofuraan	PCDF121	48	exact_name_key	1		existing	1,2,3,6,7,8-hexachloordibenzofuraan	PCDF121
+1,2,3,7,8,9-hexachloordibenzofuraan	PCDF124	48	exact_name_key	1		existing	1,2,3,7,8,9-hexachloordibenzofuraan	PCDF124
+1,2,3,4,6,7,8,9-octachloordibenzo-p-dioxine	PCDD75	48	exact_name_key	1		existing	1,2,3,4,6,7,8,9-octachloordibenzo-p-dioxine	PCDD75
+3,3',4,4',5-pentachloorbifenyl	PCB126	48	exact_name_key	1		existing	3,3',4,4',5-pentachloorbifenyl	PCB126
+3,3',4,4',5,5'-hexachloorbifenyl	PCB169	48	exact_name_key	1		existing	3,3',4,4',5,5'-hexachloorbifenyl	PCB169
+3,3',4,4'-tetrachloorbifenyl	PCB77	48	exact_name_key	1		existing	3,3',4,4'-tetrachloorbifenyl	PCB77
+3,4,4',5-tetrachlorobifenyl	PCB81	48	exact_name_key	1		existing	3,4,4',5-tetrachlorobifenyl	PCB81
+2,3,4,6,7,8-hexachloordibenzofuraan	PCDF130	48	exact_name_key	1		existing	2,3,4,6,7,8-hexachloordibenzofuraan	PCDF130
+1,2,3,4,6,7,8-heptachloordibenzofuraan	PCDF131	48	exact_name_key	1		existing	1,2,3,4,6,7,8-heptachloordibenzofuraan	PCDF131
+1,2,3,4,7,8,9-heptachloordibenzofuraan	PCDF134	48	exact_name_key	1		existing	1,2,3,4,7,8,9-heptachloordibenzofuraan	PCDF134
+2,3,7,8-tetrachloordibenzofuraan	PCDF83	48	exact_name_key	1		existing	2,3,7,8-tetrachloordibenzofuraan	PCDF83
+1,2,3,7,8-pentachloordibenzofuraan	PCDF94	48	exact_name_key	1		existing	1,2,3,7,8-pentachloordibenzofuraan	PCDF94
+1,2,3,4,6,7,8,9-octachloordibenzofuraan	PCDF135	48	exact_name_key	1		existing	1,2,3,4,6,7,8,9-octachloordibenzofuraan	PCDF135
+1,2,3-trichloorbenzeen	123TClBen	48	exact_name_key	1		existing	1,2,3-trichloorbenzeen	123TClBen
+1,2-dichloorbenzeen	12DClBen	48	exact_name_key	1		existing	1,2-dichloorbenzeen	12DClBen
+1,3,5-trimethylbenzeen	135TC1yBen	48	exact_name_key	1		existing	1,3,5-trimethylbenzeen	135TC1yBen
+1,3,5-trichloorbenzeen	135TClBen	48	exact_name_key	1		existing	1,3,5-trichloorbenzeen	135TClBen
+1,3-dichloorbenzeen	13DClBen	48	exact_name_key	1		existing	1,3-dichloorbenzeen	13DClBen
+1,4-dichloorbenzeen	14DClBen	48	exact_name_key	1		existing	1,4-dichloorbenzeen	14DClBen
+cis-1,3-dichloorpropeen	c13DClC3e	48	exact_name_key	1		existing	cis-1,3-dichloorpropeen	c13DClC3e
+2,3,3',4,4'-pentachloorbifenyl	PCB105	48	exact_name_key	1		existing	2,3,3',4,4'-pentachloorbifenyl	PCB105
+2,3,3',4,4',5-hexachloorbifenyl	PCB138	48	fuzzy_name_similarity	0.973913043478261	0.0260869565217391	existing	2,2',3,4,4',5'-hexachloorbifenyl	PCB156
+2,3,3',4,4',5'-hexachloorbifenyl	PCB138	48	fuzzy_name_similarity	0.973913043478261	0.0260869565217391	existing	2,2',3,4,4',5'-hexachloorbifenyl	PCB157
+2,3',4,4',5,5'-hexachloorbifenyl	PCB167	48	exact_name_key	1		existing	2,3',4,4',5,5'-hexachloorbifenyl	PCB167
+2,3,3',4,4',5,5 '-heptachlorobifenyl	PCB189	48	exact_name_key	1		existing	2,3,3',4,4',5,5 '-heptachlorobifenyl	PCB189
+dibroommethaan	DBrC1a	48	exact_name_key	1		existing	dibroommethaan	DBrC1a
+trans-1,3-dichloorpropeen	t13DClC3e	48	exact_name_key	1		existing	trans-1,3-dichloorpropeen	t13DClC3e
+1,1,1,2-tetrachloorethaan	1112T4ClC2a	47	exact_name_key	1		existing	1,1,1,2-tetrachloorethaan	1112T4ClC2a
+som dithiocarbamaten	sDtocbmt	45	exact_name_key	1		existing	som dithiocarbamaten	sDtocbmt
+cis-permethrin	cpermtn	45	exact_name_key	1		existing	cis-permethrin	cpermtn
+1-propylbenzeen	1C3yBen	45	exact_name_key	1		existing	1-propylbenzeen	1C3yBen
+trichloorbenzeen	TClBen	44	exact_name_key	1		existing	trichloorbenzeen	TClBen
+1,2-dibroomethaan	12DBrC2a	44	exact_name_key	1		existing	1,2-dibroomethaan	12DBrC2a
+1,1-dichloorpropeen	11DClC3e	44	exact_name_key	1		existing	1,1-dichloorpropeen	11DClC3e
+1,2-dibroom-3-chloorpropaan	12DBr3ClC3a	44	exact_name_key	1		existing	1,2-dibroom-3-chloorpropaan	12DBr3ClC3a
+1-isopropyl-4-methyl-benzeen	1iC3y4C1yBen	44	exact_name_key	1		existing	1-isopropyl-4-methyl-benzeen	1iC3y4C1yBen
+2-chloortolueen	2ClTol	44	exact_name_key	1		existing	2-chloortolueen	2ClTol
+4-chloortolueen	4ClTol	44	exact_name_key	1		existing	4-chloortolueen	4ClTol
+tertiair-butylbenzeen	ttC4yBen	44	exact_name_key	1		existing	tertiair-butylbenzeen	ttC4yBen
+2,2-dichloorpropaan	22DClC3a	44	exact_name_key	1		existing	2,2-dichloorpropaan	22DClC3a
+butylbenzeen	C4yBen	44	exact_name_key	1		existing	butylbenzeen	C4yBen
+secundair-butylbenzeen	secC4yBen	44	exact_name_key	1		existing	secundair-butylbenzeen	secC4yBen
+tetrachloorethaan	T4ClC2a	44	exact_name_key	1		existing	tetrachloorethaan	T4ClC2a
+broombenzeen	BrBen	44	exact_name_key	1		existing	broombenzeen	BrBen
+pyrifenox	pyrfnx	41	exact_name_key	1		existing	pyrifenox	pyrfnx
+folpet	folpt	37	exact_name_key	1		existing	folpet	folpt
+ureum	urum	28	exact_name_key	1		existing	ureum	urum
+tepraloxydim	teplxdm	25	exact_name_key	1		existing	tepraloxydim	teplxdm
+chlofentezin	chloftzn	25	exact_name_key	1		existing	chlofentezin	chloftzn
+milbemycin A3	milbmcA3	25	exact_name_key	1		existing	milbemycin A3	milbmcA3
+milbemycin A4	milbmcA4	25	exact_name_key	1		existing	milbemycin A4	milbmcA4
+acequinocyl	acqncl	25	exact_name_key	1		existing	acequinocyl	acqncl
+cyflumetofen	cyfmtfn	25	exact_name_key	1		existing	cyflumetofen	cyfmtfn
+maleinehydrazide	malinhdzde	25	exact_name_key	1		existing	maleinehydrazide	malinhdzde
+zwavel totaal	Stot	24	exact_name_key	1		existing	zwavel totaal	Stot
+broommethaan	BrC1a	24	exact_name_key	1		existing	broommethaan	BrC1a
+florfenicol	florfncl	24	exact_name_key	1		existing	florfenicol	florfncl
+fluoxetine	fluoxtne	24	exact_name_key	1		existing	fluoxetine	fluoxtne
+triclocarban	Tccbn	24	exact_name_key	1		existing	triclocarban	Tccbn
+warfarin	warfrn	24	exact_name_key	1		existing	warfarin	warfrn
+aminofenazon	Aofnzn	24	exact_name_key	1		existing	aminofenazon	Aofnzn
+atorvastatine	atvttne	24	exact_name_key	1		existing	atorvastatine	atvttne
+chlooramfenicol	Clafncl	24	exact_name_key	1		existing	chlooramfenicol	Clafncl
+cloxacilline	cloxclne	24	exact_name_key	1		existing	cloxacilline	cloxclne
+cortison	cortsn	24	exact_name_key	1		existing	cortison	cortsn
+cyclofosfamide	cycffAd	24	exact_name_key	1		existing	cyclofosfamide	cycffAd
+dapson	dapsn	24	exact_name_key	1		existing	dapson	dapsn
+dexamethason	dexmtsn	24	exact_name_key	1		existing	dexamethason	dexmtsn
+fenofibraat	fenfbt	24	exact_name_key	1		existing	fenofibraat	fenfbt
+fenoterol	fentrl	24	exact_name_key	1		existing	fenoterol	fentrl
+furazolidon	furzldn	24	exact_name_key	1		existing	furazolidon	furzldn
+ifosfamide	iffAd	24	exact_name_key	1		existing	ifosfamide	iffAd
+indometacine	indmtcne	24	exact_name_key	1		existing	indometacine	indmtcne
+levetiracetam	levtrctm	24	exact_name_key	1		existing	levetiracetam	levtrctm
+lincomycine	lincmcne	24	exact_name_key	1		existing	lincomycine	lincmcne
+mebendazol	mebdzl	24	exact_name_key	1		existing	mebendazol	mebdzl
+metronidazol	metndzl	24	exact_name_key	1		existing	metronidazol	metndzl
+nafcilline	nafclne	24	exact_name_key	1		existing	nafcilline	nafclne
+oxacilline	Oaclne	24	exact_name_key	1		existing	oxacilline	Oaclne
+oleandomycin	oladmcn	24	exact_name_key	1		existing	oleandomycin	oladmcn
+methyl-1H-benzotriazool	C1y1Hbztazl	24	exact_name_key	1		existing	methyl-1H-benzotriazool	C1y1Hbztazl
+1,2,3-benzotriazool	123benztazl	24	exact_name_key	1		existing	1,2,3-benzotriazool	123benztazl
+tetraethyleenglycoldimethylether	TEGDME	24	exact_name_key	1		existing	tetraethyleenglycoldimethylether	TEGDME
+2,5,8,11-tetraoxadodecaan	25811T4OaC12	24	exact_name_key	1		existing	2,5,8,11-tetraoxadodecaan	25811T4OaC12
+trifenylfosfineoxide	TPPO	24	exact_name_key	1		existing	trifenylfosfineoxide	TPPO
+bis(2-methoxyethyl)ether	bis2C1oxC2yE	24	exact_name_key	1		existing	bis(2-methoxyethyl)ether	bis2C1oxC2yE
+benzocaine	benzcine	24	exact_name_key	1		existing	benzocaine	benzcine
+carbadox	carbdx	24	exact_name_key	1		existing	carbadox	carbdx
+paracetamol	parctml	24	exact_name_key	1		existing	paracetamol	parctml
+primidon	primdn	24	exact_name_key	1		existing	primidon	primdn
+progesteron	progtrn	24	exact_name_key	1		existing	progesteron	progtrn
+propranolol	propnll	24	exact_name_key	1		existing	propranolol	propnll
+ronidazol	rondzl	24	exact_name_key	1		existing	ronidazol	rondzl
+roxitromycine	roxtmcne	24	exact_name_key	1		existing	roxitromycine	roxtmcne
+salbutamol	salbtml	24	exact_name_key	1		existing	salbutamol	salbtml
+sulfachloorpyridazine	sulfClprdzne	24	exact_name_key	1		existing	sulfachloorpyridazine	sulfClprdzne
+sulfadimidine	sulfdmdne	24	exact_name_key	1		existing	sulfadimidine	sulfdmdne
+sulfamerazin	sulfmrzn	24	exact_name_key	1		existing	sulfamerazin	sulfmrzn
+sulfaquinoxaline	sulfqoxlne	24	exact_name_key	1		existing	sulfaquinoxaline	sulfqoxlne
+tamoxifen	tamxfn	24	exact_name_key	1		existing	tamoxifen	tamxfn
+terbutaline	terbtlne	24	exact_name_key	1		existing	terbutaline	terbtlne
+tiamuline	tiamlne	24	exact_name_key	1		existing	tiamuline	tiamlne
+tylosine	tylsne	24	exact_name_key	1		existing	tylosine	tylsne
+valium	valum	24	exact_name_key	1		existing	valium	valum
+sulfadiazine	sulfdazne	24	exact_name_key	1		existing	sulfadiazine	sulfdazne
+kobalt	Co	23	exact_name_key	1		existing	kobalt	Co
+dicloxacilline	Dcloxclne	23	exact_name_key	1		existing	dicloxacilline	Dcloxclne
+2,4-dinitrofenol	24DNO2Fol	22	exact_name_key	1		existing	2,4-dinitrofenol	24DNO2Fol
+sulfadimethoxine	sulfdmtoxne	21	exact_name_key	1		existing	sulfadimethoxine	sulfdmtoxne
+vanadium	V	16	exact_name_key	1		existing	vanadium	V
+uranium	U	16	exact_name_key	1		existing	uranium	U
+thallium	Tl	16	exact_name_key	1		existing	thallium	Tl
+4-nitrofenol	4NO2Fol	14	exact_name_key	1		existing	4-nitrofenol	4NO2Fol
+diethylether	DC2yEtr	13	exact_name_key	1		existing	diethylether	DC2yEtr
+ethylacetaat	C2yactt	13	exact_name_key	1		existing	ethylacetaat	C2yactt
+2-pentanon	2C5on	13	exact_name_key	1		existing	2-pentanon	2C5on
+tertiair-butylacetaat	ttC4yactt	13	exact_name_key	1		existing	tertiair-butylacetaat	ttC4yactt
+4-methyl-2-pentanon (MIBK)	4C1y2C5on	13	exact_name_key	1		existing	4-methyl-2-pentanon (MIBK)	4C1y2C5on
+iso-butylacetaat	iC4yactt	13	exact_name_key	1		existing	iso-butylacetaat	iC4yactt
+butylacetaat	C4yactt	13	exact_name_key	1		existing	butylacetaat	C4yactt
+2-butanon (MEK)	2C4on	13	exact_name_key	1		existing	2-butanon (MEK)	2C4on
+captafol	captfl	12	exact_name_key	1		existing	captafol	captfl
+tributylfosfaat	TC4yPO4	10	exact_name_key	1		existing	tributylfosfaat	TC4yPO4
+molybdeen	Mo	10	exact_name_key	1		existing	molybdeen	Mo
+joxitalaminezuur	joxtlmnzr	8	exact_name_key	1		existing	joxitalaminezuur	joxtlmnzr
+jomeprol	jompl	8	exact_name_key	1		existing	jomeprol	jompl
+johexol	johxl	8	exact_name_key	1		existing	johexol	johxl
+joxaglinezuur	joxgnzr	8	exact_name_key	1		existing	joxaglinezuur	joxgnzr
+jopromide	jopmde	8	exact_name_key	1		existing	jopromide	jopmde
+jotalaminezuur	jotlmnzr	8	exact_name_key	1		existing	jotalaminezuur	jotlmnzr
+p-tolueensulfonamide	pTolsfAd	7	exact_name_key	1		existing	p-tolueensulfonamide	pTolsfAd
+siliciumdioxide	SiO2	7	exact_name_key	1		existing	siliciumdioxide	SiO2
+strontium	Sr	6	exact_name_key	1		existing	strontium	Sr
+sulfide	S	6	fuzzy_semantic	1	0.65625	Ws Scheldestromen	sulfide	S
+desisopropylatrazine	desiC3yatzne	5	exact_name_key	1		existing	desisopropylatrazine	desiC3yatzne
+methidathion	metdton	5	exact_name_key	1		existing	methidathion	metdton
+prometryne	promtne	5	exact_name_key	1		existing	prometryne	promtne
+trichloronaat	TClnt	5	exact_name_key	1		existing	trichloronaat	TClnt
+amitraz	amtz	5	exact_name_key	1		existing	amitraz	amtz
+broompropylaat	Brpplt	5	exact_name_key	1		existing	broompropylaat	Brpplt
+quetiapine	quetpne	5	exact_name_key	1		existing	quetiapine	quetpne
+tin	Sn	5	fuzzy_semantic	1	0.725	Ws Scheldestromen	tin	Sn
+carbonaat	CO3	4	exact_name_key	1		existing	carbonaat	CO3
+thiofanox-sulfoxide	tofnSO	4	exact_name_key	1		existing	thiofanox-sulfoxide	tofnSO
+thiofanox-sulfon	tofnsfn	4	exact_name_key	1		existing	thiofanox-sulfon	tofnsfn
+3-hydroxycarbofuran	3HOxcbfrn	4	exact_name_key	1		existing	3-hydroxycarbofuran	3HOxcbfrn
+diisopropylether	DiC3yEtr	4	exact_name_key	1		existing	diisopropylether	DiC3yEtr
+triethylfosfaat	TC2yPO4	3	exact_name_key	1		existing	triethylfosfaat	TC2yPO4
+triisobutylfosfaat	TiC4yPO4	3	exact_name_key	1		existing	triisobutylfosfaat	TiC4yPO4
+butocarboximsulfon	butcbOxmsfn	3	exact_name_key	1		existing	butocarboximsulfon	butcbOxmsfn
+profam	profm	3	exact_name_key	1		existing	profam	profm
+cyanazine	CNazne	3	exact_name_key	1		existing	cyanazine	CNazne
+cumafos	cumfs	3	exact_name_key	1		existing	cumafos	cumfs
+perfluorpentaanzuur	PFPA	3	exact_name_key	1		existing	perfluorpentaanzuur	PFPA
+perfluorbutaanzuur	PFBA	3	exact_name_key	1		existing	perfluorbutaanzuur	PFBA
+perfluor-1-butaansulfonaat (lineair)	L_PFBS	3	exact_name_key	1		existing	perfluor-1-butaansulfonaat (lineair)	L_PFBS
+perfluorhexaanzuur	PFHxA	3	exact_name_key	1		existing	perfluorhexaanzuur	PFHxA
+perfluorundecaanzuur	PFUdA	3	exact_name_key	1		existing	perfluorundecaanzuur	PFUdA
+perfluordecaanzuur	PFDA	3	exact_name_key	1		existing	perfluordecaanzuur	PFDA
+perfluornonaanzuur	PFNA	3	exact_name_key	1		existing	perfluornonaanzuur	PFNA
+2,3,3,3-tetrafluor-2-(heptafluorpropoxy)propionzuur	FRD-903	3	exact_name_key	1		existing	2,3,3,3-tetrafluor-2-(heptafluorpropoxy)propionzuur	FRD-903
+2-(perfluorhexyl)ethaan-1-sulfonzuur	2PFC6yC2a1sf	3	exact_name_key	1		existing	2-(perfluorhexyl)ethaan-1-sulfonzuur	2PFC6yC2a1sf
+perfluor-1-hexaansulfonaat (lineair)	L_PFHxS	3	exact_name_key	1		existing	perfluor-1-hexaansulfonaat (lineair)	L_PFHxS
+perfluorheptaanzuur	PFHpA	3	exact_name_key	1		existing	perfluorheptaanzuur	PFHpA
+benzothiazool	benztazl	2	exact_name_key	1		existing	benzothiazool	benztazl
+2-nitrofenol	2NO2Fol	2	exact_name_key	1		existing	2-nitrofenol	2NO2Fol
+fenuron	fenrn	2	exact_name_key	1		existing	fenuron	fenrn
+aceton	actn	1	exact_name_key	1		existing	aceton	actn
+1,3-xyleen	13xyln	1	exact_name_key	1		existing	1,3-xyleen	13xyln
+1,4-xyleen	14xyln	1	exact_name_key	1		existing	1,4-xyleen	14xyln
+cyclohexaan	cycC6a	1	exact_name_key	1		existing	cyclohexaan	cycC6a
+permethrin	permtn	1	exact_name_key	1		existing	permethrin	permtn
+fenarimol	fenarml	1	exact_name_key	1		existing	fenarimol	fenarml
