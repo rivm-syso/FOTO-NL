@@ -793,6 +793,17 @@ resolve_files <- function(raw_root, patterns) {
   files[file.exists(files)]
 }
 
+# Prefer board-specific helper files from the auxiliary input bundle when present.
+script_0_support_candidates <- function(ctx, relative_path, packaged_paths = character(0)) {
+  raw_root <- ctx$raw_root %||% ""
+  ref_root <- ctx$reference_input_root %||% ""
+  c(
+    file.path(raw_root, relative_path),
+    file.path(ref_root, relative_path),
+    packaged_paths
+  )
+}
+
 # Read the reference workbook or CSV for a datasource.
 read_reference <- function(ref_file, datasource) {
   if (env_bool("SKIP_REFERENCE_READ", default = FALSE)) return(NULL)
@@ -939,7 +950,11 @@ export_legacy_inputs <- function(ctx) {
 # Fill HHNK fields from local auxiliary location tables.
 enrich_hhnk <- function(dt, ctx) {
   mp_path <- file.path(ctx$raw_root, "HH Hollands Noorderkwartier", "hhnk_meetpunt.txt")
-  mp_enriched_path <- file.path(ctx$raw_root, "HH Hollands Noorderkwartier", "hhnk_meetpunt_verrijkt.txt")
+  mp_enriched_candidates <- script_0_support_candidates(
+    ctx,
+    file.path("HH Hollands Noorderkwartier", "hhnk_meetpunt_verrijkt.txt")
+  )
+  mp_enriched_path <- mp_enriched_candidates[file.exists(mp_enriched_candidates)][1]
   par_path <- file.path(ctx$raw_root, "HH Hollands Noorderkwartier", "hhnk_parameter.txt")
   if (!file.exists(mp_path) || !file.exists(par_path)) return(dt)
 
@@ -1282,19 +1297,22 @@ get_reference_parameteromschrijving_lookup <- local({
     datasource_key <- tolower(norm_text(datasource))
     local_lookup <- NA_character_
     if (grepl("rivierenland", datasource_key, fixed = TRUE)) {
-      local_lookup <- c(
-        file.path(ctx$raw_root, "Ws Rivierenland", "rivierenland_parameter_lookup.tsv"),
-        file.path(getwd(), "resources", "lookups", "rivierenland_parameter_lookup.tsv")
+      local_lookup <- script_0_support_candidates(
+        ctx,
+        file.path("Ws Rivierenland", "rivierenland_parameter_lookup.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "rivierenland_parameter_lookup.tsv")
       )
     } else if (grepl("scheldestromen", datasource_key, fixed = TRUE)) {
-      local_lookup <- c(
-        file.path(ctx$raw_root, "Ws Scheldestromen", "scheldestromen_parameter_lookup.tsv"),
-        file.path(getwd(), "resources", "lookups", "scheldestromen_parameter_lookup.tsv")
+      local_lookup <- script_0_support_candidates(
+        ctx,
+        file.path("Ws Scheldestromen", "scheldestromen_parameter_lookup.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "scheldestromen_parameter_lookup.tsv")
       )
     } else if (grepl("rijnland", datasource_key, fixed = TRUE)) {
-      local_lookup <- c(
-        file.path(ctx$raw_root, "HH Rijnland", "hh_rijnland_parameter_lookup.tsv"),
-        file.path(getwd(), "resources", "lookups", "hh_rijnland_parameter_lookup.tsv")
+      local_lookup <- script_0_support_candidates(
+        ctx,
+        file.path("HH Rijnland", "hh_rijnland_parameter_lookup.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "hh_rijnland_parameter_lookup.tsv")
       )
     }
     local_lookup <- local_lookup[file.exists(local_lookup)][1]
@@ -1378,19 +1396,22 @@ get_reference_parametercode_lookup <- local({
     datasource_key <- tolower(norm_text(datasource))
     local_lookup <- NA_character_
     if (grepl("rivierenland", datasource_key, fixed = TRUE)) {
-      local_lookup <- c(
-        file.path(ctx$raw_root, "Ws Rivierenland", "rivierenland_parameter_lookup.tsv"),
-        file.path(getwd(), "resources", "lookups", "rivierenland_parameter_lookup.tsv")
+      local_lookup <- script_0_support_candidates(
+        ctx,
+        file.path("Ws Rivierenland", "rivierenland_parameter_lookup.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "rivierenland_parameter_lookup.tsv")
       )
     } else if (grepl("scheldestromen", datasource_key, fixed = TRUE)) {
-      local_lookup <- c(
-        file.path(ctx$raw_root, "Ws Scheldestromen", "scheldestromen_parameter_lookup.tsv"),
-        file.path(getwd(), "resources", "lookups", "scheldestromen_parameter_lookup.tsv")
+      local_lookup <- script_0_support_candidates(
+        ctx,
+        file.path("Ws Scheldestromen", "scheldestromen_parameter_lookup.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "scheldestromen_parameter_lookup.tsv")
       )
     } else if (grepl("rijnland", datasource_key, fixed = TRUE)) {
-      local_lookup <- c(
-        file.path(ctx$raw_root, "HH Rijnland", "hh_rijnland_parameter_lookup.tsv"),
-        file.path(getwd(), "resources", "lookups", "hh_rijnland_parameter_lookup.tsv")
+      local_lookup <- script_0_support_candidates(
+        ctx,
+        file.path("HH Rijnland", "hh_rijnland_parameter_lookup.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "hh_rijnland_parameter_lookup.tsv")
       )
     }
     local_lookup <- local_lookup[file.exists(local_lookup)][1]
@@ -1802,11 +1823,19 @@ get_rivierenland_parametercode_converter <- local({
     )
 
     candidates <- c(
-      file.path(root, "Ws Rivierenland", "parametercode_converter.csv"),
-      file.path(root, "Ws Rivierenland", "parametercode_converter.tsv"),
-      file.path(getwd(), "resources", "lookups", "parametercode_converter.csv"),
-      file.path(getwd(), "resources", "lookups", "parametercode_converter.tsv"),
-      file.path(getwd(), "Chemie data waterschappen", "Ws Rivierenland", "parametercode_converter.csv")
+      script_0_support_candidates(
+        ctx,
+        file.path("Ws Rivierenland", "parametercode_converter.csv"),
+        packaged_paths = c(
+          file.path(getwd(), "resources", "lookups", "parametercode_converter.csv"),
+          file.path(getwd(), "Chemie data waterschappen", "Ws Rivierenland", "parametercode_converter.csv")
+        )
+      ),
+      script_0_support_candidates(
+        ctx,
+        file.path("Ws Rivierenland", "parametercode_converter.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "parametercode_converter.tsv")
+      )
     )
     candidates <- candidates[file.exists(candidates)]
     if (length(candidates) == 0L) {
@@ -1870,12 +1899,21 @@ get_rivierenland_parnr_lookup <- local({
     )
 
     candidates <- c(
-      file.path(root, "Ws Rivierenland", "rivierenland_parameter_parnr_lookup.tsv"),
-      file.path(root, "Ws Rivierenland", "rivierenland_parameter_lookup_with_parnr.tsv"),
-      file.path(root, "Ws Rivierenland", "rivierenland_parameter_lookup.tsv"),
-      file.path(getwd(), "resources", "lookups", "rivierenland_parameter_parnr_lookup.tsv"),
-      file.path(getwd(), "resources", "lookups", "rivierenland_parameter_lookup_with_parnr.tsv"),
-      file.path(getwd(), "resources", "lookups", "rivierenland_parameter_lookup.tsv")
+      script_0_support_candidates(
+        ctx,
+        file.path("Ws Rivierenland", "rivierenland_parameter_parnr_lookup.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "rivierenland_parameter_parnr_lookup.tsv")
+      ),
+      script_0_support_candidates(
+        ctx,
+        file.path("Ws Rivierenland", "rivierenland_parameter_lookup_with_parnr.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "rivierenland_parameter_lookup_with_parnr.tsv")
+      ),
+      script_0_support_candidates(
+        ctx,
+        file.path("Ws Rivierenland", "rivierenland_parameter_lookup.tsv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "rivierenland_parameter_lookup.tsv")
+      )
     )
     candidates <- candidates[file.exists(candidates)]
     if (length(candidates) == 0L) {
@@ -1958,8 +1996,11 @@ get_rivierenland_parameter_adjustments <- local({
 
     candidates <- c(
       file.path(getwd(), "rivierenland_parameter_adjustments.csv"),
-      file.path(getwd(), "resources", "lookups", "rivierenland_parameter_adjustments.csv"),
-      file.path(root, "Ws Rivierenland", "rivierenland_parameter_adjustments.csv")
+      script_0_support_candidates(
+        ctx,
+        file.path("Ws Rivierenland", "rivierenland_parameter_adjustments.csv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "rivierenland_parameter_adjustments.csv")
+      )
     )
     candidates <- candidates[file.exists(candidates)]
     if (length(candidates) == 0L) {
@@ -2100,8 +2141,11 @@ get_rijnland_parameter_adjustments <- local({
 
     candidates <- c(
       file.path(getwd(), "rijnland_parameter_adjustments.csv"),
-      file.path(getwd(), "resources", "lookups", "rijnland_parameter_adjustments.csv"),
-      file.path(root, "HH Rijnland", "rijnland_parameter_adjustments.csv")
+      script_0_support_candidates(
+        ctx,
+        file.path("HH Rijnland", "rijnland_parameter_adjustments.csv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "rijnland_parameter_adjustments.csv")
+      )
     )
     candidates <- candidates[file.exists(candidates)]
     if (length(candidates) == 0L) {
@@ -2191,8 +2235,11 @@ get_scheldestromen_parameter_adjustments <- local({
 
     candidates <- c(
       file.path(getwd(), "scheldestromen_parameter_adjustments.csv"),
-      file.path(getwd(), "resources", "lookups", "scheldestromen_parameter_adjustments.csv"),
-      file.path(root, "Ws Scheldestromen", "scheldestromen_parameter_adjustments.csv")
+      script_0_support_candidates(
+        ctx,
+        file.path("Ws Scheldestromen", "scheldestromen_parameter_adjustments.csv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "scheldestromen_parameter_adjustments.csv")
+      )
     )
     candidates <- candidates[file.exists(candidates)]
     if (length(candidates) == 0L) {
@@ -2282,8 +2329,11 @@ get_hhnk_parameter_adjustments <- local({
 
     candidates <- c(
       file.path(getwd(), "hhnk_parameter_adjustments.csv"),
-      file.path(getwd(), "resources", "lookups", "hhnk_parameter_adjustments.csv"),
-      file.path(root, "HH Hollands Noorderkwartier", "hhnk_parameter_adjustments.csv")
+      script_0_support_candidates(
+        ctx,
+        file.path("HH Hollands Noorderkwartier", "hhnk_parameter_adjustments.csv"),
+        packaged_paths = file.path(getwd(), "resources", "lookups", "hhnk_parameter_adjustments.csv")
+      )
     )
     candidates <- candidates[file.exists(candidates)]
     if (length(candidates) == 0L) {
